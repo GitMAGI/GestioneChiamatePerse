@@ -1,0 +1,10 @@
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\bin\GestioneChiamatePerse.dll.config
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\bin\GestioneChiamatePerse.dll
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\bin\GestioneChiamatePerse.pdb
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\bin\GCPData.exe
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\bin\log4net.dll
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\bin\GCPData.pdb
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\bin\log4net.xml
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\obj\Release\GestioneChiamatePerse.csprojResolveAssemblyReference.cache
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\obj\Release\GestioneChiamatePerse.dll
+C:\Workspace\GestioneChiamate\GestioneChiamatePerse\obj\Release\GestioneChiamatePerse.pdb

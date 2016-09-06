@@ -1,0 +1,16 @@
+C:\Workspace\HltCC-Dev\GCPData\bin\Debug\GCPData.exe.config
+C:\Workspace\HltCC-Dev\GCPData\bin\Debug\GCPData.exe
+C:\Workspace\HltCC-Dev\GCPData\bin\Debug\GCPData.pdb
+C:\Workspace\HltCC-Dev\GCPData\bin\Debug\log4net.dll
+C:\Workspace\HltCC-Dev\GCPData\bin\Debug\log4net.xml
+C:\Workspace\HltCC-Dev\GCPData\obj\Debug\GCPData.csprojResolveAssemblyReference.cache
+C:\Workspace\HltCC-Dev\GCPData\obj\Debug\GCPData.exe
+C:\Workspace\HltCC-Dev\GCPData\obj\Debug\GCPData.pdb
+C:\Workspace\GestioneChiamate\GCPData\bin\Debug\GCPData.exe.config
+C:\Workspace\GestioneChiamate\GCPData\bin\Debug\GCPData.exe
+C:\Workspace\GestioneChiamate\GCPData\bin\Debug\GCPData.pdb
+C:\Workspace\GestioneChiamate\GCPData\bin\Debug\log4net.dll
+C:\Workspace\GestioneChiamate\GCPData\bin\Debug\log4net.xml
+C:\Workspace\GestioneChiamate\GCPData\obj\Debug\GCPData.exe
+C:\Workspace\GestioneChiamate\GCPData\obj\Debug\GCPData.pdb
+C:\Workspace\GestioneChiamate\GCPData\obj\Debug\GCPData.csprojResolveAssemblyReference.cache

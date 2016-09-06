@@ -1,0 +1,83 @@
+2016-08-23 18:04:52,422 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - __EVENTTARGET => 
+2016-08-23 18:04:52,437 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - __EVENTARGUMENT => 
+2016-08-23 18:04:52,438 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - __VIEWSTATE => Bu9SZlnR1rPGhTY4cpF5NyC7vcrIgiOLXH5KPV+ovXgbXfXWw7zArCATI7myK9KfGQWQaE8+8iPjqZzS24KhS2wV8Q5OTdS36i9H+TWvAC4=
+2016-08-23 18:04:52,438 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - ExtIDChiamata => 12321321343
+2016-08-23 18:04:52,438 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - NumeroChiamata => 3432432432
+2016-08-23 18:04:52,438 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - NomeChiamata => 32432432
+2016-08-23 18:04:52,439 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - CognomeChiamata => 32432432
+2016-08-23 18:04:52,439 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - DataOraChiamata => 1993-02-01T23:00
+2016-08-23 18:04:52,440 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - MotivoChiamata => 
+2016-08-23 18:04:52,440 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - InfoChiamata => 
+2016-08-23 18:04:52,440 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - ctl00$ContentPlaceHolder1$ctl00 => Invia
+2016-08-23 18:04:52,441 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - ChiamataDTO composed as follows: 
+2016-08-23 18:04:52,441 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - IPOperazione => ::1
+2016-08-23 18:04:52,441 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - DataOraOperazione => 2016-08-23T18:04:52.421
+2016-08-23 18:04:52,441 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - __VIEWSTATE => Bu9SZlnR1rPGhTY4cpF5NyC7vcrIgiOLXH5KPV+ovXgbXfXWw7zArCATI7myK9KfGQWQaE8+8iPjqZzS24KhS2wV8Q5OTdS36i9H+TWvAC4=
+2016-08-23 18:04:52,442 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - ExtIDChiamata => 12321321343
+2016-08-23 18:04:52,442 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - NumeroChiamata => 3432432432
+2016-08-23 18:04:52,442 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - NomeChiamata => 32432432
+2016-08-23 18:04:52,442 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - CognomeChiamata => 32432432
+2016-08-23 18:04:52,443 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - DataOraChiamata => 1993-02-01T23:00:00.000
+2016-08-23 18:04:52,443 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - ctl00$ContentPlaceHolder1$ctl00 => Invia
+2016-08-23 18:04:52,443 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - All Fields are ok!
+2016-08-23 18:04:52,446 [6] INFO  GCPData.GCPDAL.AddChiamata() - Query: INSERT INTO [dbo].[Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, DataOraChiamata, DataOraOperazione, IPOperazione) VALUES (@ExtIDChiamata, @NumeroChiamata, @NomeChiamata, @CognomeChiamata, @DataOraChiamata, @DataOraOperazione, @IPOperazione)
+2016-08-23 18:04:52,447 [6] INFO  GCPData.GCPDAL.AddChiamata() - Params: ExtIDChiamata=12321321343;NumeroChiamata=3432432432;NomeChiamata=32432432;CognomeChiamata=32432432;DataOraChiamata=1993-02-01T23:00:00.000;DataOraOperazione=2016-08-23T18:04:52.421;IPOperazione=::1
+2016-08-23 18:04:52,511 [6] INFO  GCPData.GCPDAL.AddChiamata() - Query Executed! Inserted 1 records!
+2016-08-23 19:28:51,070 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:28:51,132 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:28:51,134 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:28:51,134 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:31:05,625 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:31:05,681 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:31:05,683 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:31:05,683 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:32:51,767 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:32:51,824 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:32:51,826 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:32:51,827 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:34:56,076 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:34:56,085 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:34:56,086 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:34:56,086 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:35:43,925 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:35:43,928 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:35:43,929 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:35:43,929 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:35:58,037 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:35:58,041 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:35:58,041 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:35:58,042 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:36:33,212 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:36:33,216 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:36:33,216 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:36:33,217 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:36:49,627 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:36:49,631 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:36:49,632 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:36:49,632 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:38:25,116 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:38:25,119 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:38:25,119 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:38:25,120 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:38:58,335 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:38:58,338 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:38:58,339 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:38:58,339 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:39:07,946 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:39:07,949 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:39:07,950 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:39:07,950 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:40:27,319 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:40:27,323 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:40:27,323 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:40:27,323 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-23 19:41:06,241 [17] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-23 19:41:06,246 [17] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 1 records!
+2016-08-23 19:41:06,246 [17] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped to ChiamataDTO
+2016-08-23 19:41:06,247 [17] INFO  GCPData.GCPDAL.GetChiamataAll() - Record mapped added To ChiamataDTO[]
+2016-08-24 12:12:49,376 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-24 12:12:49,431 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 0 records!
+2016-08-24 12:13:14,707 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-24 12:13:14,769 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 0 records!
+2016-08-24 12:16:19,724 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query: SELECT * FROM Chiamata
+2016-08-24 12:16:19,779 [6] INFO  GCPData.GCPDAL.GetChiamataAll() - Query Executed! Retrieved 0 records!

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="phone.seminabit.com" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Workspace\\GestioneChiamate\\GestioneChiamatePerse\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Workspace\\GestioneChiamate\\GestioneChiamatePerse\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="GCP_test-Web.config Connection String" description="" value="user id=gcpuser;password=gcpuserABC123;server=192.168.3.200;Trusted_Connection=no;database=GCP_test;connection timeout=30;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Workspace\\GestioneChiamate\\GestioneChiamatePerse\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GCP_test']/@connectionString" />
+  </parameter>
+</parameters>
