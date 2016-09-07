@@ -1,0 +1,4 @@
+C:\Workspace\C#\GestioneChiamatePerse\IBLL\bin\Release\IBLL.dll
+C:\Workspace\C#\GestioneChiamatePerse\IBLL\bin\Release\IBLL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\IBLL\obj\Release\IBLL.dll
+C:\Workspace\C#\GestioneChiamatePerse\IBLL\obj\Release\IBLL.pdb

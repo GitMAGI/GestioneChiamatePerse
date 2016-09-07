@@ -96,7 +96,7 @@ namespace GCPData
             */
 
             Type type = typeof(UInt32);
-            string data = "2015438549685496854";
+            //string data = "2015438549685496854";
 
             //System.Console.WriteLine(TypeValidator(data, type));
 

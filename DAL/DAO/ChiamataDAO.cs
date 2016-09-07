@@ -272,8 +272,9 @@ namespace DataAccessLayer
             return result;
         }
 
-        struct OpValue
+        public struct OpValue
         {
+            public string Key;
             public string Op;
             public object Value;
             public string Conj;
@@ -289,8 +290,8 @@ namespace DataAccessLayer
             {
                 string connectionString = this.GCPConnectionString;
 
-                string query = "SELECT * " + tabName + " WHERE " +
-                    string.Join(" ", conditions.Select(x => x.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj + " ").ToArray());
+                string query = "SELECT * FROM " + tabName + " WHERE " +
+                    string.Join(" ", conditions.Select(x => x.Value.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj).ToArray());
                 Dictionary<string, object> pars = new Dictionary<string, object>();
                 foreach (KeyValuePair<string, OpValue> entry in conditions)
                 {
@@ -377,7 +378,7 @@ namespace DataAccessLayer
                 string connectionString = this.GCPConnectionString;
 
                 string query = "DELETE FROM " + tabName + " WHERE " +
-                    string.Join(" ", conditions.Select(x => x.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj + " ").ToArray());
+                    string.Join(" ", conditions.Select(x => x.Value.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj).ToArray());
                 Dictionary<string, object> pars = new Dictionary<string, object>();
                 foreach (KeyValuePair<string, OpValue> entry in conditions)
                 {
@@ -428,7 +429,7 @@ namespace DataAccessLayer
                     " SET " +
                     string.Join(", ", data.Select(x => x.Key + " = " + "@" + x.Key + "_toSet").ToArray()) + 
                     " WHERE " +
-                    string.Join(" ", conditions.Select(x => x.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj + " ").ToArray());
+                    string.Join(" ", conditions.Select(x => x.Value.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj).ToArray());
                     //string.Join(" and ", conditions.Select(x => x.Key + x.Value.Op + "@" + x.Key).ToArray());
                 Dictionary<string, object> conditions_ = new Dictionary<string, object>();
                 foreach (KeyValuePair<string, OpValue> entry in conditions)

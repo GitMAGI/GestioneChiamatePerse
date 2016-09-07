@@ -107,7 +107,7 @@ namespace GCPData
         public static ChiamataDTO ChiamataMapper(DataRow row)
         {
             ChiamataDTO chiamata = new ChiamataDTO();
-
+            /*
             chiamata.IDChiamata = row["IDChiamata"] != DBNull.Value ? (long)row["IDChiamata"] : 0;
             chiamata.ExtIDChiamata = row["ExtIDChiamata"] != DBNull.Value ? (long)row["ExtIDChiamata"] : 0;
             chiamata.NumeroChiamata = row["NumeroChiamata"] != DBNull.Value ? (string)row["NumeroChiamata"] : null;
@@ -118,7 +118,7 @@ namespace GCPData
             chiamata.InfoChiamata = row["InfoChiamata"] != DBNull.Value ? (string)row["InfoChiamata"] : null;
             chiamata.DataOraOperazione = row["DataOraOperazione"] != DBNull.Value ? (string)row["DataOraOperazione"].ToString() : null;
             chiamata.IPOperazione = row["IPOperazione"] != DBNull.Value ? (string)row["IPOperazione"] : null;
-
+            */
             return chiamata;
         }
     }

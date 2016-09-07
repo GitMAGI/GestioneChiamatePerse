@@ -14,3 +14,10 @@ C:\Workspace\GestioneChiamate\GCPData\bin\Debug\log4net.xml
 C:\Workspace\GestioneChiamate\GCPData\obj\Debug\GCPData.exe
 C:\Workspace\GestioneChiamate\GCPData\obj\Debug\GCPData.pdb
 C:\Workspace\GestioneChiamate\GCPData\obj\Debug\GCPData.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Debug\GCPData.exe.config
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Debug\GCPData.exe
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Debug\GCPData.pdb
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Debug\log4net.dll
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Debug\log4net.xml
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\obj\Debug\GCPData.exe
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\obj\Debug\GCPData.pdb

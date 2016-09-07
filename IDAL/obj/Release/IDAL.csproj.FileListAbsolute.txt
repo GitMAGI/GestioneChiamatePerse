@@ -8,3 +8,9 @@ C:\Workspace\repo\c#\RISRep\IRISDAL\obj\Release\IRISDAL.dll
 C:\Workspace\repo\c#\RISRep\IRISDAL\obj\Release\IRISDAL.pdb
 C:\Workspace\repo\c#\RISRep\IRISDAL\bin\Release\IRISDAL.dll
 C:\Workspace\repo\c#\RISRep\IRISDAL\bin\Release\IRISDAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\IDAL\bin\Release\IRISDAL.dll
+C:\Workspace\C#\GestioneChiamatePerse\IDAL\bin\Release\IRISDAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\IDAL\bin\Release\log4net.dll
+C:\Workspace\C#\GestioneChiamatePerse\IDAL\bin\Release\log4net.xml
+C:\Workspace\C#\GestioneChiamatePerse\IDAL\obj\Release\IRISDAL.dll
+C:\Workspace\C#\GestioneChiamatePerse\IDAL\obj\Release\IRISDAL.pdb

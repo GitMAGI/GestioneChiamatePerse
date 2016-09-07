@@ -1,0 +1,4 @@
+C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\GeneralPurposeLib.dll
+C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\GeneralPurposeLib.pdb
+C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.dll
+C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.pdb

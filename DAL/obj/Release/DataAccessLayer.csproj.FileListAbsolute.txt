@@ -1,0 +1,11 @@
+C:\Workspace\C#\GestioneChiamatePerse\DAL\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Release\DAL.dll
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Release\DAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Release\GeneralPurposeLib.dll
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Release\IRISDAL.dll
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Release\log4net.dll
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Release\GeneralPurposeLib.pdb
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Release\IRISDAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Release\log4net.xml
+C:\Workspace\C#\GestioneChiamatePerse\DAL\obj\Release\DAL.dll
+C:\Workspace\C#\GestioneChiamatePerse\DAL\obj\Release\DAL.pdb

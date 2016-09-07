@@ -1,0 +1,15 @@
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Debug\TestServizio.exe.config
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\TestServizio.exe.config
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\TestServizio.exe
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\TestServizio.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\DAL.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\log4net.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\IRISDAL.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\GeneralPurposeLib.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\DAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\log4net.xml
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\IRISDAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\GeneralPurposeLib.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.exe
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.pdb

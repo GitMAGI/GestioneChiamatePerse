@@ -14,3 +14,13 @@ C:\Workspace\GestioneChiamate\GestioneChiamatePerse\bin\log4net.xml
 C:\Workspace\GestioneChiamate\GestioneChiamatePerse\obj\Debug\GestioneChiamatePerse.csprojResolveAssemblyReference.cache
 C:\Workspace\GestioneChiamate\GestioneChiamatePerse\obj\Debug\GestioneChiamatePerse.dll
 C:\Workspace\GestioneChiamate\GestioneChiamatePerse\obj\Debug\GestioneChiamatePerse.pdb
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\bin\GestioneChiamatePerse.dll.config
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\bin\GestioneChiamatePerse.dll
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\bin\GestioneChiamatePerse.pdb
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\bin\GCPData.exe
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\bin\log4net.dll
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\bin\GCPData.pdb
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\bin\log4net.xml
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\obj\Debug\GestioneChiamatePerse.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\obj\Debug\GestioneChiamatePerse.dll
+C:\Workspace\C#\GestioneChiamatePerse\GestioneChiamatePerse\obj\Debug\GestioneChiamatePerse.pdb

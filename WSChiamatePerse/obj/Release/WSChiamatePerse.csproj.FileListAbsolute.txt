@@ -1,0 +1,6 @@
+C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\WSChiamatePerse.dll.config
+C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\WSChiamatePerse.dll
+C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\WSChiamatePerse.pdb
+C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.dll
+C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.pdb
+C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.csprojResolveAssemblyReference.cache

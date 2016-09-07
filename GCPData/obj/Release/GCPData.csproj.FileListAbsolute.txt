@@ -6,3 +6,11 @@ C:\Workspace\GestioneChiamate\GCPData\bin\Release\log4net.xml
 C:\Workspace\GestioneChiamate\GCPData\obj\Release\GCPData.exe
 C:\Workspace\GestioneChiamate\GCPData\obj\Release\GCPData.pdb
 C:\Workspace\GestioneChiamate\GCPData\obj\Release\GCPData.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Release\GCPData.exe.config
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Release\GCPData.exe
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Release\GCPData.pdb
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Release\log4net.dll
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\bin\Release\log4net.xml
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\obj\Release\GCPData.exe
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\obj\Release\GCPData.pdb
+C:\Workspace\C#\GestioneChiamatePerse\GCPData\obj\Release\GCPData.csprojResolveAssemblyReference.cache

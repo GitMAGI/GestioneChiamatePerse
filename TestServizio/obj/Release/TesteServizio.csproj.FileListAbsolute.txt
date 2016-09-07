@@ -1,0 +1,8 @@
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Release\TesteServizio.exe.config
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Release\TesteServizio.exe
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Release\TesteServizio.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Release\log4net.dll
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Release\log4net.xml
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\obj\Release\TesteServizio.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\obj\Release\TesteServizio.exe
+C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\obj\Release\TesteServizio.pdb
