@@ -1,0 +1,4 @@
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\bin\Release\IRISDAL.dll
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\bin\Release\IRISDAL.pdb
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\obj\Release\IRISDAL.dll
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\obj\Release\IRISDAL.pdb

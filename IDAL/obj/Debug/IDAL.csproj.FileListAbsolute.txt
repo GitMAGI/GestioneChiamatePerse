@@ -1,0 +1,15 @@
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\bin\Debug\IRISDAL.dll
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\bin\Debug\IRISDAL.pdb
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\obj\Debug\IRISDAL.dll
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\obj\Debug\IRISDAL.pdb
+C:\Workspace\repo\c#\RISRep\IRISDAL\obj\Debug\IRISDAL.dll
+C:\Workspace\repo\c#\RISRep\IRISDAL\obj\Debug\IRISDAL.pdb
+C:\Workspace\repo\c#\RISRep\IRISDAL\bin\Debug\IRISDAL.dll
+C:\Workspace\repo\c#\RISRep\IRISDAL\bin\Debug\IRISDAL.pdb
+C:\Workspace\repo\c#\RISRep\IRISDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
+C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\bin\Debug\IRISDAL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\bin\Debug\IRISDAL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\bin\Debug\log4net.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\bin\Debug\log4net.xml
+C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\obj\Debug\IRISDAL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\obj\Debug\IRISDAL.pdb

@@ -1,0 +1,1 @@
+C:\Workspace\repo\c#\GestioneChiamatePerse\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
