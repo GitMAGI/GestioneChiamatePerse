@@ -1,0 +1,4 @@
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\bin\Debug\IRISDAL.dll
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\bin\Debug\IRISDAL.pdb
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\obj\Debug\IRISDAL.dll
+\\192.168.3.200\c$\leo\Workspace\RISRep\IRISDAL\obj\Debug\IRISDAL.pdb

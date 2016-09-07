@@ -1,0 +1,4 @@
+C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\bin\Debug\IBLL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\bin\Debug\IBLL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\obj\Debug\IBLL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\obj\Debug\IBLL.pdb
