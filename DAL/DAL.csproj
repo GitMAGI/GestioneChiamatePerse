@@ -35,6 +35,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,11 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL.cs" />
+    <Compile Include="DAO\ChiamataDAO.cs" />
     <Compile Include="DBSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
     <Folder Include="Mappers\" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +59,10 @@
     <ProjectReference Include="..\GeneralPurposeLib\GeneralPurposeLib.csproj">
       <Project>{2122ccc2-d83c-4ce6-a358-c2e772e4f6df}</Project>
       <Name>GeneralPurposeLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{ab3f8c7c-6fab-42a2-8c32-2efac7bb5f51}</Project>
+      <Name>IDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
