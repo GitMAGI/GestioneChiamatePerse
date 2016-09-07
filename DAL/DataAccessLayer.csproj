@@ -47,11 +47,10 @@
     <Compile Include="DAL.cs" />
     <Compile Include="DAO\ChiamataDAO.cs" />
     <Compile Include="DBSQL.cs" />
+    <Compile Include="Mappers\ChiamataMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mappers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
