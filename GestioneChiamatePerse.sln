@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestioneChiamatePerse", "Ge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCPData", "GCPData\GCPData.csproj", "{50FC2C80-0F30-4287-8B14-654B36E682A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSChiamatePerse", "WSChiamatePerse\WSChiamatePerse.csproj", "{FF683327-3314-4233-BDB1-E562D1690A1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDAL", "IDAL\IDAL.csproj", "{AB3F8C7C-6FAB-42A2-8C32-2EFAC7BB5F51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{50FC2C80-0F30-4287-8B14-654B36E682A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50FC2C80-0F30-4287-8B14-654B36E682A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50FC2C80-0F30-4287-8B14-654B36E682A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF683327-3314-4233-BDB1-E562D1690A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF683327-3314-4233-BDB1-E562D1690A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF683327-3314-4233-BDB1-E562D1690A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF683327-3314-4233-BDB1-E562D1690A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3F8C7C-6FAB-42A2-8C32-2EFAC7BB5F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3F8C7C-6FAB-42A2-8C32-2EFAC7BB5F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3F8C7C-6FAB-42A2-8C32-2EFAC7BB5F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3F8C7C-6FAB-42A2-8C32-2EFAC7BB5F51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
