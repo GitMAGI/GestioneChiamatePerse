@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using IBLL.DTO;
 
 namespace IBLL
@@ -13,6 +10,7 @@ namespace IBLL
         int UpdateChiamataByExtPk(ChiamataDTO data, long extidid);
         int UpdateChiamataByPk(ChiamataDTO data, long idid);
         int AddChiamata(ChiamataDTO data);
+        int AddChiamate(List<ChiamataDTO> data);
         int DeleteChiamata(string esamidid);
     }
 }

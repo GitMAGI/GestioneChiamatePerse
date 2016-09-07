@@ -11,3 +11,131 @@
 2016-09-08 00:51:10,297 [11] INFO  DataAccessLayer.DAL.SelectOperation() - Query Executed! Retrieved 9 records!
 2016-09-08 00:51:10,297 [11] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.181
 2016-09-08 00:51:10,298 [11] INFO  TesteServizio.Program.Main() - Test Terminato!
+2016-09-08 01:00:32,544 [10] INFO  TesteServizio.Program.Main() - Avvio esecuzione Test ...
+2016-09-08 01:00:32,581 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:00:32,582 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Params: dataInizio1=2016-05-01 13:00:10;dataInizio2=2016-06-01 13:00:10
+2016-09-08 01:00:32,584 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-08 01:00:32,591 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:00:32,765 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= 2016-05-01 13:00:10 and DataOraInizioChiamata <= 2016-06-01 13:00:10 , 
+2016-09-08 01:00:32,765 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-08 01:00:32,782 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 0
+2016-09-08 01:00:32,782 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-08 01:00:32,783 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.199
+2016-09-08 01:00:32,783 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Query Executed! Retrieved 0 records!
+2016-09-08 01:00:32,784 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.206
+2016-09-08 01:00:32,784 [10] INFO  TesteServizio.Program.Main() - Test Terminato!
+2016-09-08 01:01:58,742 [9] INFO  TesteServizio.Program.Main() - Avvio esecuzione Test ...
+2016-09-08 01:01:58,817 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:01:58,818 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:01:58,819 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-08 01:01:58,825 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:01:58,931 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:01:58,931 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-08 01:01:59,121 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 1
+2016-09-08 01:01:59,122 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-08 01:01:59,122 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.302
+2016-09-08 01:01:59,123 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query Executed! Retrieved 1 records!
+2016-09-08 01:01:59,123 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.310
+2016-09-08 01:01:59,123 [9] INFO  TesteServizio.Program.Main() - Test Terminato!
+2016-09-08 01:06:19,664 [9] INFO  TesteServizio.Program.Main() - Avvio esecuzione Test ...
+2016-09-08 01:06:19,711 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:06:19,715 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:06:19,716 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-08 01:06:19,723 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:06:19,775 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:06:19,776 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-08 01:06:19,782 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 1
+2016-09-08 01:06:19,784 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-08 01:06:19,784 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.067
+2016-09-08 01:06:19,785 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query Executed! Retrieved 1 records!
+2016-09-08 01:06:19,785 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.079
+2016-09-08 01:06:19,785 [9] INFO  DataAccessLayer.DAL.DeleteOperation() - Query: DELETE FROM Chiamata WHERE DataOraInizioChiamata >= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:06:19,787 [9] INFO  DataAccessLayer.DAL.DeleteOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:06:19,787 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Setting up ...
+2016-09-08 01:06:19,788 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:06:19,788 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query: DELETE FROM Chiamata WHERE DataOraInizioChiamata >= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:06:19,789 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query execution starting ...
+2016-09-08 01:06:19,799 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query executed! Result count: 1
+2016-09-08 01:06:19,799 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Connection Closed!
+2016-09-08 01:06:19,799 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Completed! Elapsed time 00:00:00.011
+2016-09-08 01:06:19,800 [9] INFO  DataAccessLayer.DAL.DeleteOperation() - Query Executed! Inserted 1 records!
+2016-09-08 01:06:19,800 [9] INFO  DataAccessLayer.DAL.DeleteOperation() - Completed! Elapsed time 00:00:00.014
+2016-09-08 01:06:19,801 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:06:19,801 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:06:19,802 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-08 01:06:19,803 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:06:19,805 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:06:19,805 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-08 01:06:19,806 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 0
+2016-09-08 01:06:19,807 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-08 01:06:19,807 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.005
+2016-09-08 01:06:19,807 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query Executed! Retrieved 0 records!
+2016-09-08 01:06:19,807 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.006
+2016-09-08 01:06:19,808 [9] INFO  TesteServizio.Program.Main() - Test Terminato!
+2016-09-08 01:09:58,939 [9] INFO  TesteServizio.Program.Main() - Avvio esecuzione Test ...
+2016-09-08 01:09:58,974 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:09:58,976 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:09:58,978 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-08 01:09:58,984 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:09:59,067 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:09:59,068 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-08 01:09:59,086 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 0
+2016-09-08 01:09:59,087 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-08 01:09:59,088 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.108
+2016-09-08 01:09:59,088 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query Executed! Retrieved 0 records!
+2016-09-08 01:09:59,089 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.118
+2016-09-08 01:09:59,091 [9] INFO  DataAccessLayer.DAL.DeleteOperation() - Query: DELETE FROM Chiamata WHERE DataOraInizioChiamata >= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:09:59,092 [9] INFO  DataAccessLayer.DAL.DeleteOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:09:59,093 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Setting up ...
+2016-09-08 01:09:59,094 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:09:59,094 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query: DELETE FROM Chiamata WHERE DataOraInizioChiamata >= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:09:59,095 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query execution starting ...
+2016-09-08 01:09:59,095 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query executed! Result count: 0
+2016-09-08 01:09:59,095 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Connection Closed!
+2016-09-08 01:09:59,096 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Completed! Elapsed time 00:00:00.002
+2016-09-08 01:09:59,096 [9] INFO  DataAccessLayer.DAL.DeleteOperation() - Query Executed! Inserted 0 records!
+2016-09-08 01:09:59,096 [9] INFO  DataAccessLayer.DAL.DeleteOperation() - Completed! Elapsed time 00:00:00.004
+2016-09-08 01:09:59,096 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:09:59,097 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:09:59,097 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-08 01:09:59,097 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:09:59,097 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:09:59,098 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-08 01:09:59,098 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 0
+2016-09-08 01:09:59,099 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-08 01:09:59,099 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.002
+2016-09-08 01:09:59,099 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Query Executed! Retrieved 0 records!
+2016-09-08 01:09:59,100 [9] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.003
+2016-09-08 01:09:59,100 [9] INFO  TesteServizio.Program.Main() - Test Terminato!
+2016-09-08 01:28:27,927 [10] INFO  TesteServizio.Program.Main() - Avvio esecuzione Test ...
+2016-09-08 01:28:27,960 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >0= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:28:27,962 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:28:27,963 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-08 01:28:27,969 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:28:28,012 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >0= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:28:28,013 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-08 01:28:28,024 [10] INFO  DataAccessLayer.DAL.SelectOperation() - An Error occured! Exception detected!
+2016-09-08 01:28:28,025 [10] ERROR DataAccessLayer.DAL.SelectOperation() - An Error occured! Exception detected!
+Incorrect syntax near '='.
+2016-09-08 01:28:28,025 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.068
+2016-09-08 01:28:28,026 [10] INFO  DataAccessLayer.DAL.DeleteOperation() - Query: DELETE FROM Chiamata WHERE DataOraInizioChiamata >0= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:28:28,027 [10] INFO  DataAccessLayer.DAL.DeleteOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:28:28,027 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Setting up ...
+2016-09-08 01:28:28,028 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:28:28,029 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query: DELETE FROM Chiamata WHERE DataOraInizioChiamata >0= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:28:28,029 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query execution starting ...
+2016-09-08 01:28:28,040 [10] INFO  DataAccessLayer.DAL.DeleteOperation() - An Error occured! Exception detected!
+2016-09-08 01:28:28,041 [10] ERROR DataAccessLayer.DAL.DeleteOperation() - An Error occured! Exception detected!
+Incorrect syntax near '='.
+2016-09-08 01:28:28,042 [10] INFO  DataAccessLayer.DAL.DeleteOperation() - Completed! Elapsed time 00:00:00.015
+2016-09-08 01:28:28,042 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >0= @dataInizio1 and DataOraInizioChiamata <= @dataInizio2 
+2016-09-08 01:28:28,042 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Params: dataInizio1=2016-01-23 13:00:10;dataInizio2=2016-01-25 13:00:10
+2016-09-08 01:28:28,043 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-08 01:28:28,043 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-08 01:28:28,043 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM Chiamata WHERE DataOraInizioChiamata >0= 2016-01-23 13:00:10 and DataOraInizioChiamata <= 2016-01-25 13:00:10 , 
+2016-09-08 01:28:28,044 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-08 01:28:28,051 [10] INFO  DataAccessLayer.DAL.SelectOperation() - An Error occured! Exception detected!
+2016-09-08 01:28:28,052 [10] ERROR DataAccessLayer.DAL.SelectOperation() - An Error occured! Exception detected!
+Incorrect syntax near '='.
+2016-09-08 01:28:28,052 [10] INFO  DataAccessLayer.DAL.SelectOperation() - Completed! Elapsed time 00:00:00.010
+2016-09-08 01:28:28,053 [10] INFO  TesteServizio.Program.Main() - Test Terminato!
