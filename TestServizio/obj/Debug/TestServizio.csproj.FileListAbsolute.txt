@@ -13,3 +13,4 @@ C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\GeneralPurposeLib.p
 C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.csprojResolveAssemblyReference.cache
 C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.exe
 C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.csprojResolveAssemblyReference.cache

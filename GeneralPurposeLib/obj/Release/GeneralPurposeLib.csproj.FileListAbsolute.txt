@@ -2,3 +2,7 @@ C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\GeneralPurpo
 C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\GeneralPurposeLib.pdb
 C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.dll
 C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\GeneralPurposeLib.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\GeneralPurposeLib.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.pdb

@@ -13,7 +13,7 @@ namespace TesteServizio
         {            
             log.Info("Avvio esecuzione Test ...");
 
-            DAL dal = new DAL();
+            DataAccessLayer.DAL dal = new DAL();
 
             string tabName = "Chiamata";
             Dictionary<string, DAL.OpValue> conditions = new Dictionary<string, DAL.OpValue>();

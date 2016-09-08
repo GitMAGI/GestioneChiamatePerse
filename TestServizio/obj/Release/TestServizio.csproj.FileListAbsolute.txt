@@ -12,3 +12,5 @@ C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\DAL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\IRISDAL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\GeneralPurposeLib.pdb
 C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Release\TestServizio.csprojResolveAssemblyReference.cache
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Release\TestServizio.csprojResolveAssemblyReference.cache
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Release\TestServizio.exe
