@@ -17,6 +17,8 @@ namespace DataAccessLayer
             Stopwatch tw = new Stopwatch();
             tw.Start();
 
+            log.Info("Starting ...");
+
             List<IDAL.VO.ChiamataVO> chiams = null;
             try
             {
@@ -58,6 +60,8 @@ namespace DataAccessLayer
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
+
+            log.Info("Starting ...");
 
             IDAL.VO.ChiamataVO chiam = null;
             try
@@ -102,6 +106,8 @@ namespace DataAccessLayer
             Stopwatch tw = new Stopwatch();
             tw.Start();
 
+            log.Info("Starting ...");
+
             IDAL.VO.ChiamataVO chiam = null;
             try
             {
@@ -144,6 +150,8 @@ namespace DataAccessLayer
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
+
+            log.Info("Starting ...");
 
             List<IDAL.VO.ChiamataVO> chiams = null;
             try
@@ -194,6 +202,8 @@ namespace DataAccessLayer
             Stopwatch tw = new Stopwatch();
             tw.Start();
 
+            log.Info("Starting ...");
+
             int result = -1;
 
             try
@@ -236,6 +246,10 @@ namespace DataAccessLayer
 
             return result;
         }
+        public int AddChiamate(List<ChiamataVO> data)
+        {
+            throw new NotImplementedException();
+        }
         public int DeleteChiamata(string esamidid)
         {
             Stopwatch tw = new Stopwatch();
@@ -256,6 +270,240 @@ namespace DataAccessLayer
 
                 result = DBSQL.ExecuteNonQueryWithParams(connectionString, query, pars);
 
+                log.Info(string.Format("Query Executed! Deleted {0} records!", result));
+            }
+            catch (Exception ex)
+            {
+                string msg = "An Error occured! Exception detected!";
+                log.Info(msg);
+                log.Error(msg + "\n" + ex.Message);
+            }
+
+            tw.Stop();
+
+            log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+
+            return result;
+        }
+        
+        public List<ChiamataVO> GetChiamateByRangeDate_(string begin, string end)
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting ...");
+
+            List<IDAL.VO.ChiamataVO> chiams = null;
+            try
+            {
+                string connectionString = this.GCPConnectionString;
+
+                string tabName = "[Chiamata]";
+                Dictionary<string, DBSQL.QueryCondition> conditions = new Dictionary<string, DBSQL.QueryCondition>();
+                conditions.Add("dataInizio1", new DBSQL.QueryCondition
+                {
+                    Key = "DataOraInizioChiamata",
+                    Op = DBSQL.Op.GreaterEqual,
+                    Conj = DBSQL.Conj.And,
+                    Value = begin
+                });
+                conditions.Add("dataInizio2", new DBSQL.QueryCondition
+                {
+                    Key = "DataOraInizioChiamata",
+                    Op = DBSQL.Op.LowerEqual,
+                    Conj = DBSQL.Conj.None,
+                    Value = end
+                });
+
+                DataTable data = DataAccessLayer.DBSQL.SelectOperation(connectionString, tabName, conditions);
+
+                log.Info(string.Format("Query Executed! Retrieved {0} records!", data.Rows.Count));
+
+                if (data != null)
+                {
+                    chiams = Mappers.ChiamataMapper.DataRowToVO(data.Rows);
+
+                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, chiams.First().GetType().ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = "An Error occured! Exception detected!";
+                log.Info(msg);
+                log.Error(msg + "\n" + ex.Message);
+            }
+
+            tw.Stop();
+
+            log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+
+            return chiams;           
+        }
+        public ChiamataVO GetChiamataByPk_(long idid)
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting ...");
+
+            IDAL.VO.ChiamataVO chiam = null;
+            try
+            {
+                string connectionString = this.GCPConnectionString;
+                string tabName = "[Chiamata]";                
+                
+                Dictionary<string, DBSQL.QueryCondition> conditions = new Dictionary<string, DBSQL.QueryCondition>();
+                conditions.Add("IDChiamata", new DBSQL.QueryCondition
+                {
+                    Key = "IDChiamata",
+                    Op = DBSQL.Op.LowerEqual,
+                    Conj = DBSQL.Conj.None,
+                    Value = idid
+                });
+
+                DataTable data = DataAccessLayer.DBSQL.SelectOperation(connectionString, tabName, conditions);
+                  
+                log.Info(string.Format("Query Executed! Retrieved {0} records!", data.Rows.Count));
+
+                if (data != null && data.Rows.Count == 1)
+                {
+                    DataRow row = data.Rows[0];
+
+                    chiam = Mappers.ChiamataMapper.DataRowToVO(row);
+
+                    log.Info(string.Format("Record mapped to {0}", chiam.GetType().ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = "An Error occured! Exception detected!";
+                log.Info(msg);
+                log.Error(msg + "\n" + ex.Message);
+            }
+
+            tw.Stop();
+
+            log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+
+            return chiam;
+        }
+        public ChiamataVO GetChiamataByExtPk_(long extidid)
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting ...");
+
+            IDAL.VO.ChiamataVO chiam = null;
+            try
+            {
+                string connectionString = this.GCPConnectionString;
+                string tabName = "[Chiamata]";
+
+                Dictionary<string, DBSQL.QueryCondition> conditions = new Dictionary<string, DBSQL.QueryCondition>();
+                conditions.Add("ExtIDChiamata", new DBSQL.QueryCondition
+                {
+                    Key = "ExtIDChiamata",
+                    Op = DBSQL.Op.LowerEqual,
+                    Conj = DBSQL.Conj.None,
+                    Value = extidid
+                });
+
+                DataTable data = DataAccessLayer.DBSQL.SelectOperation(connectionString, tabName, conditions);
+
+                log.Info(string.Format("Query Executed! Retrieved {0} records!", data.Rows.Count));
+
+                if (data != null && data.Rows.Count == 1)
+                {
+                    DataRow row = data.Rows[0];
+
+                    chiam = Mappers.ChiamataMapper.DataRowToVO(row);
+
+                    log.Info(string.Format("Record mapped to {0}", chiam.GetType().ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = "An Error occured! Exception detected!";
+                log.Info(msg);
+                log.Error(msg + "\n" + ex.Message);
+            }
+
+            tw.Stop();
+
+            log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+
+            return chiam;
+        }
+        public List<ChiamataVO> GetChiamateByStato_(int stato)
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting ...");
+
+            List<IDAL.VO.ChiamataVO> chiams = null;
+            try
+            {
+                string connectionString = this.GCPConnectionString;
+
+                string tabName = "[Chiamata]";
+                Dictionary<string, DBSQL.QueryCondition> conditions = new Dictionary<string, DBSQL.QueryCondition>();                
+                conditions.Add("stato", new DBSQL.QueryCondition
+                {
+                    Key = "Stato",
+                    Op = DBSQL.Op.LowerEqual,
+                    Conj = DBSQL.Conj.None,
+                    Value = stato
+                });
+
+                DataTable data = DBSQL.SelectOperation(connectionString, tabName, conditions);
+
+                log.Info(string.Format("Query Executed! Retrieved {0} records!", data.Rows.Count));
+
+                if (data != null)
+                {
+                    chiams = Mappers.ChiamataMapper.DataRowToVO(data.Rows);
+
+                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, chiams.First().GetType().ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = "An Error occured! Exception detected!";
+                log.Info(msg);
+                log.Error(msg + "\n" + ex.Message);
+            }
+
+            tw.Stop();
+
+            log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+
+            return chiams;
+        }
+        public int UpdateChiamataByExtPk_(ChiamataVO data, long extidid)
+        {
+            throw new NotImplementedException();
+        }
+        public int UpdateChiamataByPk_(ChiamataVO data, long idid)
+        {
+            throw new NotImplementedException();
+        } 
+        public int AddChiamata_(ChiamataVO data)
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting ...");
+
+            int result = -1;
+
+            try
+            {
+                string connectionString = this.GCPConnectionString;
+                string tabName = "[Chiamata]";
+                result = DBSQL.InsertOperation(connectionString, tabName, data);
+
                 log.Info(string.Format("Query Executed! Inserted {0} records!", result));
             }
             catch (Exception ex)
@@ -271,39 +519,23 @@ namespace DataAccessLayer
 
             return result;
         }
-
-        public struct OpValue
-        {
-            public string Key;
-            public string Op;
-            public object Value;
-            public string Conj;
-        }
-        public DataTable SelectOperation(string tabName, Dictionary<string, OpValue> conditions) 
+        public int AddChiamate_(List<ChiamataVO> data)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
 
-            DataTable data = null;
+            log.Info("Starting ...");
+
+            int result = -1;
 
             try
             {
                 string connectionString = this.GCPConnectionString;
+                string tabName = "[Chiamata]";
 
-                string query = "SELECT * FROM " + tabName + " WHERE " +
-                    string.Join(" ", conditions.Select(x => x.Value.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj).ToArray());
-                Dictionary<string, object> pars = new Dictionary<string, object>();
-                foreach (KeyValuePair<string, OpValue> entry in conditions)
-                {
-                    pars[entry.Key] = entry.Value.Value;
-                }
+                result = DBSQL.MultiInsertOperation(connectionString, tabName, data.Cast<object>().ToList());
 
-                log.Info(string.Format("Query: {0}", query));
-                log.Info(string.Format("Params: {0}", string.Join(";", pars.Select(x => x.Key + "=" + x.Value).ToArray())));
-
-                data = DataAccessLayer.DBSQL.ExecuteQueryWithParams(connectionString, query, pars);
-
-                log.Info(string.Format("Query Executed! Retrieved {0} records!", data.Rows.Count));                             
+                log.Info(string.Format("Query Executed! Inserted {0} records!", result));
             }
             catch (Exception ex)
             {
@@ -316,9 +548,9 @@ namespace DataAccessLayer
 
             log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
 
-            return data;
+            return result;
         }
-        public int InsertOperation(string tabName, object dataVO)
+        public int DeleteChiamata_(long esamidid)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -328,69 +560,19 @@ namespace DataAccessLayer
             try
             {
                 string connectionString = this.GCPConnectionString;
-
-                Dictionary<string, object> pars = new Dictionary<string, object>();
-
-                foreach (var prop in dataVO.GetType().GetProperties())
+                string tabName = "[Chiamata]";
+                Dictionary<string, DBSQL.QueryCondition> conditions = new Dictionary<string, DBSQL.QueryCondition>();
+                conditions.Add("IDChiamata", new DBSQL.QueryCondition
                 {
-                    if (prop.GetValue(dataVO, null) != null)
-                    {
-                        pars[prop.Name] = prop.GetValue(dataVO, null);
-                        //Console.WriteLine("{0}={1}", prop.Name, prop.GetValue(chiamata, null));
-                    }
-                }
+                    Key = "IDChiamata",
+                    Op = DBSQL.Op.Equal,
+                    Conj = DBSQL.Conj.None,
+                    Value = esamidid
+                });
 
-                string query = "INSERT INTO " + tabName + " (" +
-                    string.Join(", ", pars.Select(x => x.Key).ToArray()) +
-                    ") VALUES (" +
-                    string.Join(", ", pars.Select(x => "@" + x.Key).ToArray()) +
-                    ")";
+                result = DBSQL.DeleteOperation(connectionString, tabName, conditions);
 
-                log.Info(string.Format("Query: {0}", query));
-                log.Info(string.Format("Params: {0}", string.Join(";", pars.Select(x => x.Key + "=" + x.Value).ToArray())));
-
-                result = DBSQL.ExecuteNonQueryWithParams(connectionString, query, pars);
-
-                log.Info(string.Format("Query Executed! Inserted {0} records!", result));
-            }
-            catch (Exception ex)
-            {
-                string msg = "An Error occured! Exception detected!";
-                log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
-            }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return result;
-        }       
-        public int DeleteOperation(string tabName, Dictionary<string, OpValue> conditions) 
-        {
-            Stopwatch tw = new Stopwatch();
-            tw.Start();
-
-            int result = -1;
-
-            try
-            {
-                string connectionString = this.GCPConnectionString;
-
-                string query = "DELETE FROM " + tabName + " WHERE " +
-                    string.Join(" ", conditions.Select(x => x.Value.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj).ToArray());
-                Dictionary<string, object> pars = new Dictionary<string, object>();
-                foreach (KeyValuePair<string, OpValue> entry in conditions)
-                {
-                    pars[entry.Key] = entry.Value.Value;                       
-                }
-
-                log.Info(string.Format("Query: {0}", query));
-                log.Info(string.Format("Params: {0}", string.Join(";", pars.Select(x => x.Key + "=" + x.Value).ToArray())));
-
-                result = DBSQL.ExecuteNonQueryWithParams(connectionString, query, pars);
-
-                log.Info(string.Format("Query Executed! Inserted {0} records!", result));
+                log.Info(string.Format("Query Executed! Deleted {0} records!", result));
             }
             catch (Exception ex)
             {
@@ -405,60 +587,6 @@ namespace DataAccessLayer
 
             return result;
         }
-        public int UpdateOperation(string tabName, object dataVO, Dictionary<string, OpValue> conditions)
-        {
-            Stopwatch tw = new Stopwatch();
-            tw.Start();
-
-            int result = -1;
-
-            try
-            {
-                string connectionString = this.GCPConnectionString;
-
-                Dictionary<string, object> data = new Dictionary<string, object>();
-                foreach (var prop in dataVO.GetType().GetProperties())
-                {
-                    if (prop.GetValue(dataVO, null) != null)
-                    {
-                        data[prop.Name + "_toSet"] = prop.GetValue(dataVO, null);                        
-                    }
-                }
-
-                string query = "UPDATE " + tabName + 
-                    " SET " +
-                    string.Join(", ", data.Select(x => x.Key + " = " + "@" + x.Key + "_toSet").ToArray()) + 
-                    " WHERE " +
-                    string.Join(" ", conditions.Select(x => x.Value.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj).ToArray());
-                    //string.Join(" and ", conditions.Select(x => x.Key + x.Value.Op + "@" + x.Key).ToArray());
-                Dictionary<string, object> conditions_ = new Dictionary<string, object>();
-                foreach (KeyValuePair<string, OpValue> entry in conditions)
-                {
-                    conditions_[entry.Key] = entry.Value.Value;
-
-                }
-
-                Dictionary<string, object> pars = data.Concat(conditions_).ToDictionary(x => x.Key, x => x.Value);
-
-                log.Info(string.Format("Query: {0}", query));
-                log.Info(string.Format("Params: {0}", string.Join(";", pars.Select(x => x.Key + "=" + x.Value).ToArray())));
-
-                result = DBSQL.ExecuteNonQueryWithParams(connectionString, query, pars);
-
-                log.Info(string.Format("Query Executed! Inserted {0} records!", result));
-            }
-            catch (Exception ex)
-            {
-                string msg = "An Error occured! Exception detected!";
-                log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
-            }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return result;
-        }
+    
     }
 }

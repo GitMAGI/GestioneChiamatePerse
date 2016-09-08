@@ -59,6 +59,14 @@
       <Project>{a64ac362-2a93-4a7a-9cf6-06c0d0d377dd}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GeneralPurposeLib\GeneralPurposeLib.csproj">
+      <Project>{2122ccc2-d83c-4ce6-a358-c2e772e4f6df}</Project>
+      <Name>GeneralPurposeLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{ab3f8c7c-6fab-42a2-8c32-2efac7bb5f51}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

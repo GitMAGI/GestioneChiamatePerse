@@ -24,6 +24,8 @@ namespace GeneralPurposeLib
         {
             switch (Type.GetTypeCode(o.GetType()))
             {
+                case TypeCode.DateTime:
+                    return false;
                 case TypeCode.Byte:
                 case TypeCode.SByte:
                 case TypeCode.UInt16:
@@ -64,14 +66,16 @@ namespace GeneralPurposeLib
             int _l = 1;
             foreach (SqlParameter p in cmd.Parameters)
             {
-                string val_ = IsNumericType(p.DbType) == true ? p.Value.ToString() : "'" + p.Value.ToString() + "'";
+                string val_ = IsNumericType(p.DbType) ? p.Value.ToString() : string.Format("'{0}'", p.Value.ToString());
                 string par_ = "@" + p.ParameterName;
 
                 result = result.Replace(par_, val_);
 
+                /*
                 if (_l < cmd.Parameters.Count)
                     result += ", ";
                 _l++;
+                 * */
             }
 
             return result;

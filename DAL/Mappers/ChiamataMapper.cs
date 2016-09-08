@@ -31,19 +31,22 @@ namespace DataAccessLayer.Mappers
             DateTime trash;
 
             chia.CognomeChiamata = row["CognomeChiamata"] != DBNull.Value ? (string)row["CognomeChiamata"] : null;            
-            chia.DataOraFineChiamata = DateTime.TryParse((string)row["DataOraFineChiamata"], out trash) ? trash : DateTime.MinValue;
-            chia.DataOraInizioChiamata = DateTime.TryParse((string)row["DataOraInizioChiamata"], out trash) ? trash : DateTime.MinValue;
-            chia.DataOraOperazione = DateTime.TryParse((string)row["DataOraOperazione"], out trash) ? trash : DateTime.MinValue;
+            //chia.DataOraFineChiamata = DateTime.TryParse((string)row["DataOraFineChiamata"], out trash) ? trash : DateTime.MinValue;
+            chia.DataOraFineChiamata = row["DataOraFineChiamata"] != DBNull.Value ? (DateTime)row["DataOraFineChiamata"] : DateTime.MinValue;
+            //chia.DataOraInizioChiamata = DateTime.TryParse((string)row["DataOraInizioChiamata"], out trash) ? trash : DateTime.MinValue;
+            chia.DataOraFineChiamata = row["DataOraInizioChiamata"] != DBNull.Value ? (DateTime)row["DataOraInizioChiamata"] : DateTime.MinValue;
+            //chia.DataOraOperazione = DateTime.TryParse((string)row["DataOraOperazione"], out trash) ? trash : DateTime.MinValue;
+            chia.DataOraFineChiamata = row["DataOraOperazione"] != DBNull.Value ? (DateTime)row["DataOraOperazione"] : DateTime.MinValue;
             chia.ExtIDChiamata = row["ExtIDChiamata"] != DBNull.Value ? (long)row["ExtIDChiamata"] : 0;
-            chia.ExtIDOperatore = row["ExtIDOperatore"] != DBNull.Value ? (string)row["ExtIDOperatore"] : null;
+            chia.ExtIDOperatore = row["ExtIDOperatore"] != DBNull.Value ? (long)row["ExtIDOperatore"] : 0;
             chia.IDChiamata = row["IDChiamata"] != DBNull.Value ? (long)row["IDChiamata"] : 0;
-            chia.IDExtSollecitoChiamata = row["IDExtSollecitoChiamata"] != DBNull.Value ? (string)row["IDExtSollecitoChiamata"] : null;
+            chia.IDExtSollecitoChiamata = row["IDExtSollecitoChiamata"] != DBNull.Value ? (long)row["IDExtSollecitoChiamata"] : 0;
             chia.InfoChiamata = row["InfoChiamata"] != DBNull.Value ? (string)row["InfoChiamata"] : null;
             chia.IPOperazione = row["IPOperazione"] != DBNull.Value ? (string)row["IPOperazione"] : null;
             chia.MotivoChiamata = row["MotivoChiamata"] != DBNull.Value ? (string)row["MotivoChiamata"] : null;
             chia.NomeChiamata = row["NomeChiamata"] != DBNull.Value ? (string)row["NomeChiamata"] : null;
             chia.NumeroChiamata = row["NumeroChiamata"] != DBNull.Value ? (string)row["NumeroChiamata"] : null;
-            chia.priorita = row["priorita"] != DBNull.Value ? (int)row["priorita"] : 0;
+            chia.Priorita = row["priorita"] != DBNull.Value ? (int)row["priorita"] : 0;
             chia.Stato = row["Stato"] != DBNull.Value ? (int)row["Stato"] : 0;
 
             return chia;
