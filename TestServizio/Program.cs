@@ -39,9 +39,9 @@ namespace TesteServizio
 
             
             DAL dal = new DAL();
-            dal.GetChiamateByRangeDate_("2012-01-23 13:00:10", "2016-01-23 13:00:10");
-            dal.DeleteChiamata_(17);
-            dal.GetChiamateByRangeDate_("2012-01-23 13:00:10", "2016-01-23 13:00:10");
+            dal.GetChiamateByRangeDate(Convert.ToDateTime("2012-01-23 13:00:10"), Convert.ToDateTime("2016-01-23 13:00:10"));
+            //dal.DeleteChiamata_(17);
+            dal.GetChiamateByRangeDate(Convert.ToDateTime("2012-01-23 13:00:10"), Convert.ToDateTime("2016-01-23 13:00:10"));
             
 
             /*

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GeneralPurposeLib
 {
@@ -22,10 +18,13 @@ namespace GeneralPurposeLib
 
         static public bool IsNumericType(this object o)
         {
-            switch (Type.GetTypeCode(o.GetType()))
-            {
+            bool result = false;
+            var type = Type.GetTypeCode(o.GetType());
+            switch (type)
+            {                
                 case TypeCode.DateTime:
-                    return false;
+                    result=false;
+                    break;
                 case TypeCode.Byte:
                 case TypeCode.SByte:
                 case TypeCode.UInt16:
@@ -37,10 +36,13 @@ namespace GeneralPurposeLib
                 case TypeCode.Decimal:
                 case TypeCode.Double:
                 case TypeCode.Single:
-                    return true;
+                    result=true;
+                    break;
                 default:
-                    return false;
+                    result=false;
+                    break;
             }
+            return result;
         }
 
         static public string SQLCommand2String(SqlCommand cmd)

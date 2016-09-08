@@ -16,6 +16,6 @@ namespace IDAL
         int UpdateChiamataByExtPk(ChiamataVO data, long extidid);
         int UpdateChiamataByPk(ChiamataVO data, long idid);
         int AddChiamata(ChiamataVO data);
-        int DeleteChiamata(string esamidid);
+        int DeleteChiamata(long chimidid);
     }
 }

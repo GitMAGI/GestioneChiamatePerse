@@ -12,6 +12,7 @@ namespace DataAccessLayer
 {
     public partial class DAL
     {
+        /*
         public List<ChiamataVO> GetChiamateByRangeDate(DateTime begin, DateTime end)
         {
             Stopwatch tw = new Stopwatch();
@@ -250,7 +251,7 @@ namespace DataAccessLayer
         {
             throw new NotImplementedException();
         }
-        public int DeleteChiamata(string esamidid)
+        public int DeleteChiamata(string chiamidid)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -263,7 +264,7 @@ namespace DataAccessLayer
 
                 string query = "DELETE FROM [dbo].[Chiamata] WHERE IDChiamata = @IDChiamata";
                 Dictionary<string, object> pars = new Dictionary<string, object>();                                
-                pars["IDChiamata"] = esamidid;
+                pars["IDChiamata"] = chiamidid;
 
                 log.Info(string.Format("Query: {0}", query));
                 log.Info(string.Format("Params: {0}", string.Join(";", pars.Select(x => x.Key + "=" + x.Value).ToArray())));
@@ -285,8 +286,9 @@ namespace DataAccessLayer
 
             return result;
         }
+        */
         
-        public List<ChiamataVO> GetChiamateByRangeDate_(string begin, string end)
+        public List<ChiamataVO> GetChiamateByRangeDate(DateTime begin, DateTime end)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -339,7 +341,7 @@ namespace DataAccessLayer
 
             return chiams;           
         }
-        public ChiamataVO GetChiamataByPk_(long idid)
+        public ChiamataVO GetChiamataByPk(long idid)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -387,7 +389,7 @@ namespace DataAccessLayer
 
             return chiam;
         }
-        public ChiamataVO GetChiamataByExtPk_(long extidid)
+        public ChiamataVO GetChiamataByExtPk(long extidid)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -435,7 +437,7 @@ namespace DataAccessLayer
 
             return chiam;
         }
-        public List<ChiamataVO> GetChiamateByStato_(int stato)
+        public List<ChiamataVO> GetChiamateByStato(int stato)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -481,15 +483,15 @@ namespace DataAccessLayer
 
             return chiams;
         }
-        public int UpdateChiamataByExtPk_(ChiamataVO data, long extidid)
+        public int UpdateChiamataByExtPk(ChiamataVO data, long extidid)
         {
             throw new NotImplementedException();
         }
-        public int UpdateChiamataByPk_(ChiamataVO data, long idid)
+        public int UpdateChiamataByPk(ChiamataVO data, long idid)
         {
             throw new NotImplementedException();
         } 
-        public int AddChiamata_(ChiamataVO data)
+        public int AddChiamata(ChiamataVO data)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -519,7 +521,7 @@ namespace DataAccessLayer
 
             return result;
         }
-        public int AddChiamate_(List<ChiamataVO> data)
+        public int AddChiamate(List<ChiamataVO> data)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -550,7 +552,7 @@ namespace DataAccessLayer
 
             return result;
         }
-        public int DeleteChiamata_(long esamidid)
+        public int DeleteChiamata(long chiamidid)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -567,7 +569,7 @@ namespace DataAccessLayer
                     Key = "IDChiamata",
                     Op = DBSQL.Op.Equal,
                     Conj = DBSQL.Conj.None,
-                    Value = esamidid
+                    Value = chiamidid
                 });
 
                 result = DBSQL.DeleteOperation(connectionString, tabName, conditions);

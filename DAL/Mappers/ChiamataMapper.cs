@@ -27,9 +27,6 @@ namespace DataAccessLayer.Mappers
         public static IDAL.VO.ChiamataVO DataRowToVO(DataRow row)
         {
             IDAL.VO.ChiamataVO chia = new IDAL.VO.ChiamataVO();
-
-            DateTime trash;
-
             chia.CognomeChiamata = row["CognomeChiamata"] != DBNull.Value ? (string)row["CognomeChiamata"] : null;            
             //chia.DataOraFineChiamata = DateTime.TryParse((string)row["DataOraFineChiamata"], out trash) ? trash : DateTime.MinValue;
             chia.DataOraFineChiamata = row["DataOraFineChiamata"] != DBNull.Value ? (DateTime)row["DataOraFineChiamata"] : DateTime.MinValue;
