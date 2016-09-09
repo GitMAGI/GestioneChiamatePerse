@@ -1,0 +1,17 @@
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\DAL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\IBLL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\IRISDAL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\log4net.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\GeneralPurposeLib.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\DAL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\IBLL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\IRISDAL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\log4net.xml
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\GeneralPurposeLib.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\Newtonsoft.Json.xml

@@ -27,3 +27,9 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\GeneralPurpose
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.csprojResolveAssemblyReference.cache
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.exe
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\BusinessLogicLayer.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\IBLL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\BusinessLogicLayer.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\IBLL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\Newtonsoft.Json.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\Newtonsoft.Json.xml

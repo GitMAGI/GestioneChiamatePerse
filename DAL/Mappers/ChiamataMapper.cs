@@ -31,9 +31,9 @@ namespace DataAccessLayer.Mappers
             //chia.DataOraFineChiamata = DateTime.TryParse((string)row["DataOraFineChiamata"], out trash) ? trash : DateTime.MinValue;
             chia.DataOraFineChiamata = row["DataOraFineChiamata"] != DBNull.Value ? (DateTime)row["DataOraFineChiamata"] : DateTime.MinValue;
             //chia.DataOraInizioChiamata = DateTime.TryParse((string)row["DataOraInizioChiamata"], out trash) ? trash : DateTime.MinValue;
-            chia.DataOraFineChiamata = row["DataOraInizioChiamata"] != DBNull.Value ? (DateTime)row["DataOraInizioChiamata"] : DateTime.MinValue;
+            chia.DataOraInizioChiamata = row["DataOraInizioChiamata"] != DBNull.Value ? (DateTime)row["DataOraInizioChiamata"] : DateTime.MinValue;
             //chia.DataOraOperazione = DateTime.TryParse((string)row["DataOraOperazione"], out trash) ? trash : DateTime.MinValue;
-            chia.DataOraFineChiamata = row["DataOraOperazione"] != DBNull.Value ? (DateTime)row["DataOraOperazione"] : DateTime.MinValue;
+            chia.DataOraOperazione = row["DataOraOperazione"] != DBNull.Value ? (DateTime)row["DataOraOperazione"] : DateTime.MinValue;
             chia.ExtIDChiamata = row["ExtIDChiamata"] != DBNull.Value ? (long)row["ExtIDChiamata"] : 0;
             chia.ExtIDOperatore = row["ExtIDOperatore"] != DBNull.Value ? (long)row["ExtIDOperatore"] : 0;
             chia.IDChiamata = row["IDChiamata"] != DBNull.Value ? (long)row["IDChiamata"] : 0;

@@ -71,6 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="PO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -79,6 +81,24 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{784b7562-1f51-4fe5-b3f3-2eee12e4cf0d}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DataAccessLayer.csproj">
+      <Project>{a64ac362-2a93-4a7a-9cf6-06c0d0d377dd}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IBLL\IBLL.csproj">
+      <Project>{3387cdb0-421d-41da-843d-0948aab955c9}</Project>
+      <Name>IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{ab3f8c7c-6fab-42a2-8c32-2efac7bb5f51}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
