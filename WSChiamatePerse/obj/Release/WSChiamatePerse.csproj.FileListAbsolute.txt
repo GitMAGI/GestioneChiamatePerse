@@ -10,3 +10,17 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\WSChiamatePerse.p
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.csprojResolveAssemblyReference.cache
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\BusinessLogicLayer.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\DAL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\GeneralPurposeLib.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\IBLL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\IRISDAL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\Newtonsoft.Json.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\log4net.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\BusinessLogicLayer.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\DAL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\GeneralPurposeLib.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\IBLL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\IRISDAL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\Newtonsoft.Json.xml
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\log4net.xml

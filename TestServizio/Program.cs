@@ -18,6 +18,7 @@ namespace TesteServizio
 
             DAL dal = new DAL();
             BLL bll = new BLL(dal);
+            /*
             string inizio = "2011-05-01 00:09:19";
             string fine = "2016-01-01 00:01:05";
             List<IDAL.VO.ChiamataVO> vos = dal.GetChiamateByRangeDate(Convert.ToDateTime(inizio), Convert.ToDateTime(fine));
@@ -28,7 +29,8 @@ namespace TesteServizio
             List<IBLL.DTO.ChiamataDTO> dtos = BusinessLogicLayer.Mappers.ChiamataMapper.JsonArrayToDTOList(jsonvos);
             int res = bll.AddChiamate(dtos);
             log.Debug(res);
-
+            */
+              
             log.Info("Test Terminato!");
 
             Console.WriteLine("Premere un tasto per terminare ....");

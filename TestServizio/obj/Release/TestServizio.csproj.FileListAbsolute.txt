@@ -26,3 +26,9 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\log4net.xml
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\GeneralPurposeLib.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Release\TestServizio.exe
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Release\TestServizio.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\BusinessLogicLayer.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\IBLL.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\Newtonsoft.Json.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\BusinessLogicLayer.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\IBLL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\Newtonsoft.Json.xml

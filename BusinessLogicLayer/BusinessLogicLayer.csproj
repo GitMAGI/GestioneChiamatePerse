@@ -34,10 +34,6 @@
       <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,6 +53,10 @@
     <ProjectReference Include="..\DAL\DataAccessLayer.csproj">
       <Project>{a64ac362-2a93-4a7a-9cf6-06c0d0d377dd}</Project>
       <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneralPurposeLib\GeneralPurposeLib.csproj">
+      <Project>{2122ccc2-d83c-4ce6-a358-c2e772e4f6df}</Project>
+      <Name>GeneralPurposeLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\IBLL\IBLL.csproj">
       <Project>{3387cdb0-421d-41da-843d-0948aab955c9}</Project>

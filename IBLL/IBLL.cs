@@ -11,6 +11,6 @@ namespace IBLL
         int UpdateChiamataByPk(ChiamataDTO data, long idid);
         int AddChiamata(ChiamataDTO data);
         int AddChiamate(List<ChiamataDTO> data);
-        int DeleteChiamata(string esamidid);
+        int DeleteChiamata(long esamidid);
     }
 }
