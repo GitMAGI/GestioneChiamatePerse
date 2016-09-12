@@ -65,7 +65,7 @@ namespace GeneralPurposeLib
             string result = "";
 
             result = cmd.CommandText;
-            int _l = 1;
+            //int _l = 1;
             foreach (SqlParameter p in cmd.Parameters)
             {
                 string val_ = IsNumericType(p.DbType) ? p.Value.ToString() : string.Format("'{0}'", p.Value.ToString());

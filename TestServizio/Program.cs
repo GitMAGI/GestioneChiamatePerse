@@ -1,40 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using BusinessLogicLayer;
-using DataAccessLayer;
-using IBLL.DTO;
-using Newtonsoft.Json;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace TesteServizio
+
+namespace TestServizio
 {
     class Program
     {
-        public static readonly log4net.ILog log =
-           log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
         static void Main(string[] args)
-        {            
-            log.Info("Avvio esecuzione Test ...");
+        {
+            System.Console.WriteLine("Avvio test ...");
 
-            DAL dal = new DAL();
-            BLL bll = new BLL(dal);
-            /*
-            string inizio = "2011-05-01 00:09:19";
-            string fine = "2016-01-01 00:01:05";
-            List<IDAL.VO.ChiamataVO> vos = dal.GetChiamateByRangeDate(Convert.ToDateTime(inizio), Convert.ToDateTime(fine));
-            string jsonvos = JsonConvert.SerializeObject(vos);
-            log.Debug(jsonvos);
+            WSChiamatePerse.ChiamataSOi testR = new WSChiamatePerse.ChiamataSOi();
+            testR.CognomeChiamata = "Boriellieri";
+            testR.NomeChiamata = "Marcella";
+            testR.NumeroChiamata = "44222390";
+            testR.MotivoChiamata = "Reclamo!";
+            testR.ExtIDChiamata = null;
+            testR.DataOraInizioChiamata = Convert.ToDateTime("2015-11-21 14:07:47");
+            testR.DataOraFineChiamata = Convert.ToDateTime("2015-1-21 14:13:14");
+            testR.Priorita = 1;
+            testR.ExtIDOperatore = 3209;
 
+            WSChiamatePerse.GestioneChiamateClient client = new WSChiamatePerse.GestioneChiamateClient();
 
-            List<IBLL.DTO.ChiamataDTO> dtos = BusinessLogicLayer.Mappers.ChiamataMapper.JsonArrayToDTOList(jsonvos);
-            int res = bll.AddChiamate(dtos);
-            log.Debug(res);
-            */
-              
-            log.Info("Test Terminato!");
+            WSChiamatePerse.ResponseInsert rsp = client.InserisciChiamateOO(testR);
 
-            Console.WriteLine("Premere un tasto per terminare ....");
-            Console.ReadKey();
+            System.Console.WriteLine("Test Concluso. Premere un tasto per terminare!");
+            System.Console.ReadKey();
         }
     }
 }

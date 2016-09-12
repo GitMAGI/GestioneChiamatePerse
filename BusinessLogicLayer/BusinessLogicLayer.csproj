@@ -50,8 +50,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DataAccessLayer.csproj">
-      <Project>{a64ac362-2a93-4a7a-9cf6-06c0d0d377dd}</Project>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{e94d5d5d-e3b7-4b8b-88f7-7b6a43b9e8a4}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\GeneralPurposeLib\GeneralPurposeLib.csproj">
@@ -65,10 +65,6 @@
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{ab3f8c7c-6fab-42a2-8c32-2efac7bb5f51}</Project>
       <Name>IDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OperationStatusNotifier\OperationStatusNotifier.csproj">
-      <Project>{8ff36043-e78c-46c5-bcc5-883dd716d23c}</Project>
-      <Name>OperationStatusNotifier</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

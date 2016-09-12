@@ -49,6 +49,7 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,25 +69,23 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.svc" />
+    <Content Include="GestioneChiamate.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestFunctionality.cs" />
     <Compile Include="Mappers\ChiamataMapper.cs" />
-    <Compile Include="ServiceObject\ChiamataSO.cs" />
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
+    <Compile Include="GestioneChiamate.svc.cs">
+      <DependentUpon>GestioneChiamate.svc</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="IGestioneChiamate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validators\ChiamataValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\WSChiamatePerse.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -99,8 +98,8 @@
       <Project>{784b7562-1f51-4fe5-b3f3-2eee12e4cf0d}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\DataAccessLayer.csproj">
-      <Project>{a64ac362-2a93-4a7a-9cf6-06c0d0d377dd}</Project>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{e94d5d5d-e3b7-4b8b-88f7-7b6a43b9e8a4}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\GeneralPurposeLib\GeneralPurposeLib.csproj">
@@ -114,10 +113,6 @@
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{ab3f8c7c-6fab-42a2-8c32-2efac7bb5f51}</Project>
       <Name>IDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OperationStatusNotifier\OperationStatusNotifier.csproj">
-      <Project>{8ff36043-e78c-46c5-bcc5-883dd716d23c}</Project>
-      <Name>OperationStatusNotifier</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

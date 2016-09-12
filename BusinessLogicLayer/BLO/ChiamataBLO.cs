@@ -24,20 +24,20 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("Operation computed for {0} items!", chiams_.Count));
                 chiams = ChiamataMapper.VOListToDTOList(chiams_);
                 log.Info(string.Format("{0} items of {1} mapped to {2}", chiams.Count, chiams_.First().GetType().ToString(), chiams.First().GetType().ToString()));
+                return chiams; 
             }
             catch (Exception ex)
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
                 log.Error(msg, ex);
-                //log.Error(msg + "\n" + ex.Message);
+                throw;
             }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return chiams;        
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }
         }
         
         public int UpdateChiamataByExtPk(ChiamataDTO data, long extidid)
@@ -55,20 +55,20 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("{0} items of {1} mapped to {2}", 1, data.GetType().ToString(), data_.GetType().ToString()));
                 result = this.dal.UpdateChiamataByExtPk(data_, extidid);
                 log.Info(string.Format("Operation computed for {0} items!", result));
+                return result;
             }
             catch (Exception ex)
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
                 log.Error(msg, ex);
-                //log.Error(msg + "\n" + ex.Message);
+                throw;
             }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return result; 
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }
         }
         public int UpdateChiamataByPk(ChiamataDTO data, long idid)
         {
@@ -85,20 +85,21 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("{0} items of {1} mapped to {2}", 1, data.GetType().ToString(), data_.GetType().ToString()));
                 result = this.dal.UpdateChiamataByPk(data_, idid);
                 log.Info(string.Format("Operation computed for {0} items!", result));
+                return result; 
             }
             catch (Exception ex)
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
                 log.Error(msg, ex);
-                //log.Error(msg + "\n" + ex.Message);
+                throw;
             }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return result; 
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }
+            
         }
         
         public int AddChiamata(ChiamataDTO data)
@@ -116,20 +117,20 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("{0} items of {1} mapped to {2}", 1, data.GetType().ToString(), data_.GetType().ToString()));
                 result = this.dal.AddChiamata(data_);
                 log.Info(string.Format("Operation computed for {0} items!", result));
+                return result;   
             }
             catch (Exception ex)
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
                 log.Error(msg, ex);
-                //log.Error(msg + "\n" + ex.Message);
+                throw;
             }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return result;   
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }
         }
         public int AddChiamate(List<ChiamataDTO> data)
         {
@@ -146,20 +147,20 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("{0} items of {1} mapped to {2}", data.Count, data_.First().GetType().ToString(), data.First().GetType().ToString()));
                 result = this.dal.AddChiamate(data_);
                 log.Info(string.Format("Operation computed for {0} items!", result));
+                return result;
             }
             catch (Exception ex)
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
                 log.Error(msg, ex);
-                //log.Error(msg + "\n" + ex.Message);
+                throw;
             }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return result;   
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }  
         }
         public int AddChiamate(ChiamataDTO[] data)
         {
@@ -183,20 +184,20 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("{0} items of {1} mapped to {2}", dataDTO.Count, data_.First().GetType().ToString(), dataDTO.First().GetType().ToString()));
                 result = this.dal.AddChiamate(data_);
                 log.Info(string.Format("Operation computed for {0} items!", result));
+                return result;  
             }
             catch (Exception ex)
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
                 log.Error(msg, ex);
-                //log.Error(msg + "\n" + ex.Message);
+                throw;
             }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return result;   
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }            
         }
 
         public int DeleteChiamata(long chiamidid)
@@ -212,20 +213,20 @@ namespace BusinessLogicLayer
             {
                 result = this.dal.DeleteChiamata(chiamidid);
                 log.Info(string.Format("Operation computed for {0} items!", result));
+                return result; 
             }
             catch (Exception ex)
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
                 log.Error(msg, ex);
-                //log.Error(msg + "\n" + ex.Message);
+                throw;
             }
-
-            tw.Stop();
-
-            log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
-
-            return result; 
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }                 
         }
     }
 }

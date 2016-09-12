@@ -1,7 +1,0 @@
-C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Debug\TesteServizio.exe.config
-C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Debug\TesteServizio.exe
-C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Debug\TesteServizio.pdb
-C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Debug\log4net.dll
-C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\bin\Debug\log4net.xml
-C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\obj\Debug\TesteServizio.exe
-C:\Workspace\C#\GestioneChiamatePerse\TesteServizio\obj\Debug\TesteServizio.pdb

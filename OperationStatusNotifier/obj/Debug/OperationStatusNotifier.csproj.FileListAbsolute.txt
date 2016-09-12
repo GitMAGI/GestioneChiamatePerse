@@ -1,5 +1,0 @@
-C:\Workspace\C#\GestioneChiamatePerse\OperationStatusNotifier\bin\Debug\OperationStatusNotifier.dll
-C:\Workspace\C#\GestioneChiamatePerse\OperationStatusNotifier\bin\Debug\OperationStatusNotifier.pdb
-C:\Workspace\C#\GestioneChiamatePerse\OperationStatusNotifier\obj\Debug\OperationStatusNotifier.csprojResolveAssemblyReference.cache
-C:\Workspace\C#\GestioneChiamatePerse\OperationStatusNotifier\obj\Debug\OperationStatusNotifier.dll
-C:\Workspace\C#\GestioneChiamatePerse\OperationStatusNotifier\obj\Debug\OperationStatusNotifier.pdb
