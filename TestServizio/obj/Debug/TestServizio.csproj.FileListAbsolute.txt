@@ -3,3 +3,8 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\TestServizio.e
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Debug\TestServizio.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.exe
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\TestServizio.exe.config
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.exe
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\obj\Debug\TestServizio.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\TestServizio.exe
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Debug\TestServizio.pdb

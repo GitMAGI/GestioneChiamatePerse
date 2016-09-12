@@ -33,19 +33,25 @@ namespace WSChiamatePerse
 
         public ResponseInsert InserisciChiamateJO(string jsonArray)
         {
+            log.Info("Starting procedure...");
+            string tmp_ = jsonArray != null ? jsonArray.GetType().ToString() : "Null";
+            log.Debug(string.Format("Data passed to the function is {0}", tmp_));
             ResponseInsert response = new ResponseInsert();
             response.success = false;
             response.AffectedRows = -1;
 
             try
             {
+                log.Info("Starting Validation structure ...");
                 // Validations of structure, parsing and building of the SOs
                 List<ChiamataSOi> sos = Mappers.ChiamataMapper.JsonArrayToSOList(jsonArray);
+                log.Info("Validation of contraints Successful!");
+                log.Info(string.Format("Mapped {0} items!", sos.Count));
                 response = InserisciChiamateLOO(sos);
             }
             catch (AggregateException exs)
             {
-                string msg = "Errors Occurred!\n" + exs.Flatten().Message;
+                string msg = "Errors Occurred! " + exs.Flatten().Message;
                 log.Error(msg);
                 response.success = false;
                 response.AffectedRows = -1;
@@ -72,7 +78,7 @@ namespace WSChiamatePerse
             }
             catch (AggregateException exs)
             {
-                string msg = "Errors Occurred!\n" + exs.Flatten().Message;
+                string msg = "Errors Occurred! " + exs.Flatten().Message;
                 log.Error(msg);
             }
 
@@ -82,20 +88,26 @@ namespace WSChiamatePerse
         public ResponseInsert InserisciChiamateLOO(List<ChiamataSOi> data)
         {
             ResponseInsert response = new ResponseInsert();
-
+            string tmp_ = data != null ? data.GetType().ToString() : "Null";
+            log.Debug(string.Format("Data passed to the function is {0}", tmp_));
             try
             {
+                log.Info("Starting Validation of contraints (Not null, max length, ...)");
                 // Validations of constraints
                 var context = new ValidationContext(data, serviceProvider: null, items: null);
                 var results = new List<ValidationResult>();
                 if (Validator.TryValidateObject(data, context, results))
                 {
+                    log.Info("Validation of contraints Successful!");
                     List<ChiamataDTO> dtos = Mappers.ChiamataMapper.SOListToDTOList(data);
+                    log.Info("Mapping Successful!");
                     response.AffectedRows = bll.AddChiamate(dtos);
+                    log.Info("Request completed! Response Object built!");
                     response.success = true;
                 }
                 else
                 {
+                    log.Info("Validation of contraints Failed!");
                     int count = 0;
                     string msg = string.Empty;
                     foreach (var validationResult in results)
@@ -103,11 +115,11 @@ namespace WSChiamatePerse
                         string tmp = string.Format("Checks validation failure: {0}", validationResult.ErrorMessage);
                         msg += tmp;
                         if (count < results.Count)
-                            msg += "\n";
+                            msg += " ";
                         count++;
                     }
 
-                    response.AddError("Data validation failed!\n" + msg);
+                    response.AddError("Data validation failed! " + msg);
                     response.success = false;
                     response.AffectedRows = -1;
                     log.Error(msg);
@@ -116,7 +128,7 @@ namespace WSChiamatePerse
             }
             catch (AggregateException exs)
             {
-                string msg = "Errors Occurred!\n" + exs.Flatten().Message;
+                string msg = "Errors Occurred! " + exs.Flatten().Message;
                 response.AddError(msg);
                 response.success = false;
                 response.AffectedRows = -1;
@@ -124,7 +136,7 @@ namespace WSChiamatePerse
             }
             catch (Exception ex)
             {
-                string msg = "Errors Occurred!\n" + ex.Message;
+                string msg = "Errors Occurred! " + ex.Message;
                 response.AddError(msg);
                 response.success = false;
                 response.AffectedRows = -1;
@@ -169,9 +181,14 @@ namespace WSChiamatePerse
 
         public ResponseInsert InserisciChiamateOO(ChiamataSOi data)
         {
+            log.Info("Starting procedure...");
+            string tmp_ = data != null ? data.GetType().ToString() : "Null";
+            log.Debug(string.Format("Data passed to the function is {0}", tmp_));           
             List<ChiamataSOi> sos = new List<ChiamataSOi>();
             sos.Add(data);
+            log.Info("List of data object built!");
             ResponseInsert response = InserisciChiamateLOO(sos);
+            log.Info("Procedure completed!");
             return response;
         }
         public string InserisciChiamateOJ(ChiamataSOi data)

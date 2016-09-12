@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WSChiamatePerse" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WSChiamatePerse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:41000/GestioneChiamate.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ResponseInsert">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AffectedRows" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResponseInsert" nillable="true" type="tns:ResponseInsert" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Errors" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Infos" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Warnings" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="ArrayOfChiamataSOi">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChiamataSOi" nillable="true" type="tns:ChiamataSOi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChiamataSOi" nillable="true" type="tns:ArrayOfChiamataSOi" />
+  <xs:complexType name="ChiamataSOi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CognomeChiamata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataOraFineChiamata" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataOraInizioChiamata" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExtIDChiamata" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ExtIDOperatore" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IDExtSollecitoChiamata" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="InfoChiamata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MotivoChiamata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomeChiamata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroChiamata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priorita" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChiamataSOi" nillable="true" type="tns:ChiamataSOi" />
+</xs:schema>

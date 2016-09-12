@@ -202,7 +202,7 @@ namespace DataAccessLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg + " " + ex.Message);
                 throw;
             }
             finally
@@ -250,7 +250,7 @@ namespace DataAccessLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg + " " + ex.Message);
                 throw;
             }
             finally
@@ -328,7 +328,7 @@ namespace DataAccessLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg + " " + ex.Message);
                 throw;
             }
             finally
@@ -367,7 +367,7 @@ namespace DataAccessLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg + " " + ex.Message);
                 throw;
             }
             finally
@@ -423,7 +423,7 @@ namespace DataAccessLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg + " " + ex.Message);
                 throw;
             }
             finally
