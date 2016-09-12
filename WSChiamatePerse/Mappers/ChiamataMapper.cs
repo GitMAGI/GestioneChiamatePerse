@@ -2,8 +2,6 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace WSChiamatePerse.Mappers
 {
@@ -13,25 +11,21 @@ namespace WSChiamatePerse.Mappers
         {
             IBLL.DTO.ChiamataDTO dto = new IBLL.DTO.ChiamataDTO();
 
-            DateTime trash;
-            long trash_;
-            int trash__;
-
             dto.CognomeChiamata = jObject["CognomeChiamata"] != null ? (string)jObject["CognomeChiamata"] : null;
-            dto.DataOraFineChiamata = DateTime.TryParse((string)jObject["DataOraFineChiamata"], out trash) ? trash : DateTime.MinValue;
-            dto.DataOraInizioChiamata = DateTime.TryParse((string)jObject["DataOraInizioChiamata"], out trash) ? trash : DateTime.MinValue;
+            dto.DataOraInizioChiamata = jObject["DataOraInizioChiamata"] != null ? DateTime.Parse((string)jObject["DataOraInizioChiamata"]) : (DateTime?)null;
+            dto.DataOraFineChiamata = jObject["DataOraFineChiamata"] != null ? DateTime.Parse((string)jObject["DataOraFineChiamata"]) : (DateTime?)null;
             dto.DataOraOperazione = DateTime.Now;
-            dto.ExtIDChiamata = long.TryParse((string)jObject["ExtIDChiamata"], out trash_) ? trash_ : 0;
-            dto.ExtIDOperatore = long.TryParse((string)jObject["ExtIDOperatore"], out trash_) ? trash_ : 0;
-            dto.IDChiamata = long.TryParse((string)jObject["IDChiamata"], out trash_) ? trash_ : 0;
-            dto.IDExtSollecitoChiamata = long.TryParse((string)jObject["IDExtSollecitoChiamata"], out trash_) ? trash_ : 0;
+            dto.ExtIDChiamata = jObject["ExtIDChiamata"] != null ? long.Parse((string)jObject["ExtIDChiamata"]) : (long?)null;
+            dto.ExtIDOperatore = jObject["ExtIDOperatore"] != null ? long.Parse((string)jObject["ExtIDOperatore"]) : (long?)null;
+            dto.IDChiamata = jObject["IDChiamata"] != null ? long.Parse((string)jObject["IDChiamata"]) : (long?)null;
+            dto.IDExtSollecitoChiamata = jObject["IDExtSollecitoChiamata"] != null ? long.Parse((string)jObject["IDExtSollecitoChiamata"]) : (long?)null;
             dto.InfoChiamata = jObject["InfoChiamata"] != null ? (string)jObject["InfoChiamata"] : null;
             dto.IPOperazione = jObject["IPOperazione"] != null ? (string)jObject["IPOperazione"] : null;
             dto.MotivoChiamata = jObject["MotivoChiamata"] != null ? (string)jObject["MotivoChiamata"] : null;
             dto.NomeChiamata = jObject["NomeChiamata"] != null ? (string)jObject["NomeChiamata"] : null;
             dto.NumeroChiamata = jObject["NumeroChiamata"] != null ? (string)jObject["NumeroChiamata"] : null;
-            dto.Priorita = int.TryParse((string)jObject["Priorita"], out trash__) ? trash__ : 0;
-            dto.Stato = int.TryParse((string)jObject["Stato"], out trash__) ? trash__ : 0;
+            dto.Priorita = jObject["Priorita"] != null ? int.Parse((string)jObject["Priorita"]) : (int?)null;
+            dto.Stato = jObject["Stato"] != null ? int.Parse((string)jObject["Stato"]) : (int?)null;
 
             return dto;
         }
@@ -41,7 +35,6 @@ namespace WSChiamatePerse.Mappers
 
             JObject jObject = JObject.Parse(jsonObj);
             JToken jToken = jObject.First;
-            //JToken jToken = JToken.Parse(jsonObj);
 
             dto = JTokenToDTO(jToken);
 
@@ -68,7 +61,7 @@ namespace WSChiamatePerse.Mappers
 
             return json;
         }
-        public static string DTOListToJsonObject(IBLL.DTO.ChiamataDTO dto)
+        public static string DTOToJsonObject(IBLL.DTO.ChiamataDTO dto)
         {
             string json = null;
 
@@ -76,6 +69,5 @@ namespace WSChiamatePerse.Mappers
 
             return json;
         }
-
     }
 }

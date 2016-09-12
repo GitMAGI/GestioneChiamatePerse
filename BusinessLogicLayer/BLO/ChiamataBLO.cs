@@ -3,8 +3,6 @@ using IDAL.VO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
 using BusinessLogicLayer.Mappers;
 
@@ -31,7 +29,8 @@ namespace BusinessLogicLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg, ex);
+                //log.Error(msg + "\n" + ex.Message);
             }
 
             tw.Stop();
@@ -61,7 +60,8 @@ namespace BusinessLogicLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg, ex);
+                //log.Error(msg + "\n" + ex.Message);
             }
 
             tw.Stop();
@@ -90,7 +90,8 @@ namespace BusinessLogicLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg, ex);
+                //log.Error(msg + "\n" + ex.Message);
             }
 
             tw.Stop();
@@ -120,7 +121,8 @@ namespace BusinessLogicLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg, ex);
+                //log.Error(msg + "\n" + ex.Message);
             }
 
             tw.Stop();
@@ -149,7 +151,8 @@ namespace BusinessLogicLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg, ex);
+                //log.Error(msg + "\n" + ex.Message);
             }
 
             tw.Stop();
@@ -185,7 +188,8 @@ namespace BusinessLogicLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg, ex);
+                //log.Error(msg + "\n" + ex.Message);
             }
 
             tw.Stop();
@@ -213,7 +217,8 @@ namespace BusinessLogicLayer
             {
                 string msg = "An Error occured! Exception detected!";
                 log.Info(msg);
-                log.Error(msg + "\n" + ex.Message);
+                log.Error(msg, ex);
+                //log.Error(msg + "\n" + ex.Message);
             }
 
             tw.Stop();

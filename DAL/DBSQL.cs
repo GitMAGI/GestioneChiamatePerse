@@ -32,6 +32,7 @@ namespace DataAccessLayer
                 connection.Open();
                 log.Info(string.Format("Query: {0}", sql));
                 log.Info(string.Format("Query execution starting ..."));
+
                 using (var reader = cmd.ExecuteReader())
                 {
                     dataTable = new DataTable();

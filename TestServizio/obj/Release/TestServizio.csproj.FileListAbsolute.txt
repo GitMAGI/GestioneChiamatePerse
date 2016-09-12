@@ -32,3 +32,11 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\Newtonsoft.J
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\BusinessLogicLayer.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\IBLL.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestServizio\bin\Release\Newtonsoft.Json.xml
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\BusinessLogicLayer.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\IBLL.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\Newtonsoft.Json.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\OperationStatusNotifier.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\BusinessLogicLayer.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\IBLL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\Newtonsoft.Json.xml
+C:\Workspace\C#\GestioneChiamatePerse\TestServizio\bin\Release\OperationStatusNotifier.pdb

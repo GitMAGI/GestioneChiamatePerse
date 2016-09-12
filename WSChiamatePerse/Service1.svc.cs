@@ -12,6 +12,8 @@ namespace WSChiamatePerse
     // NOTA: per avviare il client di prova WCF per testare il servizio, selezionare Service1.svc o Service1.svc.cs in Esplora soluzioni e avviare il debug.
     public class Service1 : IService1
     {
+        public static readonly OperationStatusNotifier.Notifier globalNotfier = OperationStatusNotifier.Notifier.GetNotifier(new Guid());
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);

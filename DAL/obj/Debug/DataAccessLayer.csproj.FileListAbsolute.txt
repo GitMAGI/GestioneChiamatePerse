@@ -20,3 +20,5 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\DAL\bin\Debug\log4net.xml
 C:\Workspace\repo\c#\GestioneChiamatePerse\DAL\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Workspace\repo\c#\GestioneChiamatePerse\DAL\obj\Debug\DAL.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\DAL\obj\Debug\DAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Debug\OperationStatusNotifier.dll
+C:\Workspace\C#\GestioneChiamatePerse\DAL\bin\Debug\OperationStatusNotifier.pdb

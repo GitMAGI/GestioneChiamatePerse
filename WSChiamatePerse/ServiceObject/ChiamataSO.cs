@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace WSChiamatePerse.PO
+namespace WSChiamatePerse.ServiceObjects
 {
-    public class ChiamataPO
+    public class ChiamataSO
     {
         public long? IDChiamata { get { return this.IDChiamata; } }
         public long? ExtIDChiamata { get; set; }

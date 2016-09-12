@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,12 +74,13 @@
   <ItemGroup>
     <Compile Include="TestFunctionality.cs" />
     <Compile Include="Mappers\ChiamataMapper.cs" />
-    <Compile Include="PO\ChiamataPO.cs" />
+    <Compile Include="ServiceObject\ChiamataSO.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\ChiamataValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -112,6 +114,10 @@
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{ab3f8c7c-6fab-42a2-8c32-2efac7bb5f51}</Project>
       <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OperationStatusNotifier\OperationStatusNotifier.csproj">
+      <Project>{8ff36043-e78c-46c5-bcc5-883dd716d23c}</Project>
+      <Name>OperationStatusNotifier</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

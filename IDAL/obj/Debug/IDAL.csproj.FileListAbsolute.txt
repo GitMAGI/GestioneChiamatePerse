@@ -19,3 +19,4 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\bin\Debug\log4net.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\bin\Debug\log4net.xml
 C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\obj\Debug\IRISDAL.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\IDAL\obj\Debug\IRISDAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache

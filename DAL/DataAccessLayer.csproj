@@ -63,6 +63,10 @@
       <Project>{ab3f8c7c-6fab-42a2-8c32-2efac7bb5f51}</Project>
       <Name>IDAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OperationStatusNotifier\OperationStatusNotifier.csproj">
+      <Project>{8ff36043-e78c-46c5-bcc5-883dd716d23c}</Project>
+      <Name>OperationStatusNotifier</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
