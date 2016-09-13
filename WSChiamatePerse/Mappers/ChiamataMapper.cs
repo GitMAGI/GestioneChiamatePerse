@@ -7,141 +7,7 @@ using System.Collections.Generic;
 namespace WSChiamatePerse.Mappers
 {
     public class ChiamataMapper
-    {
-        /*
-        public static ChiamataDTO JTokenToDTO(JToken jObject)
-        {
-            ChiamataDTO dto = new ChiamataDTO();
-
-            dto.CognomeChiamata = jObject["CognomeChiamata"] != null ? (string)jObject["CognomeChiamata"] : null;
-            dto.DataOraInizioChiamata = jObject["DataOraInizioChiamata"] != null ? DateTime.Parse((string)jObject["DataOraInizioChiamata"]) : (DateTime?)null;
-            dto.DataOraFineChiamata = jObject["DataOraFineChiamata"] != null ? DateTime.Parse((string)jObject["DataOraFineChiamata"]) : (DateTime?)null;
-            dto.DataOraOperazione = DateTime.Now;
-            dto.ExtIDChiamata = jObject["ExtIDChiamata"] != null ? long.Parse((string)jObject["ExtIDChiamata"]) : (long?)null;
-            dto.ExtIDOperatore = jObject["ExtIDOperatore"] != null ? long.Parse((string)jObject["ExtIDOperatore"]) : (long?)null;
-            dto.IDChiamata = jObject["IDChiamata"] != null ? long.Parse((string)jObject["IDChiamata"]) : (long?)null;
-            dto.IDExtSollecitoChiamata = jObject["IDExtSollecitoChiamata"] != null ? long.Parse((string)jObject["IDExtSollecitoChiamata"]) : (long?)null;
-            dto.InfoChiamata = jObject["InfoChiamata"] != null ? (string)jObject["InfoChiamata"] : null;
-            dto.IPOperazione = jObject["IPOperazione"] != null ? (string)jObject["IPOperazione"] : "MyIP";
-            dto.MotivoChiamata = jObject["MotivoChiamata"] != null ? (string)jObject["MotivoChiamata"] : null;
-            dto.NomeChiamata = jObject["NomeChiamata"] != null ? (string)jObject["NomeChiamata"] : null;
-            dto.NumeroChiamata = jObject["NumeroChiamata"] != null ? (string)jObject["NumeroChiamata"] : null;
-            dto.Priorita = jObject["Priorita"] != null ? int.Parse((string)jObject["Priorita"]) : (int?)null;
-            dto.Stato = jObject["Stato"] != null ? int.Parse((string)jObject["Stato"]) : 1;
-
-            return dto;
-        }
-        public static ChiamataDTO JsonObjToDTO(string jsonObj)
-        {
-            ChiamataDTO dto = null;
-
-            JObject jObject = JObject.Parse(jsonObj);
-            JToken jToken = jObject.First;
-
-            dto = JTokenToDTO(jToken);
-
-            return dto;
-        }
-        public static List<ChiamataDTO> JsonArrayToDTOList(string jsonArray)
-        {
-            List<ChiamataDTO> dtos = new List<ChiamataDTO>();
-
-            JArray jArray = JArray.Parse(jsonArray);
-
-            foreach (JToken jToken in jArray)
-            {
-                dtos.Add(JTokenToDTO(jToken));
-            }
-
-            return dtos;
-        }
-        public static string DTOListToJsonArray(List<ChiamataDTO> dtos)
-        {
-            string json = null;
-
-            json = JsonConvert.SerializeObject(dtos);
-
-            return json;
-        }
-        public static string DTOToJsonObject(ChiamataDTO dto)
-        {
-            string json = null;
-
-            json = JsonConvert.SerializeObject(dto);
-
-            return json;
-        }
-        */
-        /*
-        public static List<string> JTokenToSOValidator(JToken jObject)
-        {
-            List<string> result = new List<string>();
-
-            string attName = "DataOraInizioChiamata";
-            string attType = "DateTime";
-            if (jObject[attName] != null)
-            {
-                DateTime tmp;
-                if (!DateTime.TryParse((string)jObject[attName], out tmp))
-                {                    
-                    result.Add(attName + " is not a valid " + attType);
-                }
-            }
-            attName = "DataOraFineChiamata";
-            attType = "DateTime";
-            if (jObject[attName] != null)
-            {
-                DateTime tmp;
-                if (!DateTime.TryParse((string)jObject[attName], out tmp))
-                {
-                    result.Add(attName + " is not a valid " + attType);
-                }
-            }
-            attName = "ExtIDChiamata";
-            attType = "long";
-            if (jObject[attName] != null)
-            {
-                long tmp;
-                if (!long.TryParse((string)jObject[attName], out tmp))
-                {
-                    result.Add(attName + " is not a valid " + attType);
-                }
-            }
-            attName = "ExtIDOperatore";
-            attType = "long";
-            if (jObject[attName] != null)
-            {
-                long tmp;
-                if (!long.TryParse((string)jObject[attName], out tmp))
-                {
-                    result.Add(attName + " is not a valid " + attType);
-                }
-            }
-            attName = "IDExtSollecitoChiamata";
-            attType = "long";
-            if (jObject[attName] != null)
-            {
-                long tmp;
-                if (!long.TryParse((string)jObject[attName], out tmp))
-                {
-                    result.Add(attName + " is not a valid " + attType);
-                }
-            }
-            attName = "Priorita";
-            attType = "int";
-            if (jObject[attName] != null)
-            {
-                int tmp;
-                if (!int.TryParse((string)jObject[attName], out tmp))
-                {
-                    result.Add(attName + " is not a valid " + attType);
-                }
-            }
-
-            return result;
-        }
-        */       
-        
+    {     
         public static ChiamataSOi JTokenToSO(JToken jObject)
         {
             var exceptions = new List<Exception>();
@@ -248,7 +114,6 @@ namespace WSChiamatePerse.Mappers
 
             return json;
         }
-
         public static ChiamataDTO SOToDTO(ChiamataSOi so)
         {
             ChiamataDTO dto = new ChiamataDTO();
@@ -284,7 +149,6 @@ namespace WSChiamatePerse.Mappers
             List<ChiamataSOi> sos_ = new List<ChiamataSOi>(sos);
             return SOListToDTOList(sos_);
         }
-
         public static ChiamataSOo DTOToSO(ChiamataDTO dto)
         {
             ChiamataSOo so = new ChiamataSOo();

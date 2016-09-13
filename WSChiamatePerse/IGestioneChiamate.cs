@@ -40,7 +40,6 @@ namespace WSChiamatePerse
         int InserisciChiamateOI(ChiamataSOi data);
     }
 
-
     [DataContract]
     public class Response
     {

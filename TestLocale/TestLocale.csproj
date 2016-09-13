@@ -48,6 +48,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GeneralPurposeLib\GeneralPurposeLib.csproj">
+      <Project>{2122ccc2-d83c-4ce6-a358-c2e772e4f6df}</Project>
+      <Name>GeneralPurposeLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WSChiamatePerse\WSChiamatePerse.csproj">
       <Project>{ff683327-3314-4233-bdb1-e562d1690a1a}</Project>
       <Name>WSChiamatePerse</Name>

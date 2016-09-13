@@ -3,3 +3,6 @@ C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Debug\TestCasa.exe
 C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Debug\TestCasa.pdb
 C:\Workspace\C#\GestioneChiamatePerse\TestCasa\obj\Debug\TestCasa.exe
 C:\Workspace\C#\GestioneChiamatePerse\TestCasa\obj\Debug\TestCasa.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\bin\Debug\TestCasa.exe.config
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\obj\Debug\TestCasa.exe
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\obj\Debug\TestCasa.pdb
