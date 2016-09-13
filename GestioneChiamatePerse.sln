@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestioneChiamatePerse", "GestioneChiamatePerse\GestioneChiamatePerse.csproj", "{38C05490-685F-41EC-9E84-DB664FD0D888}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServizio", "TestServizio\TestServizio.csproj", "{433B8CEE-918A-4E90-8359-C628B1223122}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLocale", "TestLocale\TestLocale.csproj", "{659F52D6-BC06-4BF7-B597-DFCAFFE21773}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCasa", "TestCasa\TestCasa.csproj", "{7EB6F242-ACFF-4283-9776-7265FDA629A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{659F52D6-BC06-4BF7-B597-DFCAFFE21773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{659F52D6-BC06-4BF7-B597-DFCAFFE21773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{659F52D6-BC06-4BF7-B597-DFCAFFE21773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB6F242-ACFF-4283-9776-7265FDA629A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB6F242-ACFF-4283-9776-7265FDA629A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB6F242-ACFF-4283-9776-7265FDA629A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB6F242-ACFF-4283-9776-7265FDA629A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

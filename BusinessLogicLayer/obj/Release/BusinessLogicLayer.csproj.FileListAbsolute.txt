@@ -1,16 +1,12 @@
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\BusinessLogicLayer.dll
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\BusinessLogicLayer.pdb
-C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\DAL.dll
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\GeneralPurposeLib.dll
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\IBLL.dll
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\IRISDAL.dll
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\log4net.dll
-C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\OperationStatusNotifier.dll
-C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\DAL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\GeneralPurposeLib.pdb
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\IBLL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\IRISDAL.pdb
-C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\OperationStatusNotifier.pdb
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\log4net.xml
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\obj\Release\BusinessLogicLayer.csprojResolveAssemblyReference.cache
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\obj\Release\BusinessLogicLayer.dll
@@ -30,3 +26,5 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\obj\Release\Busine
 C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\obj\Release\BusinessLogicLayer.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\DataAccessLayer.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\DataAccessLayer.pdb
+C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\DataAccessLayer.dll
+C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\DataAccessLayer.pdb

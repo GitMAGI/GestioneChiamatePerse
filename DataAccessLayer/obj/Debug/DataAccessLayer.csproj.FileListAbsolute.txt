@@ -9,3 +9,14 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\IRISDAL.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\log4net.xml
 C:\Workspace\repo\c#\GestioneChiamatePerse\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\GeneralPurposeLib.dll
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\IRISDAL.dll
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\log4net.dll
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\GeneralPurposeLib.pdb
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\IRISDAL.pdb
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Debug\log4net.xml
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GestioneChiamate" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:41000/GestioneChiamate.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:41000/GestioneChiamate.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:41000/GestioneChiamate.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WSChiamatePerse" />
+      <xsd:import schemaLocation="http://localhost:41000/GestioneChiamate.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateJO_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateJO" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateJO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateJOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateJJ_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateJJ" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateJJ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateJJResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateJI_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateJI" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateJI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateJIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateLOO_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateLOO" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateLOO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateLOOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateLOJ_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateLOJ" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateLOJ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateLOJResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateLOI_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateLOI" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateLOI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateLOIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateAOO_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateAOO" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateAOO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateAOOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateAOJ_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateAOJ" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateAOJ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateAOJResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateAOI_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateAOI" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateAOI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateAOIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateOO_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateOO" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateOO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateOOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateOJ_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateOJ" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateOJ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateOJResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateOI_InputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateOI" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InserisciChiamateOI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserisciChiamateOIResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGestioneChiamate">
+    <wsdl:operation name="InserisciChiamateJO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateJO" message="tns:IGestioneChiamate_InserisciChiamateJO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateJOResponse" message="tns:IGestioneChiamate_InserisciChiamateJO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateJJ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateJJ" message="tns:IGestioneChiamate_InserisciChiamateJJ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateJJResponse" message="tns:IGestioneChiamate_InserisciChiamateJJ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateJI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateJI" message="tns:IGestioneChiamate_InserisciChiamateJI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateJIResponse" message="tns:IGestioneChiamate_InserisciChiamateJI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateLOO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOO" message="tns:IGestioneChiamate_InserisciChiamateLOO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOOResponse" message="tns:IGestioneChiamate_InserisciChiamateLOO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateLOJ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOJ" message="tns:IGestioneChiamate_InserisciChiamateLOJ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOJResponse" message="tns:IGestioneChiamate_InserisciChiamateLOJ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateLOI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOI" message="tns:IGestioneChiamate_InserisciChiamateLOI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOIResponse" message="tns:IGestioneChiamate_InserisciChiamateLOI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateAOO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOO" message="tns:IGestioneChiamate_InserisciChiamateAOO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOOResponse" message="tns:IGestioneChiamate_InserisciChiamateAOO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateAOJ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOJ" message="tns:IGestioneChiamate_InserisciChiamateAOJ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOJResponse" message="tns:IGestioneChiamate_InserisciChiamateAOJ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateAOI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOI" message="tns:IGestioneChiamate_InserisciChiamateAOI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOIResponse" message="tns:IGestioneChiamate_InserisciChiamateAOI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateOO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateOO" message="tns:IGestioneChiamate_InserisciChiamateOO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateOOResponse" message="tns:IGestioneChiamate_InserisciChiamateOO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateOJ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateOJ" message="tns:IGestioneChiamate_InserisciChiamateOJ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateOJResponse" message="tns:IGestioneChiamate_InserisciChiamateOJ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateOI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateOI" message="tns:IGestioneChiamate_InserisciChiamateOI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InserisciChiamateOIResponse" message="tns:IGestioneChiamate_InserisciChiamateOI_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGestioneChiamate" type="tns:IGestioneChiamate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InserisciChiamateJO">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateJO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateJJ">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateJJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateJI">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateJI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateLOO">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateLOJ">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateLOI">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateLOI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateAOO">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateAOJ">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateAOI">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateAOI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateOO">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateOO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateOJ">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateOJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserisciChiamateOI">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InserisciChiamateOI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GestioneChiamate">
+    <wsdl:port name="BasicHttpBinding_IGestioneChiamate" binding="tns:BasicHttpBinding_IGestioneChiamate">
+      <soap:address location="http://localhost:41000/GestioneChiamate.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
