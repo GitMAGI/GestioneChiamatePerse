@@ -5,19 +5,15 @@ C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePers
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.pdb
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.csprojResolveAssemblyReference.cache
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\BusinessLogicLayer.dll
-C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\DAL.dll
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\GeneralPurposeLib.dll
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\IBLL.dll
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\IRISDAL.dll
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\log4net.dll
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\Newtonsoft.Json.dll
-C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\OperationStatusNotifier.dll
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\BusinessLogicLayer.pdb
-C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\DAL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\GeneralPurposeLib.pdb
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\IBLL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\IRISDAL.pdb
-C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\OperationStatusNotifier.pdb
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\log4net.xml
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\Newtonsoft.Json.xml
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.csprojResolveAssemblyReference.cache
@@ -40,3 +36,5 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\log4net.xml
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\Newtonsoft.Json.xml
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Release\WSChiamatePerse.pdb
+C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\DataAccessLayer.dll
+C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\DataAccessLayer.pdb
