@@ -7,3 +7,4 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Debug\GeneralPu
 C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\obj\Debug\GeneralPurposeLib.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\obj\Debug\GeneralPurposeLib.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\obj\Debug\GeneralPurposeLib.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\obj\Debug\GeneralPurposeLib.csprojResolveAssemblyReference.cache

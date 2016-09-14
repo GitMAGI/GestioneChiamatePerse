@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GeneralPurposeLib
 {
@@ -48,21 +45,66 @@ namespace GeneralPurposeLib
 
             return result;
         }
-        public bool ValidationChecksConstraints(ColumnStructure colStruct, object data)
+        public bool ValidationChecksConstraints(ColumnStructure colStruct, object data, Dictionary<string, object> parsedData, ref List<string> errReport)
         {
             bool result = true;
 
             // 1. MaxLength
-            if (colStruct.colMaxLength != null)
+            if (colStruct.colMaxLength != null && colStruct.colType == typeof(string))
+            {
                 if (data.ToString().Length > colStruct.colMaxLength)
-                    result = false;       
-            
+                {
+                    result = false;
+                    string msg = string.Format("Attribute '{0}' exceeds the maximum length available. Actual length is {1} of {2}!", colStruct.colName, data.ToString().Length, colStruct.colMaxLength);
+                    if (errReport == null)
+                        errReport = new List<string>();
+                    errReport.Add(msg);
+                }
+            }
             // 2. Checks Validation
             if (colStruct.colChecks != null)
             {
-                foreach (string check in colStruct.colChecks)
+                foreach (CheckValidation check in colStruct.colChecks)
                 {
+                    Type classType = check.libName;
+                    string funtionName = check.functionName;
 
+                    // To Implement and understand how to code it! Holy Shit!
+                    try
+                    {
+                        object[] args = new object[check.args.Count + 2];
+                        args[0] = data;
+                        int i = 1;
+                        foreach(string arg in check.args)
+                        {
+                            args[i] = parsedData[arg];
+                            i++;
+                        }
+                        args[i] = errReport;
+
+                        MethodInfo method = classType.GetMethod(funtionName);
+                        object genericResult = method.Invoke(null, args);
+
+                        bool tmpRes = (bool)genericResult;
+
+                        if (!tmpRes)
+                        {
+                            result = tmpRes;
+                            
+                            string msg = string.Format("Attribute '{0}' fails checks validation defined into {1}.{2}() function!", colStruct.colName, classType.ToString(), funtionName);
+                            if (errReport == null)
+                                errReport = new List<string>();
+                            string old = errReport.Last();
+                            errReport[errReport.Count - 1] = msg + " " + old;
+
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        string msg = string.Format("Fatal Error during checks validation. Check the function {0}.{1}() is defined as static, return a bool, has the right number of args and doesn't throw unhandled exceptions!", classType.ToString(), funtionName);
+                        throw new Exception(msg, ex);
+                    }
                 }
             }
                 
@@ -81,7 +123,7 @@ namespace GeneralPurposeLib
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
@@ -119,30 +161,36 @@ namespace GeneralPurposeLib
         {
             bool result = true;
 
+            Dictionary<string, bool> convOk = new Dictionary<string, bool>();
+
             foreach (KeyValuePair<string, string> entry in dataRow)
             {
                 //entry.Value
                 //entry.Key
+
+                
                 ColumnStructure? colStruct = GetStructureByColName(entry.Key);
                 if (colStruct == null)
                 {
-                    string msg = "Fatal Error! Bad dataRow index! {0} not found into TableStructure definition!";
+                    string msg = string.Format("Fatal Error! Bad dataRow index! '{0}' not found into TableStructure definition!", entry.Key);
                     if (errReport == null)
                         errReport = new List<string>();
                     errReport.Add(msg);
                     throw new KeyNotFoundException(string.Format(msg));
                 }
 
+                // NULLABLE VALIDATION
                 if (!ValidationNotNullable(colStruct.Value, entry.Value))
                 {
                     result = false;
-                    string msg = string.Format("Attribute {0} must be not null!", entry.Key);
+                    string msg = string.Format("Attribute '{0}' must be not null!", entry.Key);
                     if (errReport == null)
                         errReport = new List<string>();
                     errReport.Add(msg);
                 }
                 else
                 {
+                    // PARSING VALIDATION
                     object[] args = new object[2];
                     args[0] = entry.Value;
 
@@ -157,13 +205,57 @@ namespace GeneralPurposeLib
                         if (dataRowConverted == null)
                             dataRowConverted = new Dictionary<string, object>();
                         dataRowConverted.Add(entry.Key, args[1]);
+
                     }
                     else
                     {
                         result = tmpRes;
+                        string msg = string.Format("Attribute '{0}' Parsing from string to {1} failed! '{2}' is not a {3} parsable string!", entry.Key, colStruct.Value.colType.ToString(), entry.Value, colStruct.Value.colType.ToString());
+                        if (errReport == null)
+                            errReport = new List<string>();
+                        errReport.Add(msg);
                     }
                 }
 
+            }
+
+            // CHECKS AND CONSTRAINTS VALIDATION
+            if (result)
+            {
+                foreach (KeyValuePair<string, string> entry in dataRow)
+                {
+                    ColumnStructure? colStruct = GetStructureByColName(entry.Key);
+                    if (!ValidationChecksConstraints((ColumnStructure)colStruct, dataRowConverted[entry.Key], dataRowConverted, ref errReport))
+                    {
+                        result = false;
+                    }
+                }
+            }
+           
+
+            return result;
+        } // Can Throw tons of Exception, because of fatal Errors!
+
+        public bool Validation(List<Dictionary<string, string>> data, out List<Dictionary<string, object>> dataConverted, out List<string> errReport)
+        {
+            bool result = true;
+
+            dataConverted = new List<Dictionary<string, object>>();
+            errReport = new List<string>();
+
+            int i = 0;
+            foreach (Dictionary<string, string> datum in data)
+            {
+                Dictionary<string, object> datumConverted = new Dictionary<string, object>();
+                dataConverted.Add(datumConverted);
+                string msg = string.Format("Line {0} errors", i+1);
+                errReport.Add(msg);
+                bool rowRes = ValidationRow(datum, ref datumConverted, ref errReport);
+                if (rowRes)      
+                    errReport.Remove(msg);
+                else
+                    result = false;
+                i++;
             }
 
             return result;
@@ -176,6 +268,13 @@ namespace GeneralPurposeLib
         public Type colType;
         public int? colMaxLength;
         public bool colNotNull;
-        public List<string> colChecks;
+        public List<CheckValidation> colChecks;
+    }
+
+    public struct CheckValidation
+    {
+        public Type libName;
+        public string functionName; // Function must be static!!
+        public List<string> args; // Other attribute Names of the same row u want to check!! Not add the self attribute
     }
 }

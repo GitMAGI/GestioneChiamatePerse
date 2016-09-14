@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WSChiamatePerse;
 
 namespace TestLocale
 {
@@ -11,7 +7,7 @@ namespace TestLocale
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Avvio test ...");
+            Console.WriteLine("Avvio test ...");
 
             /*
 
@@ -46,28 +42,46 @@ namespace TestLocale
             bool res8 = ChiamataTab.ValidationDataTypeAndParsing<DateTime>("DataOraFineChiamata", "25-02-2016 22:15:45", out trash__);
             */
 
-            Dictionary<string, string> data2Conv = new Dictionary<string, string>()
+            Dictionary<string, string> data2Conv1 = new Dictionary<string, string>()
             {
                 {"CognomeChiamata", "Boriellieri"},
-                {"NomeChiamata", null},
+                {"NomeChiamata", "Bombiero"},
                 {"NumeroChiamata", "44222390"},
                 {"MotivoChiamata", "Reclamo!"},
-                {"ExtIDChiamata", null},
-                {"DataOraInizioChiamata", "2015-1p-21 14:07:47"},
-                {"DataOraFineChiamata", "2015-1-21 14:13:14"},
+                {"ExtIDChiamata", "13452"},
+                {"DataOraInizioChiamata", "2015-1-21 14:07:50"},
+                {"DataOraFineChiamata", "2015-1-21 14:07:54"},
                 {"Priorita", "1"},
-                {"ExtIDOperatore", "yt09"},
+                {"ExtIDOperatore", "2309"},
+            };
+            Dictionary<string, string> data2Conv2 = new Dictionary<string, string>()
+            {
+                {"CognomeChiamata", "Giorgelli"},
+                {"NomeChiamata", "Topello"},
+                {"NumeroChiamata", "123322390"},
+                {"MotivoChiamata", "Intercettazione"},
+                {"ExtIDChiamata", null},
+                {"DataOraInizioChiamata", "2011-10-1 11:07:47"},
+                {"DataOraFineChiamata", "2011-10-1 11:07:54"},
+                {"Priorita", "1"},
+                {"ExtIDOperatore", "112"},
             };
 
-            Dictionary<string, object> dataCNVT = new Dictionary<string, object>();
+            List<Dictionary<string, string>> data2Conv = new List<Dictionary<string, string>>()
+            {
+                data2Conv1,
+                data2Conv2
+            };
+
+            List<Dictionary<string, object>> dataCNVT = new List<Dictionary<string, object>>();
 
             List<string> errRep = new List<string>();
 
-            bool valid = ChiamataTab.ValidationRow(data2Conv, ref dataCNVT, ref errRep);
+            bool valid = ChiamataTab.Validation(data2Conv, out dataCNVT, out errRep);
 
 
-            System.Console.WriteLine("Test Concluso. Premere un tasto per terminare!");
-            System.Console.ReadKey();
+            Console.WriteLine("Test Concluso. Premere un tasto per terminare!");
+            Console.ReadKey();
         }
     }
 }
