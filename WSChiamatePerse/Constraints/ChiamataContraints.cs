@@ -13,23 +13,32 @@ namespace WSChiamatePerse.Constraints
             return new List<ColumnStructure>(
                 new ColumnStructure[] {
 
-                    new ColumnStructure{ 
+                    new ColumnStructure{
                         colName = "ExtIDChiamata", colType = typeof(long), colMaxLength = null, colNotNull = true, colChecks = null
                     },
-                    new ColumnStructure{ 
+                    new ColumnStructure{
                         colName = "NumeroChiamata", colType = typeof(string), colMaxLength = 255, colNotNull = true, colChecks = null
                     },
-                    new ColumnStructure{ 
+                    new ColumnStructure{
                         colName = "NomeChiamata", colType = typeof(string), colMaxLength = 255, colNotNull = true, colChecks = null
                     },
-                    new ColumnStructure{ 
+                    new ColumnStructure{
                         colName = "CognomeChiamata", colType = typeof(string), colMaxLength = 255, colNotNull = true, colChecks = null
                     },
-                    new ColumnStructure{ 
+                    new ColumnStructure{
                         colName = "MotivoChiamata", colType = typeof(string), colMaxLength = null, colNotNull = true, colChecks = null
                     },
-                    new ColumnStructure{ 
-                        colName = "DataOraInizioChiamata", colType = typeof(DateTime), colMaxLength = null, colNotNull = true, colChecks = null
+                    new ColumnStructure{
+                        colName = "DataOraInizioChiamata", colType = typeof(DateTime), colMaxLength = null, colNotNull = true,
+                        colChecks = new List<CheckValidation>()
+                        {
+                            new CheckValidation()
+                            {
+                                libName = typeof(ChiamataContraints),
+                                functionName = "DataFineMaggioreDataInizio",
+                                args = new List<string>() { "DataOraFineChiamata" }
+                            }
+                        }
                     },
                     new ColumnStructure{ 
                         colName = "DataOraFineChiamata", colType = typeof(DateTime), colMaxLength = null, colNotNull = false, colChecks = null
@@ -46,11 +55,22 @@ namespace WSChiamatePerse.Constraints
                     new ColumnStructure{ 
                         colName = "ExtIDOperatore", colType = typeof(long), colMaxLength = null, colNotNull = false, colChecks = null
                     },
-
                 }
             ); 
-        }
-
+        } 
         
+        public static bool DataFineMaggioreDataInizio(DateTime dataInizio, DateTime dataFine, ref List<string> errReport)
+        {
+            if (dataFine > dataInizio)
+                return true;
+            else
+            {
+                string msg = "Data finale maggiore di quella iniziale!";
+                if (errReport == null)
+                    errReport = new List<string>();
+                errReport.Add(msg);
+                return false;
+            }
+        }
     }
 }
