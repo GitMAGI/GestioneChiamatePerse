@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.Web.Services;
 
 namespace WSChiamatePerse
 {
@@ -11,13 +12,15 @@ namespace WSChiamatePerse
     [ServiceContract]
     public interface IGestioneChiamate
     {
+        
+        //[OperationContract]
+        //ResponseInsert InserisciChiamateJO(string jsonArray);
         [OperationContract]
-        ResponseInsert InserisciChiamateJO(string jsonArray);
-        [OperationContract]
+        [WebMethod]
         string InserisciChiamateJJ(string jsonArray);
-        [OperationContract]
-        int InserisciChiamateJI(string jsonArray);
-
+        //[OperationContract]
+        //int InserisciChiamateJI(string jsonArray);
+        /*
         [OperationContract]
         ResponseInsert InserisciChiamateLOO(List<ChiamataSOi> data);
         [OperationContract]
@@ -38,6 +41,10 @@ namespace WSChiamatePerse
         string InserisciChiamateOJ(ChiamataSOi data);
         [OperationContract]
         int InserisciChiamateOI(ChiamataSOi data);
+        */
+
+        //[OperationContract]
+        //string EchoFunction(string data);
     }
 
     [DataContract]

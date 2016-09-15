@@ -60,7 +60,7 @@ namespace TestLocale
                 {"NomeChiamata", "Topello"},
                 {"NumeroChiamata", "123322390"},
                 {"MotivoChiamata", "Intercettazione"},
-                {"ExtIDChiamata", null},
+                {"ExtIDChiamata", "34354"},
                 {"DataOraInizioChiamata", "2011-10-1 11:07:47"},
                 {"DataOraFineChiamata", "2011-10-1 11:07:54"},
                 {"Priorita", "1"},

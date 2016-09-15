@@ -6,11 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
-
 namespace WSChiamatePerse
 {
     // NOTA: è possibile utilizzare il comando "Rinomina" del menu "Refactoring" per modificare il nome di classe "Service1" nel codice, nel file svc e nel file di configurazione contemporaneamente.
@@ -63,6 +58,10 @@ namespace WSChiamatePerse
         {
             string jresponse = string.Empty;
             ResponseInsert response = InserisciChiamateJO(jsonArray);
+
+            // To test
+            response.AddInfo("Test pazzesco");
+
             jresponse = JsonConvert.SerializeObject(response);
             return jresponse;
         }
@@ -216,6 +215,11 @@ namespace WSChiamatePerse
             result = this.bll.AddChiamate(dtos);
 
             return result;
-        }    
+        }
+
+        public string EchoFunction(string data)
+        {
+            return "Hai detto " + data;
+        }
     }
 }
