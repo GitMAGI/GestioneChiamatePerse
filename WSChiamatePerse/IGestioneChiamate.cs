@@ -12,6 +12,10 @@ namespace WSChiamatePerse
     public interface IGestioneChiamate
     {
         [OperationContract]
+        ResponseInsert InsertJson(string jsonArray);
+
+        /*
+        [OperationContract]
         ResponseInsert InserisciChiamateJO(string jsonArray);
         [OperationContract]
         string InserisciChiamateJJ(string jsonArray);
@@ -38,6 +42,7 @@ namespace WSChiamatePerse
         string InserisciChiamateOJ(ChiamataSOi data);
         [OperationContract]
         int InserisciChiamateOI(ChiamataSOi data);
+         * */
     }
 
     [DataContract]
@@ -54,21 +59,30 @@ namespace WSChiamatePerse
                 
         public void AddInfos(List<string> infos)
         {
-            if (this.Infos == null)
-                this.Infos = new List<string>();
-            this.Infos.AddRange(infos);
+            if (infos != null && infos.Count > 0)
+            {
+                if (this.Infos == null)
+                    this.Infos = new List<string>();
+                this.Infos.AddRange(infos);
+            }
         }
         public void AddWarnings(List<string> warnings)
         {
-            if (this.Warnings == null)
-                this.Warnings = new List<string>();
-            this.Warnings.AddRange(warnings);
+            if (warnings != null && warnings.Count > 0)
+            {
+                if (this.Warnings == null)
+                    this.Warnings = new List<string>();
+                this.Warnings.AddRange(warnings);
+            }
         }
         public void AddErrors(List<string> errors)
         {
-            if (this.Errors == null)
-                this.Errors = new List<string>();
-            this.Errors.AddRange(errors);
+            if (errors != null && errors.Count > 0)
+            {
+                if (this.Errors == null)
+                    this.Errors = new List<string>();
+                this.Errors.AddRange(errors);
+            }            
         }
         public void AddInfo(string info)
         {

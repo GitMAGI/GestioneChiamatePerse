@@ -165,10 +165,6 @@ namespace GeneralPurposeLib
 
             foreach (KeyValuePair<string, string> entry in dataRow)
             {
-                //entry.Value
-                //entry.Key
-
-                
                 ColumnStructure? colStruct = GetStructureByColName(entry.Key);
                 if (colStruct == null)
                 {
@@ -248,7 +244,7 @@ namespace GeneralPurposeLib
             {
                 Dictionary<string, object> datumConverted = new Dictionary<string, object>();
                 dataConverted.Add(datumConverted);
-                string msg = string.Format("Line {0} errors", i+1);
+                string msg = string.Format("Line {0} errors: ", i+1);
                 errReport.Add(msg);
                 bool rowRes = ValidationRow(datum, ref datumConverted, ref errReport);
                 if (rowRes)      
@@ -257,6 +253,8 @@ namespace GeneralPurposeLib
                     result = false;
                 i++;
             }
+            if (errReport.Count == 0)
+                errReport = null;
 
             return result;
         }

@@ -6,3 +6,5 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\General
 C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\GeneralPurposeLib.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\Newtonsoft.Json.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\Newtonsoft.Json.xml

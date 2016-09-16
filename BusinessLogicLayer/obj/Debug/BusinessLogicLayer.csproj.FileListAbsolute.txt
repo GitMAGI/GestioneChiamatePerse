@@ -28,3 +28,5 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\DataAcce
 C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Debug\Newtonsoft.Json.xml

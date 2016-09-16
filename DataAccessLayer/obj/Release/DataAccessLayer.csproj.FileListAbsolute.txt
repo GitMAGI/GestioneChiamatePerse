@@ -20,3 +20,5 @@ C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Release\log4net.xml
 C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\obj\Release\DataAccessLayer.dll
 C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\DataAccessLayer\bin\Release\Newtonsoft.Json.dll
+C:\Workspace\repo\c#\GestioneChiamatePerse\DataAccessLayer\bin\Release\Newtonsoft.Json.xml

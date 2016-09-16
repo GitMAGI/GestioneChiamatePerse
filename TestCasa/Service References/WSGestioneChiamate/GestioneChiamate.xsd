@@ -1,171 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:41000/GestioneChiamate.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WSChiamatePerse" />
-  <xs:element name="InserisciChiamateJO">
+  <xs:element name="InsertJson">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="jsonArray" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InserisciChiamateJOResponse">
+  <xs:element name="InsertJsonResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="InserisciChiamateJOResult" nillable="true" type="q1:ResponseInsert" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateJJ">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="jsonArray" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateJJResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InserisciChiamateJJResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateJI">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="jsonArray" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateJIResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InserisciChiamateJIResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateLOO">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q2:ArrayOfChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateLOOResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="InserisciChiamateLOOResult" nillable="true" type="q3:ResponseInsert" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateLOJ">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q4:ArrayOfChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateLOJResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InserisciChiamateLOJResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateLOI">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q5:ArrayOfChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateLOIResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InserisciChiamateLOIResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateAOO">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q6:ArrayOfChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateAOOResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="InserisciChiamateAOOResult" nillable="true" type="q7:ResponseInsert" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateAOJ">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q8:ArrayOfChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateAOJResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InserisciChiamateAOJResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateAOI">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q9:ArrayOfChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateAOIResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InserisciChiamateAOIResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateOO">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q10:ChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateOOResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="InserisciChiamateOOResult" nillable="true" type="q11:ResponseInsert" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateOJ">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q12:ChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateOJResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InserisciChiamateOJResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateOI">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="data" nillable="true" type="q13:ChiamataSOi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InserisciChiamateOIResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InserisciChiamateOIResult" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="InsertJsonResult" nillable="true" type="q1:ResponseInsert" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

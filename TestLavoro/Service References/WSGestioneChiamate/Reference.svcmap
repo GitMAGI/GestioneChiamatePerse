@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="974fec22-8743-461c-b691-e9d0dbdee344" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.3.47:41000/GestioneChiamate.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GestioneChiamate4.xsd" MetadataType="Schema" ID="d95c5aa1-57ad-4043-9ef1-27c954c175c3" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?xsd=xsd3" />
+    <MetadataFile FileName="GestioneChiamate41.xsd" MetadataType="Schema" ID="778a721a-5671-4c5e-85f9-cb39aef24c34" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?xsd=xsd2" />
+    <MetadataFile FileName="GestioneChiamate42.xsd" MetadataType="Schema" ID="1bea9089-8613-4314-a1f4-d507427c0f89" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?xsd=xsd0" />
+    <MetadataFile FileName="GestioneChiamate1.wsdl" MetadataType="Wsdl" ID="45ad7bcb-aa1c-4e4a-a20d-a80e0665582c" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?wsdl" />
+    <MetadataFile FileName="GestioneChiamate43.xsd" MetadataType="Schema" ID="4672c113-e149-4f2b-9e46-4d5e42f9ba1f" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

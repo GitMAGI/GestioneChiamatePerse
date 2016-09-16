@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace TestLocale
@@ -28,7 +29,7 @@ namespace TestLocale
 
             */
 
-            WSChiamatePerse.Constraints.ChiamataContraints ChiamataTab = new WSChiamatePerse.Constraints.ChiamataContraints();
+            //WSChiamatePerse.Constraints.ChiamataContraints ChiamataTab = new WSChiamatePerse.Constraints.ChiamataContraints();
             /*
             long obj;
             bool res1 = ChiamataTab.ValidationDataTypeAndParsing<long>("ExtIDChiamata", null, out obj);            
@@ -60,7 +61,7 @@ namespace TestLocale
                 {"NomeChiamata", "Topello"},
                 {"NumeroChiamata", "123322390"},
                 {"MotivoChiamata", "Intercettazione"},
-                {"ExtIDChiamata", null},
+                {"ExtIDChiamata", "3445"},
                 {"DataOraInizioChiamata", "2011-10-1 11:07:47"},
                 {"DataOraFineChiamata", "2011-10-1 11:07:54"},
                 {"Priorita", "1"},
@@ -77,8 +78,13 @@ namespace TestLocale
 
             List<string> errRep = new List<string>();
 
-            bool valid = ChiamataTab.Validation(data2Conv, out dataCNVT, out errRep);
+            string data = JsonConvert.SerializeObject(data2Conv);
+            
+            WSChiamatePerse.GestioneChiamate client = new WSChiamatePerse.GestioneChiamate();
 
+            //bool valid = ChiamataTab.Validation(data2Conv, out dataCNVT, out errRep);
+
+            WSChiamatePerse.ResponseInsert response = client.InsertJson(data);
 
             Console.WriteLine("Test Concluso. Premere un tasto per terminare!");
             Console.ReadKey();

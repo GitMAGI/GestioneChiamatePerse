@@ -3,101 +3,49 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Reflection;
+using System.Web;
 
 namespace WSChiamatePerse.Mappers
 {
     public class ChiamataMapper
-    {     
-        public static ChiamataSOi JTokenToSO(JToken jObject)
+    {
+        public static ChiamataSOi DictionaryToSO(Dictionary<string, object> data)
         {
-            var exceptions = new List<Exception>();
             ChiamataSOi so = new ChiamataSOi();
 
-            so.CognomeChiamata = jObject["CognomeChiamata"] != null ? (string)jObject["CognomeChiamata"] : null;
-            try{
-                so.DataOraInizioChiamata = jObject["DataOraInizioChiamata"] != null ? DateTime.Parse((string)jObject["DataOraInizioChiamata"]) : (DateTime?)null;
-            }catch (Exception ex){
-                string msg = "Error During Parsing of \"DataOraInizioChiamata\"";
-                exceptions.Add(new Exception(msg, ex));
-            }
-            try{
-                so.DataOraFineChiamata = jObject["DataOraFineChiamata"] != null ? DateTime.Parse((string)jObject["DataOraFineChiamata"]) : (DateTime?)null;
-            }catch (Exception ex){
-                string msg = "Error During Parsing of \"DataOraFineChiamata\"";
-                exceptions.Add(new Exception(msg, ex));
-            }
-            try{
-                so.ExtIDChiamata = jObject["ExtIDChiamata"] != null ? long.Parse((string)jObject["ExtIDChiamata"]) : (long?)null;
-            }catch (Exception ex){
-                string msg = "Error During Parsing of \"ExtIDChiamata\"";
-                exceptions.Add(new Exception(msg, ex));
-            }
-            try{
-                so.ExtIDOperatore = jObject["ExtIDOperatore"] != null ? long.Parse((string)jObject["ExtIDOperatore"]) : (long?)null;
-            }catch (Exception ex){
-                string msg = "Error During Parsing of \"ExtIDOperatore\"";
-                exceptions.Add(new Exception(msg, ex));
-            }
-            try{
-                so.IDExtSollecitoChiamata = jObject["IDExtSollecitoChiamata"] != null ? long.Parse((string)jObject["IDExtSollecitoChiamata"]) : (long?)null;
-            }catch (Exception ex){
-                string msg = "Error During Parsing of \"IDExtSollecitoChiamata\"";
-                exceptions.Add(new Exception(msg, ex));
-            }
-            so.InfoChiamata = jObject["InfoChiamata"] != null ? (string)jObject["InfoChiamata"] : null;
-            so.MotivoChiamata = jObject["MotivoChiamata"] != null ? (string)jObject["MotivoChiamata"] : null;
-            so.NomeChiamata = jObject["NomeChiamata"] != null ? (string)jObject["NomeChiamata"] : null;
-            so.NumeroChiamata = jObject["NumeroChiamata"] != null ? (string)jObject["NumeroChiamata"] : null;
-            try{
-                so.Priorita = jObject["Priorita"] != null ? int.Parse((string)jObject["Priorita"]) : (int?)null;}
-            catch (Exception ex){
-                string msg = "Error During Parsing of \"IDExtSollecitoChiamata\"";
-                exceptions.Add(new Exception(msg, ex));
+            //List<string> unevaluated = new List<string>(data.Keys);
+
+            foreach (PropertyInfo prop in so.GetType().GetProperties())
+            {
+                if (data.ContainsKey(prop.Name))
+                {
+                    object value = data[prop.Name];
+                    prop.SetValue(so, value, null);
+                    //unevaluated.Remove(prop.Name);
+                }
+                else
+                {
+                    string msg = string.Format("{0} is not defined into the Dictionary to map!", prop.Name);
+                }
             }
 
-            if (exceptions.Count > 0)
-                throw new AggregateException("Encountered errors during SO mapping!", exceptions);
+            //string warning = string.Format("The Following Dictionary Itmes do not have any correnspondence with Object's properties to Map. {0}", string.Join(", ",unevaluated.ToArray()));
 
             return so;
         }
-        public static ChiamataSOi JsonObjToSO(string jsonObj)
+        public static List<ChiamataSOi> DictionaryListToSOList(List<Dictionary<string, object>> data)
         {
-            ChiamataSOi so = null;
-
-            JObject jObject = JObject.Parse(jsonObj);
-            JToken jToken = jObject.First;
-
-            so = JTokenToSO(jToken);
-
-            return so;
-        }
-        public static List<ChiamataSOi> JsonArrayToSOList(string jsonArray)
-        {
-            List<AggregateException> exceptions = new List<AggregateException>();
             List<ChiamataSOi> sos = new List<ChiamataSOi>();
 
-            JArray jArray = JArray.Parse(jsonArray);
-
-            int count = 1;
-            foreach (JToken jToken in jArray)
+            foreach (Dictionary<string, object> datum in data)
             {
-                try
-                {
-                    sos.Add(JTokenToSO(jToken));
-                }
-                catch (AggregateException exs)
-                {
-                    string msg = string.Format("Error During Parsing of the {0} items!", count);
-                    exceptions.Add(new AggregateException(msg, exs.Flatten()));
-                }   
-                count ++;
-            }
-
-            if (exceptions.Count > 0)
-                throw new AggregateException("Encountered errors during SO mapping!", exceptions);
+                sos.Add(DictionaryToSO(datum));
+            }            
 
             return sos;
-        }
+        }      
         public static string SOListToJsonArray(List<ChiamataSOo> sos)
         {
             string json = null;
@@ -127,7 +75,18 @@ namespace WSChiamatePerse.Mappers
             dto.IDChiamata = so.IDChiamata;
             dto.IDExtSollecitoChiamata = so.IDExtSollecitoChiamata;
             dto.InfoChiamata = so.InfoChiamata;
-            dto.IPOperazione = so.IPOperazione != null ? so.IPOperazione : "MyIP";
+
+            string ip_ = "-- no ip detected --";
+            if (HttpContext.Current != null)
+            {
+                NameValueCollection srv = HttpContext.Current.Request.ServerVariables;
+                ip_ = srv["HTTP_X_FORWARDED_FOR"] != null ? srv["HTTP_X_FORWARDED_FOR"] : string.Empty;
+                if (ip_ == string.Empty)
+                {
+                    ip_ = srv["REMOTE_ADDR"] != null ? srv["REMOTE_ADDR"] : "-- no ip discoverable --";
+                }
+            }
+            dto.IPOperazione = so.IPOperazione != null ? so.IPOperazione : ip_;
             dto.MotivoChiamata = so.MotivoChiamata;
             dto.NomeChiamata = so.NomeChiamata;
             dto.NumeroChiamata = so.NumeroChiamata;

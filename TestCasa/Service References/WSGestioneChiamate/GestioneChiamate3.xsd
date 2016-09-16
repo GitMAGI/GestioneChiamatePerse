@@ -20,26 +20,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Response" nillable="true" type="tns:Response" />
-  <xs:complexType name="ArrayOfChiamataSOi">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChiamataSOi" nillable="true" type="tns:ChiamataSOi" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfChiamataSOi" nillable="true" type="tns:ArrayOfChiamataSOi" />
-  <xs:complexType name="ChiamataSOi">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CognomeChiamata" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DataOraFineChiamata" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="DataOraInizioChiamata" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="ExtIDChiamata" nillable="true" type="xs:long" />
-      <xs:element minOccurs="0" name="ExtIDOperatore" nillable="true" type="xs:long" />
-      <xs:element minOccurs="0" name="IDExtSollecitoChiamata" nillable="true" type="xs:long" />
-      <xs:element minOccurs="0" name="InfoChiamata" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MotivoChiamata" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="NomeChiamata" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="NumeroChiamata" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Priorita" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ChiamataSOi" nillable="true" type="tns:ChiamataSOi" />
 </xs:schema>

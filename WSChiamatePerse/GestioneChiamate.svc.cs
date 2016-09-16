@@ -2,6 +2,7 @@
 using DataAccessLayer;
 using IBLL.DTO;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,6 +11,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using GeneralPurposeLib;
+using WSChiamatePerse.Constraints;
 
 namespace WSChiamatePerse
 {
@@ -23,6 +26,8 @@ namespace WSChiamatePerse
         private BLL bll;
         private DAL dal;
 
+        private ChiamataContraints ChiamataTab = new ChiamataContraints();
+
         public GestioneChiamate()
         {
             DAL dal = new DAL();
@@ -30,6 +35,106 @@ namespace WSChiamatePerse
             BLL bll = new BLL(this.dal);
             this.bll = bll;
         }
+
+        public ResponseInsert InsertJson(string jsonArray)
+        {
+            List<string> errReport = new List<string>();
+
+            log.Info("Starting procedure...");
+            
+            ResponseInsert response = new ResponseInsert();
+            response.success = true;
+            response.AffectedRows = -1;
+
+            try
+            {
+                if (jsonArray == null && jsonArray == string.Empty)
+                {
+                    string msg = "Bad Json Request. Void or Null has been passed to the Web Service!";
+                    errReport.Add("JSON PARSING ERRORS ->");
+                    errReport.Add(msg);
+                    log.Error(msg);
+                    response.success = false;
+                }
+                else
+                {
+                    JArray jArray = JArray.Parse(jsonArray);
+                    List<Dictionary<string, string>> records = new List<Dictionary<string, string>>();
+                    foreach (JToken jRecord in jArray)
+                    {
+                        Dictionary<string, string> record = new Dictionary<string, string>();
+                        foreach (JProperty prop in jRecord.Children())
+                        {
+                            string n = prop.Name;
+                            string v = null;
+                            if(prop.Value.Type != JTokenType.Null)
+                                v = prop.Value.ToString();                            
+                            record[n] = v;
+                        }
+                        records.Add(record);
+                    }
+
+                    List<Dictionary<string, object>> parsed = new List<Dictionary<string, object>>();
+
+                    List<string> errReport_validation = new List<string>();
+                    bool validate = ChiamataTab.Validation(records, out parsed, out errReport_validation);
+                    if (errReport_validation != null && errReport_validation.Count > 0)
+                    {
+                        string err = string.Join(" ", errReport_validation.ToArray());
+                        errReport.Add(string.Format("DATA VALIDATION ERRORS -> [{0}]", err));
+                        errReport_validation = null;
+                    }
+                    
+                    if (!validate)
+                    {
+                        string msg = "Bad Json Request. Validation failed!";                        
+                        log.Error(msg);
+                        response.success = false;
+                    }
+                    else
+                    {
+                        log.Info(string.Format("Starting Mapping! {0} items to evaluate ...", parsed.Count));                        
+                        List<ChiamataSOi> data = Mappers.ChiamataMapper.DictionaryListToSOList(parsed);
+                        log.Info(string.Format("Mapping completed! {0} objects mapped!", data.Count));
+
+                        log.Info(string.Format("Starting Insert Operation..."));
+                        int result = AddChiamate(data);
+                        if (result == -1)
+                        {
+                            log.Info(string.Format("Insert Operation failed!"));
+                            response.success = false;
+                        }
+                        else
+                        {
+                            log.Info(string.Format("Insert Operation completed! Has been written {0} items!", result));
+                            response.success = true;                            
+                        }
+                        response.AffectedRows = result;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = "INTERNAL ERROR -> An Exception occurred during the request was under computation! The stack is: " + ex.Message;
+                errReport.Add(msg);
+                log.Error(msg);
+                response.success = false;
+            }
+
+            if (errReport.Count == 0)
+                errReport = null;
+
+            response.AddErrors(errReport);
+            log.Info("Procedure completed!");
+
+            return response;
+        }
+
+
+
+
+
+        /*
 
         public ResponseInsert InserisciChiamateJO(string jsonArray)
         {
@@ -207,6 +312,12 @@ namespace WSChiamatePerse
             int iresponse = InserisciChiamateLOI(sos);
             return iresponse;
         }
+
+        */
+
+
+
+
 
         private int AddChiamate(List<ChiamataSOi> data)
         {
