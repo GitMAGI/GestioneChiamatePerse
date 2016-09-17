@@ -11,3 +11,5 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\bin\Debug\TestCasa.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\bin\Debug\Newtonsoft.Json.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\bin\Debug\Newtonsoft.Json.xml
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\obj\Debug\TestCasa.csprojResolveAssemblyReference.cache
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Debug\Newtonsoft.Json.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Debug\Newtonsoft.Json.xml

@@ -1,10 +1,8 @@
 ﻿using IBLL.DTO;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Reflection;
 using System.Web;
 
 namespace WSChiamatePerse.Mappers
@@ -13,37 +11,12 @@ namespace WSChiamatePerse.Mappers
     {
         public static ChiamataSOi DictionaryToSO(Dictionary<string, object> data)
         {
-            ChiamataSOi so = new ChiamataSOi();
-
-            //List<string> unevaluated = new List<string>(data.Keys);
-
-            foreach (PropertyInfo prop in so.GetType().GetProperties())
-            {
-                if (data.ContainsKey(prop.Name))
-                {
-                    object value = data[prop.Name];
-                    prop.SetValue(so, value, null);
-                    //unevaluated.Remove(prop.Name);
-                }
-                else
-                {
-                    string msg = string.Format("{0} is not defined into the Dictionary to map!", prop.Name);
-                }
-            }
-
-            //string warning = string.Format("The Following Dictionary Itmes do not have any correnspondence with Object's properties to Map. {0}", string.Join(", ",unevaluated.ToArray()));
-
+            ChiamataSOi so = GeneralPurposeLib.ConversionUtlilities.DictionaryToObject<ChiamataSOi>(data);
             return so;
         }
         public static List<ChiamataSOi> DictionaryListToSOList(List<Dictionary<string, object>> data)
         {
-            List<ChiamataSOi> sos = new List<ChiamataSOi>();
-
-            foreach (Dictionary<string, object> datum in data)
-            {
-                sos.Add(DictionaryToSO(datum));
-            }            
-
+            List<ChiamataSOi> sos = GeneralPurposeLib.ConversionUtlilities.DictionaryListToObjectList<ChiamataSOi>(data);
             return sos;
         }      
         public static string SOListToJsonArray(List<ChiamataSOo> sos)

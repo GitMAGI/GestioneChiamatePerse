@@ -1,0 +1,7 @@
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\TestCasa.exe.config
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\TestCasa.exe
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\TestCasa.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\Newtonsoft.Json.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\Newtonsoft.Json.xml
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\obj\Release\TestCasa.exe
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\obj\Release\TestCasa.pdb

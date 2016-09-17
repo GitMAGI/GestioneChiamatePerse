@@ -39,6 +39,5 @@ C:\Workspace\C#\GestioneChiamatePerse\TestLocale\bin\Debug\IBLL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\TestLocale\bin\Debug\Newtonsoft.Json.xml
 C:\Workspace\C#\GestioneChiamatePerse\TestLocale\bin\Debug\IRISDAL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\TestLocale\bin\Debug\GeneralPurposeLib.pdb
-C:\Workspace\C#\GestioneChiamatePerse\TestLocale\obj\Debug\TestLocale.csprojResolveAssemblyReference.cache
 C:\Workspace\C#\GestioneChiamatePerse\TestLocale\obj\Debug\TestLocale.exe
 C:\Workspace\C#\GestioneChiamatePerse\TestLocale\obj\Debug\TestLocale.pdb

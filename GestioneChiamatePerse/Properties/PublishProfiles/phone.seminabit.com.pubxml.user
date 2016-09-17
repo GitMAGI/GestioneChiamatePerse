@@ -10,100 +10,100 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/GCPData.exe">
-      <publishTime>08/25/2016 10:24:30</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/GestioneChiamatePerse.dll">
-      <publishTime>08/25/2016 10:24:31</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>08/23/2016 14:47:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="BoostrapMain.Master">
-      <publishTime>08/23/2016 19:38:32</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/bootstrap-theme.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/bootstrap-theme.css.map">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/bootstrap-theme.min.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/bootstrap-theme.min.css.map">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/bootstrap.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/bootstrap.css.map">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/bootstrap.min.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/bootstrap.min.css.map">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/css/ie10-viewport-bug-workaround.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.eot">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.svg">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.woff">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>08/23/2016 19:41:02</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>08/23/2016 14:47:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="PostPage.aspx">
-      <publishTime>08/23/2016 19:40:54</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="ReceiverPage.aspx">
-      <publishTime>08/23/2016 18:16:27</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="RecieverPage.aspx">
-      <publishTime>08/23/2016 15:41:57</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Scripts/docs.min.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Scripts/holder.min.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Scripts/ie10-viewport-bug-workaround.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Scripts/jquery-3.1.0.min.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Scripts/npm.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="SummaryPage.aspx">
-      <publishTime>08/23/2016 19:40:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/23/2016 19:45:46</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -22,3 +22,5 @@ C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\obj\Release\DataAccessLaye
 C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\obj\Release\DataAccessLayer.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\DataAccessLayer\bin\Release\Newtonsoft.Json.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\DataAccessLayer\bin\Release\Newtonsoft.Json.xml
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Release\Newtonsoft.Json.dll
+C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\bin\Release\Newtonsoft.Json.xml

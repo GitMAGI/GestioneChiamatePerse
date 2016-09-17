@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
 namespace GeneralPurposeLib
@@ -35,102 +34,6 @@ namespace GeneralPurposeLib
             return found;
         }
 
-        public bool ValidationNotNullable(ColumnStructure colStruct, object data)
-        {
-            bool result = true;
-
-            if (data == null)
-                if (colStruct.colNotNull)                
-                    result = false;
-
-            return result;
-        }
-        public bool ValidationChecksConstraints(ColumnStructure colStruct, object data, Dictionary<string, object> parsedData, ref List<string> errReport)
-        {
-            bool result = true;
-
-            // 1. MaxLength
-            if (colStruct.colMaxLength != null && colStruct.colType == typeof(string))
-            {
-                if (data.ToString().Length > colStruct.colMaxLength)
-                {
-                    result = false;
-                    string msg = string.Format("Attribute '{0}' exceeds the maximum length available. Actual length is {1} of {2}!", colStruct.colName, data.ToString().Length, colStruct.colMaxLength);
-                    if (errReport == null)
-                        errReport = new List<string>();
-                    errReport.Add(msg);
-                }
-            }
-            // 2. Checks Validation
-            if (colStruct.colChecks != null)
-            {
-                foreach (CheckValidation check in colStruct.colChecks)
-                {
-                    Type classType = check.libName;
-                    string funtionName = check.functionName;
-
-                    // To Implement and understand how to code it! Holy Shit!
-                    try
-                    {
-                        object[] args = new object[check.args.Count + 2];
-                        args[0] = data;
-                        int i = 1;
-                        foreach(string arg in check.args)
-                        {
-                            args[i] = parsedData[arg];
-                            i++;
-                        }
-                        args[i] = errReport;
-
-                        MethodInfo method = classType.GetMethod(funtionName);
-                        object genericResult = method.Invoke(null, args);
-
-                        bool tmpRes = (bool)genericResult;
-
-                        if (!tmpRes)
-                        {
-                            result = tmpRes;
-                            
-                            string msg = string.Format("Attribute '{0}' fails checks validation defined into {1}.{2}() function!", colStruct.colName, classType.ToString(), funtionName);
-                            if (errReport == null)
-                                errReport = new List<string>();
-                            string old = errReport.Last();
-                            errReport[errReport.Count - 1] = msg + " " + old;
-
-
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        string msg = string.Format("Fatal Error during checks validation. Check the function {0}.{1}() is defined as static, return a bool, has the right number of args and doesn't throw unhandled exceptions!", classType.ToString(), funtionName);
-                        throw new Exception(msg, ex);
-                    }
-                }
-            }
-                
-            return result;
-        }
-        public bool ValidationDataTypeAndParsing<TR>(string colValue, out TR converted)
-        {
-            bool result = true;
-            converted = default(TR);
-
-            try
-            {                
-                if (colValue != null)
-                {
-                    result = TryConvertFromString<TR>(colValue, out converted);
-                }
-
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-            return result;
-        }
-
         public static bool TryConvertFromString<TR>(string input, out TR output)
         {
             bool result = false;
@@ -157,106 +60,375 @@ namespace GeneralPurposeLib
             return result;
         }
 
-        public bool ValidationRow(Dictionary<string, string> dataRow, ref Dictionary<string, object> dataRowConverted, ref List<string> errReport)
+        public bool ParsingValidationRow(Dictionary<string, string> dataRow, ref Dictionary<string, object> dataRowConverted, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             bool result = true;
 
-            Dictionary<string, bool> convOk = new Dictionary<string, bool>();
+            if (dataRowConverted == null)
+                dataRowConverted = new Dictionary<string, object>();
+            if (warnReport == null)
+                warnReport = new List<string>();
+            if (errReport == null)
+                errReport = new List<string>();
+            if (infoReport == null)
+                infoReport = new List<string>();
 
             foreach (KeyValuePair<string, string> entry in dataRow)
             {
                 ColumnStructure? colStruct = GetStructureByColName(entry.Key);
                 if (colStruct == null)
                 {
-                    string msg = string.Format("Fatal Error! Bad dataRow index! '{0}' not found into TableStructure definition!", entry.Key);
-                    if (errReport == null)
-                        errReport = new List<string>();
-                    errReport.Add(msg);
-                    throw new KeyNotFoundException(string.Format(msg));
+                    string msg = string.Format("Waring! An unaxpected dataRow index! '{0}' not found into TableStructure definition! This item will be ignored!", entry.Key);                    
+                    warnReport.Add(msg);                  
+                    continue; // Jump at the next iteration !!                    
                 }
 
-                // NULLABLE VALIDATION
-                if (!ValidationNotNullable(colStruct.Value, entry.Value))
-                {
-                    result = false;
-                    string msg = string.Format("Attribute '{0}' must be not null!", entry.Key);
-                    if (errReport == null)
-                        errReport = new List<string>();
-                    errReport.Add(msg);
+                // PARSING VALIDATION
+                object[] args = new object[2];
+                args[0] = entry.Value;
+
+                /*
+                MethodInfo method = typeof(TableStructure).GetMethod("ValidationDataTypeAndParsing");
+                MethodInfo generic = method.MakeGenericMethod(colStruct.Value.colType);
+                object genericResult = generic.Invoke(this, args);
+                */
+
+                MethodInfo method = typeof(TableStructure).GetMethod("TryConvertFromString");
+                MethodInfo generic = method.MakeGenericMethod(colStruct.Value.colType);
+                object genericResult = generic.Invoke(null, args);
+
+                bool tmpRes = (bool)genericResult;
+
+                if (tmpRes)
+                {                    
+                    dataRowConverted.Add(entry.Key, args[1]);
                 }
                 else
                 {
-                    // PARSING VALIDATION
-                    object[] args = new object[2];
-                    args[0] = entry.Value;
-
-                    MethodInfo method = typeof(TableStructure).GetMethod("ValidationDataTypeAndParsing");
-                    MethodInfo generic = method.MakeGenericMethod(colStruct.Value.colType);
-                    object genericResult = generic.Invoke(this, args);
-
-                    bool tmpRes = (bool)genericResult;
-
-                    if (tmpRes)
-                    {
-                        if (dataRowConverted == null)
-                            dataRowConverted = new Dictionary<string, object>();
-                        dataRowConverted.Add(entry.Key, args[1]);
-
-                    }
-                    else
-                    {
-                        result = tmpRes;
-                        string msg = string.Format("Attribute '{0}' Parsing from string to {1} failed! '{2}' is not a {3} parsable string!", entry.Key, colStruct.Value.colType.ToString(), entry.Value, colStruct.Value.colType.ToString());
-                        if (errReport == null)
-                            errReport = new List<string>();
-                        errReport.Add(msg);
-                    }
-                }
-
-            }
-
-            // CHECKS AND CONSTRAINTS VALIDATION
-            if (result)
-            {
-                foreach (KeyValuePair<string, string> entry in dataRow)
-                {
-                    ColumnStructure? colStruct = GetStructureByColName(entry.Key);
-                    if (!ValidationChecksConstraints((ColumnStructure)colStruct, dataRowConverted[entry.Key], dataRowConverted, ref errReport))
-                    {
-                        result = false;
-                    }
+                    result = tmpRes;
+                    string msg = string.Format("Attribute '{0}' Parsing from string to {1} failed! '{2}' is not a {3} parsable string!", entry.Key, colStruct.Value.colType.ToString(), entry.Value, colStruct.Value.colType.ToString());                    
+                    errReport.Add(msg);
                 }
             }
-           
+
+            if (errReport.Count == 0)
+                errReport = null;
+            if (warnReport.Count == 0)
+                warnReport = null;
+            if (infoReport.Count == 0)
+                infoReport = null;
+            if (dataRowConverted.Count == 0)
+                dataRowConverted = null;
 
             return result;
         } // Can Throw tons of Exception, because of fatal Errors!
 
-        public bool Validation(List<Dictionary<string, string>> data, out List<Dictionary<string, object>> dataConverted, out List<string> errReport)
+        public bool ParsingValidation(List<Dictionary<string, string>> data, ref List<Dictionary<string, object>> dataConverted, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             bool result = true;
 
-            dataConverted = new List<Dictionary<string, object>>();
-            errReport = new List<string>();
+            if(dataConverted == null)
+                dataConverted = new List<Dictionary<string, object>>();
+            if(errReport == null)
+                errReport = new List<string>();
+            if (warnReport == null)
+                warnReport = new List<string>();
+            if (infoReport == null)
+                infoReport = new List<string>();
 
             int i = 0;
             foreach (Dictionary<string, string> datum in data)
             {
                 Dictionary<string, object> datumConverted = new Dictionary<string, object>();
                 dataConverted.Add(datumConverted);
-                string msg = string.Format("Line {0} errors: ", i+1);
-                errReport.Add(msg);
-                bool rowRes = ValidationRow(datum, ref datumConverted, ref errReport);
-                if (rowRes)      
-                    errReport.Remove(msg);
-                else
+
+                List<string> errReport_row = null;
+                List<string> warnReport_row = null;
+                List<string> infoReport_row = null;
+
+                bool rowRes = ParsingValidationRow(datum, ref datumConverted, ref errReport_row, ref warnReport_row, ref infoReport_row);
+
+                if (!rowRes)
                     result = false;
+
+                string msg = string.Format("Line {0}: ", i + 1);
+                if(errReport_row != null && errReport_row.Count > 0)
+                {
+                    msg += string.Join(" | ", errReport_row.ToArray());
+                    errReport.Add(msg);
+                }
+                if (warnReport_row != null && warnReport_row.Count > 0)
+                {
+                    msg += string.Join(" | ", warnReport_row.ToArray());
+                    warnReport.Add(msg);
+                }
+                if (infoReport_row != null && infoReport_row.Count > 0)
+                {
+                    msg += string.Join(" | ", infoReport_row.ToArray());
+                    infoReport.Add(msg);
+                }
+
                 i++;
             }
             if (errReport.Count == 0)
                 errReport = null;
+            if (warnReport.Count == 0)
+                warnReport = null;
+            if (infoReport.Count == 0)
+                infoReport = null;
+            if (dataConverted.Count == 0)
+                dataConverted = null;
 
             return result;
+        }
+
+
+        public bool CheckAndConstranitsValidation<T>(List<T> objectData, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
+        {
+            bool valid = true;
+
+            if (errReport == null)
+                errReport = new List<string>();
+            if (warnReport == null)
+                warnReport = new List<string>();
+            if (infoReport == null)
+                infoReport = new List<string>();
+
+            int i = 1;
+            foreach (T data in objectData)
+            {
+                List<string> errReport_att = new List<string>();
+                List<string> warnReport_att = new List<string>();
+                List<string> infoReport_att = new List<string>();
+
+                bool validRow = CheckAndConstranitsValidationRow<T>(data, ref errReport_att, ref warnReport_att, ref infoReport_att);
+                if (!validRow)
+                    valid = false;
+
+                string msg = string.Format("Item {0}: ", i);
+                if (errReport_att != null && errReport_att.Count > 0)
+                {
+                    string msg_ = msg + string.Join(" - ", errReport_att.ToArray());
+                    errReport.Add(msg_);
+                }
+                if (warnReport_att != null && warnReport_att.Count > 0)
+                {
+                    string msg_ = msg + string.Join(" - ", warnReport_att.ToArray());
+                    warnReport.Add(msg_);
+                }
+                if (infoReport_att != null && infoReport_att.Count > 0)
+                {
+                    string msg_ = msg + string.Join(" - ", infoReport_att.ToArray());
+                    infoReport.Add(msg_);
+                }
+
+                errReport_att = null;
+                warnReport_att = null;
+                infoReport_att = null;
+
+                i++;
+            }
+
+            if (errReport.Count == 0)
+                errReport = null;
+            if (warnReport.Count == 0)
+                warnReport = null;
+            if (infoReport.Count == 0)
+                infoReport = null;
+
+            return valid;
+        }
+        public bool CheckAndConstranitsValidationRow<T>(T objectData, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
+        {
+            bool valid = true;
+
+            if (errReport == null)
+                errReport = new List<string>();
+            if (warnReport == null)
+                warnReport = new List<string>();
+            if (infoReport == null)
+                infoReport = new List<string>();
+
+
+            foreach(PropertyInfo prop in objectData.GetType().GetProperties())
+            {
+                string propName = prop.Name;
+                object propValue = prop.GetValue(objectData);
+
+                List<string> errReport_att = new List<string>();
+                List<string> warnReport_att = new List<string>();
+                List<string> infoReport_att = new List<string>();
+
+                ColumnStructure? colStruct = this.GetStructureByColName(propName);
+                if (colStruct != null)
+                {
+                    bool validAtt = CheckAndConstranitsValidationItem<T>(colStruct.Value, propValue, objectData, ref errReport_att, ref warnReport_att, ref infoReport_att);
+                    if (!validAtt)
+                        valid = false;
+                }
+
+                string msg = string.Format("Attribute '{0}': ", propName);
+                if (errReport_att != null && errReport_att.Count > 0)
+                {
+                    string msg_ = msg + string.Join(" - ", errReport_att.ToArray());
+                    errReport.Add(msg_);
+                }
+                if (warnReport_att != null && warnReport_att.Count > 0)
+                {
+                    string msg_ = msg + string.Join(" - ", warnReport_att.ToArray());
+                    warnReport.Add(msg_);
+                }
+                if (infoReport_att != null && infoReport_att.Count > 0)
+                {
+                    string msg_ = msg + string.Join(" - ", infoReport_att.ToArray());
+                    infoReport.Add(msg_);
+                }
+
+                errReport_att = null;
+                warnReport_att = null;
+                infoReport_att = null;
+            }
+
+
+            if (errReport.Count == 0)
+                errReport = null;
+            if (warnReport.Count == 0)
+                warnReport = null;
+            if (infoReport.Count == 0)
+                infoReport = null;
+
+            return valid;
+        }
+        public bool CheckAndConstranitsValidationItem<T>(ColumnStructure colStruct, object data, T objectData, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
+        {
+            bool valid = true;
+
+            if (errReport == null)
+                errReport = new List<string>();
+            if (warnReport == null)
+                warnReport = new List<string>();
+            if (infoReport == null)
+                infoReport = new List<string>();
+
+
+
+
+            // 1. Not Null Conditions
+            if (data == null)
+                if (colStruct.colNotNull)
+                {
+                    valid = false;
+                    string msg = "NULL is not a valid value for this attribute!";
+                    if (errReport == null)
+                        errReport = new List<string>();
+                    errReport.Add(msg);
+                }
+
+
+
+            // 2. MaxLength
+            if (colStruct.colMaxLength != null && colStruct.colType == typeof(string) && data != null)
+            {
+                if (data.ToString().Length > colStruct.colMaxLength)
+                {
+                    valid = false;
+                    string msg = string.Format("Exceeding the maximum length available. Actual length is {0} of {1}!", data.ToString().Length, colStruct.colMaxLength);
+                    if (errReport == null)
+                        errReport = new List<string>();
+                    errReport.Add(msg);
+                }
+            }
+
+
+
+            // 3. Checks Validation
+            if (colStruct.colChecks != null && data != null)
+            {
+                foreach (CheckValidation check in colStruct.colChecks)
+                {
+                    Type classType = check.libName;
+                    string funtionName = check.functionName;
+
+                    List<string> errReport_func = new List<string>();
+                    List<string> warnReport_func = new List<string>();
+                    List<string> infoReport_func = new List<string>();
+
+                    object[] args = new object[check.args.Count + 4];
+                    args[0] = data;
+                    int i = 1;
+                    foreach (string arg in check.args)
+                    {
+                        object propValue = null;
+                        if (objectData.GetType().GetProperty(arg) != null)
+                        {
+                            propValue = objectData.GetType().GetProperty(arg).GetValue(objectData, null);
+                        }
+                        else
+                        { 
+                            string err = string.Format("Fatal Error! {0} is an undefined property of the class {1}. Check the TableStructure class, the 'colChecks' property for the attribute {0}!", arg, objectData.GetType().ToString(), colStruct.colName);
+                            throw new NullReferenceException(err);
+                        }
+                        args[i] = propValue;
+                        i++;
+                    }
+                    args[i] = errReport_func;
+                    args[i+1] = warnReport_func;
+                    args[i+2] = infoReport_func;
+
+                    try
+                    {
+                        MethodInfo method = classType.GetMethod(funtionName);
+                        object genericResult = method.Invoke(null, args);
+
+                        bool tmpRes = (bool)genericResult;
+
+                        if (!tmpRes)
+                            valid = false;
+
+                        //string msg = string.Format("{0}.{1}() function check -> ", classType.ToString(), funtionName);
+                        string msg = "";
+                        if (errReport_func != null && errReport_func.Count > 0)
+                        {
+                            string msg_ = msg + string.Join(" - ", errReport_func.ToArray());
+                            errReport.Add(msg_);
+                        }
+                        if (warnReport_func != null && warnReport_func.Count > 0)
+                        {
+                            string msg_ = msg + string.Join(" - ", warnReport_func.ToArray());
+                            warnReport.Add(msg_);
+                        }
+                        if (infoReport_func != null && infoReport_func.Count > 0)
+                        {
+                            string msg_ = msg + string.Join(" - ", infoReport_func.ToArray());
+                            infoReport.Add(msg_);
+                        }
+                        errReport_func = null;
+                        warnReport_func = null;
+                        infoReport_func = null;
+                    }
+                    catch (Exception ex)
+                    {
+                        string msg = string.Format("Fatal Error during check validations. Look at the function {0}.{1}(). Check if it's defined as static, return a bool, has the right number of args and doesn't throw unhandled exceptions!", classType.ToString(), funtionName);
+                        throw new Exception(msg, ex);
+                    }
+                }
+            }
+
+
+            
+            
+        
+
+
+
+            if (errReport.Count == 0)
+                errReport = null;
+            if (warnReport.Count == 0)
+                warnReport = null;
+            if (infoReport.Count == 0)
+                infoReport = null;
+
+            return valid;
         }
     }
 

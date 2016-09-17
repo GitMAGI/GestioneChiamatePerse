@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using GeneralPurposeLib;
 
 namespace WSChiamatePerse.Constraints
@@ -59,13 +57,13 @@ namespace WSChiamatePerse.Constraints
             ); 
         } 
         
-        public static bool DataFineMaggioreDataInizio(DateTime dataInizio, DateTime dataFine, ref List<string> errReport)
+        public static bool DataFineMaggioreDataInizio(DateTime dataInizio, DateTime dataFine, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             if (dataFine > dataInizio)
                 return true;
             else
             {
-                string msg = "Data finale maggiore di quella iniziale!";
+                string msg = "Data finale minore di quella iniziale!";
                 if (errReport == null)
                     errReport = new List<string>();
                 errReport.Add(msg);

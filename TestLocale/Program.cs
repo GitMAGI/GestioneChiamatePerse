@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using WSChiamatePerse;
 
 namespace TestLocale
 {
@@ -10,38 +11,26 @@ namespace TestLocale
         {
             Console.WriteLine("Avvio test ...");
 
-            /*
+            List<string> err = null;
+            List<string> warn = null;
+            List<string> info = null;
 
             ChiamataSOi testR = new ChiamataSOi();
             testR.CognomeChiamata = "Boriellieri";
             testR.NomeChiamata = "Marcella";
             testR.NumeroChiamata = "44222390";
             testR.MotivoChiamata = "Reclamo!";
-            testR.ExtIDChiamata = null;
+            testR.ExtIDChiamata = 153;
             testR.DataOraInizioChiamata = Convert.ToDateTime("2015-11-21 14:07:47");
-            testR.DataOraFineChiamata = Convert.ToDateTime("2015-1-21 14:13:14");
+            testR.DataOraFineChiamata = Convert.ToDateTime("2015-11-21 14:09:14");
             testR.Priorita = 1;
             testR.ExtIDOperatore = 3209;
 
-            GestioneChiamate client = new GestioneChiamate();
+            List<ChiamataSOi> dat = new List<ChiamataSOi>() { testR };
 
-            ResponseInsert rsp = client.InserisciChiamateOO(testR);
-
-            */
-
-            //WSChiamatePerse.Constraints.ChiamataContraints ChiamataTab = new WSChiamatePerse.Constraints.ChiamataContraints();
-            /*
-            long obj;
-            bool res1 = ChiamataTab.ValidationDataTypeAndParsing<long>("ExtIDChiamata", null, out obj);            
-            bool res2 = ChiamataTab.ValidationDataTypeAndParsing<DateTime>("DataOraInizioChiamata", "2015/05/03 12:12:45", out trash__);
-            bool res3 = ChiamataTab.ValidationDataTypeAndParsing<DateTime>("DataOraFineChiamata", "02/05/2016 22:15:45", out trash__);
-            bool res4 = ChiamataTab.ValidationDataTypeAndParsing<DateTime>("DataOraFineChiamata", "02/25/2016 22:15:45", out trash__);
-            bool res5 = ChiamataTab.ValidationDataTypeAndParsing<DateTime>("DataOraInizioChiamata", "2015-05-03 12:12:45", out trash__);
-            bool res6 = ChiamataTab.ValidationDataTypeAndParsing<DateTime>("DataOraFineChiamata", "02-05-2016 22:15:45", out trash__); 
-            DateTime trash__;
-            bool res7 = ChiamataTab.ValidationDataTypeAndParsing<DateTime>("DataOraFineChiamata", null, out trash__);
-            bool res8 = ChiamataTab.ValidationDataTypeAndParsing<DateTime>("DataOraFineChiamata", "25-02-2016 22:15:45", out trash__);
-            */
+            WSChiamatePerse.Constraints.ChiamataContraints tbChecker = new WSChiamatePerse.Constraints.ChiamataContraints();
+            bool res = tbChecker.CheckAndConstranitsValidation<ChiamataSOi>(dat, ref err, ref warn, ref info);
+/*
 
             Dictionary<string, string> data2Conv1 = new Dictionary<string, string>()
             {
@@ -85,7 +74,7 @@ namespace TestLocale
             //bool valid = ChiamataTab.Validation(data2Conv, out dataCNVT, out errRep);
 
             WSChiamatePerse.ResponseInsert response = client.InsertJson(data);
-
+*/
             Console.WriteLine("Test Concluso. Premere un tasto per terminare!");
             Console.ReadKey();
         }

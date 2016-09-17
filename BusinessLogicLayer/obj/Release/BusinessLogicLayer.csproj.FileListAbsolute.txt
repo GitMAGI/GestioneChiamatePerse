@@ -30,3 +30,5 @@ C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\DataAccessL
 C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\DataAccessLayer.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\Newtonsoft.Json.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\Newtonsoft.Json.xml
+C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\Newtonsoft.Json.dll
+C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\bin\Release\Newtonsoft.Json.xml
