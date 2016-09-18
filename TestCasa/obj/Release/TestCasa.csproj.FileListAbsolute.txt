@@ -5,3 +5,6 @@ C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\Newtonsoft.Json.dll
 C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\Newtonsoft.Json.xml
 C:\Workspace\C#\GestioneChiamatePerse\TestCasa\obj\Release\TestCasa.exe
 C:\Workspace\C#\GestioneChiamatePerse\TestCasa\obj\Release\TestCasa.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\GeneralPurposeLib.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Release\GeneralPurposeLib.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\obj\Release\TestCasa.csprojResolveAssemblyReference.cache

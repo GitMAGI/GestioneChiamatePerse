@@ -36,6 +36,5 @@ namespace GeneralPurposeLib
 
             return obj;
         }
-
     }
 }

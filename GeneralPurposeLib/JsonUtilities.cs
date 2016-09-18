@@ -7,6 +7,44 @@ namespace GeneralPurposeLib
 {
     public class JsonUtilities
     {
+        public static List<Dictionary<string, string>> JsonArrayToDictionaryList(string jsonArray)
+        {
+            List<Dictionary<string, string>> records = null;
+
+            if (jsonArray == null && jsonArray == string.Empty)
+            {
+                string msg = "Bad Json Request. Void or Null has been passed to the Web Service!";
+                throw new ArgumentNullException(msg);
+            }
+            else
+            {
+                try
+                {
+                    JArray jArray = JArray.Parse(jsonArray);
+                    records = new List<Dictionary<string, string>>();
+                    foreach (JToken jRecord in jArray)
+                    {
+                        Dictionary<string, string> record = new Dictionary<string, string>();
+                        foreach (JProperty prop in jRecord.Children())
+                        {
+                            string n = prop.Name;
+                            string v = null;
+                            if (prop.Value.Type != JTokenType.Null)
+                                v = prop.Value.ToString();
+                            record[n] = v;
+                        }
+                        records.Add(record);
+                    }
+                }
+                catch(Exception ex)
+                {
+                    string msg = "Bad Json Request. Check the structure of the json data. A structure like this is acceptable: [{obj1}, {obj2}, ... {objN}].";
+                    throw new ArgumentException(msg + " " + ex.Message);
+                }                
+            }
+            return records;
+        }
+
         public static bool JObjToDictionaryObj(JObject jObject, ref Dictionary<string, string> parsed, ref List<string> errReport)
         {
             bool success = true;

@@ -12,37 +12,10 @@ namespace WSChiamatePerse
     public interface IGestioneChiamate
     {
         [OperationContract]
-        ResponseInsert InsertJson(string jsonArray);
-
-        /*
-        [OperationContract]
-        ResponseInsert InserisciChiamateJO(string jsonArray);
-        [OperationContract]
-        string InserisciChiamateJJ(string jsonArray);
-        [OperationContract]
-        int InserisciChiamateJI(string jsonArray);
+        ResponseInsert InsertJson_obj(string jsonArray);
 
         [OperationContract]
-        ResponseInsert InserisciChiamateLOO(List<ChiamataSOi> data);
-        [OperationContract]
-        string InserisciChiamateLOJ(List<ChiamataSOi> data);
-        [OperationContract]
-        int InserisciChiamateLOI(List<ChiamataSOi> data);
-
-        [OperationContract]
-        ResponseInsert InserisciChiamateAOO(ChiamataSOi[] data);
-        [OperationContract]
-        string InserisciChiamateAOJ(ChiamataSOi[] data);
-        [OperationContract]
-        int InserisciChiamateAOI(ChiamataSOi[] data);
-
-        [OperationContract]
-        ResponseInsert InserisciChiamateOO(ChiamataSOi data);
-        [OperationContract]
-        string InserisciChiamateOJ(ChiamataSOi data);
-        [OperationContract]
-        int InserisciChiamateOI(ChiamataSOi data);
-         * */
+        string InsertJson_json(string jsonArray);
     }
 
     [DataContract]

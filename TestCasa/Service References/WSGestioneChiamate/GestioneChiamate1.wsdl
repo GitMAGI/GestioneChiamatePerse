@@ -8,22 +8,41 @@
       <xsd:import schemaLocation="http://192.168.1.152:41000/GestioneChiamate.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IGestioneChiamate_InsertJson_InputMessage">
-    <wsdl:part name="parameters" element="tns:InsertJson" />
+  <wsdl:message name="IGestioneChiamate_InsertJson_obj_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJson_obj" />
   </wsdl:message>
-  <wsdl:message name="IGestioneChiamate_InsertJson_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertJsonResponse" />
+  <wsdl:message name="IGestioneChiamate_InsertJson_obj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJson_objResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertJson_json_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJson_json" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertJson_json_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJson_jsonResponse" />
   </wsdl:message>
   <wsdl:portType name="IGestioneChiamate">
-    <wsdl:operation name="InsertJson">
-      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson" message="tns:IGestioneChiamate_InsertJson_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJsonResponse" message="tns:IGestioneChiamate_InsertJson_OutputMessage" />
+    <wsdl:operation name="InsertJson_obj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_obj" message="tns:IGestioneChiamate_InsertJson_obj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_objResponse" message="tns:IGestioneChiamate_InsertJson_obj_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertJson_json">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_json" message="tns:IGestioneChiamate_InsertJson_json_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_jsonResponse" message="tns:IGestioneChiamate_InsertJson_json_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IGestioneChiamate" type="tns:IGestioneChiamate">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="InsertJson">
-      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InsertJson" style="document" />
+    <wsdl:operation name="InsertJson_obj">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InsertJson_obj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertJson_json">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InsertJson_json" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

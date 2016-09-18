@@ -1,9 +1,10 @@
 ﻿using BusinessLogicLayer;
 using DataAccessLayer;
 using IBLL.DTO;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using WSChiamatePerse.Constraints;
 
 namespace WSChiamatePerse
@@ -30,6 +31,9 @@ namespace WSChiamatePerse
 
         public Response GenericCall(object input)
         {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
             log.Info("Starting procedure...");
 
             List<string> errReport = new List<string>();
@@ -63,13 +67,17 @@ namespace WSChiamatePerse
             warnReport = null;
             infoReport = null;
 
-            log.Info("Procedure complete!");
+            tw.Stop();
+            log.Info(string.Format("Procedure Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
 
             return response;
         }
 
-        public ResponseInsert InsertJson(string jsonArray)
+        public ResponseInsert InsertJson_obj(string jsonArray)
         {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
             log.Info("Starting procedure...");
 
             List<string> errReport = new List<string>();
@@ -82,15 +90,39 @@ namespace WSChiamatePerse
 
             try
             {
-
-
-
-
-
+                // 1. Get List of dictionary from the input JSON
+                List<Dictionary<string, string>> data = GeneralPurposeLib.JsonUtilities.JsonArrayToDictionaryList(jsonArray);
+                // 2. Parse and Validate Types
+                List<Dictionary<string, object>> dataConverted = null;
+                bool validType = ChiamataTabStruct.ParsingValidation(data, ref dataConverted, ref errReport, ref warnReport, ref infoReport);
+                if (validType)
+                {
+                    // 3. Map to SOi
+                    List<ChiamataSOi> sos = Mappers.ChiamataMapper.DictionaryListToSOList(dataConverted);
+                    // 4. Validate the Object
+                    bool validChecks = ChiamataTabStruct.CheckAndConstranitsValidation<ChiamataSOi>(sos, ref errReport, ref warnReport, ref infoReport);
+                    if(validChecks)
+                    {
+                        // 5. Make the real service call
+                        int rows = AddChiamate(sos, ref errReport, ref warnReport, ref infoReport);
+                        if (errReport != null && errReport.Count > 0)
+                            response.success = false;
+                    }
+                    else
+                    {
+                        response.success = false;
+                    }                 
+                }
+                else
+                {
+                    response.success = false;
+                }
             }
             catch(Exception ex)
             {
                 string msg = "INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: " + ex.Message;
+                if (errReport == null)
+                    errReport = new List<string>();
                 errReport.Add(msg);
                 log.Error(msg);
                 response.success = false;
@@ -104,114 +136,27 @@ namespace WSChiamatePerse
             warnReport = null;
             infoReport = null;
 
-            log.Info("Procedure complete!");
+            tw.Stop();
+            log.Info(string.Format("Procedure Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
 
             return response;
         }
 
-        /*
-        public ResponseInsert InsertJson(string jsonArray)
+        public string InsertJson_json(string jsonArray)
         {
-            List<string> errReport = new List<string>();
+            string result = null;
 
-            log.Info("Starting procedure...");
-            
-            ResponseInsert response = new ResponseInsert();
-            response.success = true;
-            response.AffectedRows = -1;
+            result = JsonConvert.SerializeObject(InsertJson_obj(jsonArray));
 
-            try
-            {
-                if (jsonArray == null && jsonArray == string.Empty)
-                {
-                    string msg = "Bad Json Request. Void or Null has been passed to the Web Service!";
-                    errReport.Add("JSON PARSING ERRORS ->");
-                    errReport.Add(msg);
-                    log.Error(msg);
-                    response.success = false;
-                }
-                else
-                {
-                    JArray jArray = JArray.Parse(jsonArray);
-                    List<Dictionary<string, string>> records = new List<Dictionary<string, string>>();
-                    foreach (JToken jRecord in jArray)
-                    {
-                        Dictionary<string, string> record = new Dictionary<string, string>();
-                        foreach (JProperty prop in jRecord.Children())
-                        {
-                            string n = prop.Name;
-                            string v = null;
-                            if(prop.Value.Type != JTokenType.Null)
-                                v = prop.Value.ToString();                            
-                            record[n] = v;
-                        }
-                        records.Add(record);
-                    }
-
-                    List<Dictionary<string, object>> parsed = null;
-                    List<string> errReport_validation = null;
-                    List<string> warnReport_validation = null;
-                    List<string> infoReport_validation = null;
-                    bool validate = ChiamataTabStruct.ParsingValidation(records, ref parsed, ref errReport_validation, ref warnReport_validation, ref infoReport_validation);
-                    if (errReport_validation != null && errReport_validation.Count > 0)
-                    {
-                        string err = string.Join(" ", errReport_validation.ToArray());
-                        errReport.Add(string.Format("DATA VALIDATION ERRORS -> {0}", err));
-                        errReport_validation = null;
-                    }
-                    
-                    if (!validate)
-                    {
-                        string msg = "Bad Json Request. ParsingValidation failed!";                        
-                        log.Error(msg);
-                        response.success = false;
-                    }
-                    else
-                    {
-                        log.Info(string.Format("Starting Mapping! {0} items to evaluate ...", parsed.Count));                        
-                        List<ChiamataSOi> data = Mappers.ChiamataMapper.DictionaryListToSOList(parsed);
-                        log.Info(string.Format("Mapping completed! {0} objects mapped!", data.Count));
-
-                        log.Info(string.Format("Starting Insert Operation..."));
-                        int result = AddChiamate(data);
-                        if (result == -1)
-                        {
-                            log.Info(string.Format("Insert Operation failed!"));
-                            response.success = false;
-                        }
-                        else
-                        {
-                            log.Info(string.Format("Insert Operation completed! Has been written {0} items!", result));
-                            response.success = true;                            
-                        }
-                        response.AffectedRows = result;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                string msg = "INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: " + ex.Message;
-                errReport.Add(msg);
-                log.Error(msg);
-                response.success = false;
-            }
-
-            if (errReport.Count == 0)
-                errReport = null;
-
-            response.AddErrors(errReport);
-            log.Info("Procedure completed!");
-
-            return response;
+            return result;
         }
-        */
 
-        private int AddChiamate(List<ChiamataSOi> data)
+        private int AddChiamate(List<ChiamataSOi> data, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             int result = -1;
 
             List<ChiamataDTO> dtos = Mappers.ChiamataMapper.SOListToDTOList(data);
-            result = this.bll.AddChiamate(dtos);
+            result = this.bll.AddChiamate(dtos, ref errReport, ref warnReport, ref infoReport);
 
             return result;
         }    

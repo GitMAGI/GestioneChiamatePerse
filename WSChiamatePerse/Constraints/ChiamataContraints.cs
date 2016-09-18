@@ -39,7 +39,7 @@ namespace WSChiamatePerse.Constraints
                         }
                     },
                     new ColumnStructure{ 
-                        colName = "DataOraFineChiamata", colType = typeof(DateTime), colMaxLength = null, colNotNull = false, colChecks = null
+                        colName = "DataOraFineChiamata", colType = typeof(DateTime), colMaxLength = null, colNotNull = true, colChecks = null
                     },
                     new ColumnStructure{ 
                         colName = "Priorita", colType = typeof(int), colMaxLength = null,  colNotNull = false, colChecks = null

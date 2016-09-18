@@ -12,6 +12,7 @@ namespace IDAL
         List<ChiamataVO> GetChiamateByRangeDate(DateTime begin, DateTime end);
         ChiamataVO GetChiamataByPk(long idid);
         ChiamataVO GetChiamataByExtPk(long extidid);
+        List<ChiamataVO> GetChiamateByExtPk(List<long> extidids);
         List<ChiamataVO> GetChiamateByStato(int stato);
         int UpdateChiamataByExtPk(ChiamataVO data, long extidid);
         int UpdateChiamataByPk(ChiamataVO data, long idid);

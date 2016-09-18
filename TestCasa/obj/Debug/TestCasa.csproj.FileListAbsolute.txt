@@ -13,3 +13,6 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\bin\Debug\Newtonsoft.Json.xm
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestCasa\obj\Debug\TestCasa.csprojResolveAssemblyReference.cache
 C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Debug\Newtonsoft.Json.dll
 C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Debug\Newtonsoft.Json.xml
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Debug\GeneralPurposeLib.dll
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\bin\Debug\GeneralPurposeLib.pdb
+C:\Workspace\C#\GestioneChiamatePerse\TestCasa\obj\Debug\TestCasa.csprojResolveAssemblyReference.cache

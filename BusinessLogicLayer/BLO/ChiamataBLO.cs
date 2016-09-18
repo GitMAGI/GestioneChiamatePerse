@@ -40,7 +40,7 @@ namespace BusinessLogicLayer
             }
         }
         
-        public int UpdateChiamataByExtPk(ChiamataDTO data, long extidid)
+        public int UpdateChiamataByExtPk(ChiamataDTO data, long extidid, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -70,7 +70,7 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
             }
         }
-        public int UpdateChiamataByPk(ChiamataDTO data, long idid)
+        public int UpdateChiamataByPk(ChiamataDTO data, long idid, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -102,7 +102,7 @@ namespace BusinessLogicLayer
             
         }
         
-        public int AddChiamata(ChiamataDTO data)
+        public int AddChiamata(ChiamataDTO data, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -115,6 +115,19 @@ namespace BusinessLogicLayer
             {
                 ChiamataVO data_ = ChiamataMapper.DTOToVO(data);
                 log.Info(string.Format("{0} items of {1} mapped to {2}", 1, data.GetType().ToString(), data_.GetType().ToString()));
+                // ----------------------------------------------------------
+                // Check if Object with the same ExtIDChiamata already exists
+                ChiamataVO got = this.dal.GetChiamataByExtPk(data_.ExtIDChiamata.Value);
+                if (got != null)
+                {
+                    string msg = string.Format("Duplicate Index for {0}: {1}", "ExtIdChiamata", data_.ExtIDChiamata.Value);
+                    log.Info("Operation aborted! " + msg);
+                    if (errReport == null) 
+                        errReport = new List<string>();
+                    errReport.Add("Record already in the DB! " + msg);
+                    return result;
+                }
+                // ----------------------------------------------------------
                 result = this.dal.AddChiamata(data_);
                 log.Info(string.Format("Operation computed for {0} items!", result));
                 return result;   
@@ -132,7 +145,7 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
             }
         }
-        public int AddChiamate(List<ChiamataDTO> data)
+        public int AddChiamate(List<ChiamataDTO> data, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -144,7 +157,32 @@ namespace BusinessLogicLayer
             try
             {
                 List<ChiamataVO> data_ = ChiamataMapper.DTOListToVOList(data);
-                log.Info(string.Format("{0} items of {1} mapped to {2}", data.Count, data_.First().GetType().ToString(), data.First().GetType().ToString()));
+                log.Info(string.Format("{0} items of {1} mapped to {2}", data.Count, data.First().GetType().ToString(), data_.First().GetType().ToString()));
+                // ----------------------------------------------------------
+                // Check if Object with the same ExtIDChiamata already exists
+                List<long> extidids = new List<long>();
+                foreach(ChiamataVO d in data_)
+                {
+                    extidids.Add(d.ExtIDChiamata.Value);
+                }
+                List<ChiamataVO> gots = this.dal.GetChiamateByExtPk(extidids);
+                List<long> alreadys = new List<long>();
+                if (gots != null)
+                {
+                    foreach(ChiamataVO g in gots)
+                    {
+                        long already = g.ExtIDChiamata.Value;
+                        alreadys.Add(already);
+                        string msg = string.Format("Duplicate Index for {0}: {1}", "ExtIdChiamata", already);                        
+                        if (errReport == null)
+                            errReport = new List<string>();
+                        errReport.Add("Record already in the DB! " + msg);
+                    }
+                    string msg_ = string.Format("Operation aborted! Duplicate Indexes for {0}: {1}", "ExtIdChiamata", string.Join(", ", alreadys));
+                    log.Info(msg_);
+                    return result;
+                }
+                // ----------------------------------------------------------
                 result = this.dal.AddChiamate(data_);
                 log.Info(string.Format("Operation computed for {0} items!", result));
                 return result;
@@ -162,7 +200,7 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
             }  
         }
-        public int AddChiamate(ChiamataDTO[] data)
+        public int AddChiamate(ChiamataDTO[] data, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -182,6 +220,32 @@ namespace BusinessLogicLayer
 
                 List<ChiamataVO> data_ = ChiamataMapper.DTOListToVOList(dataDTO);
                 log.Info(string.Format("{0} items of {1} mapped to {2}", dataDTO.Count, data_.First().GetType().ToString(), dataDTO.First().GetType().ToString()));
+
+                // ----------------------------------------------------------
+                // Check if Object with the same ExtIDChiamata already exists
+                List<long> extidids = new List<long>();
+                foreach (ChiamataVO d in data_)
+                {
+                    extidids.Add(d.ExtIDChiamata.Value);
+                }
+                List<ChiamataVO> gots = this.dal.GetChiamateByExtPk(extidids);
+                List<long> alreadys = new List<long>();
+                if (gots != null)
+                {
+                    foreach (ChiamataVO g in gots)
+                    {
+                        long already = g.ExtIDChiamata.Value;
+                        alreadys.Add(already);
+                        string msg = string.Format("Duplicate Index for {0}: {1}", "ExtIdChiamata", already);
+                        if (errReport == null)
+                            errReport = new List<string>();
+                        errReport.Add("Record already in the DB! " + msg);
+                    }
+                    log.Info(string.Format("Operation aborted! Duplicate Indexes for {0}: ", "ExtIdChiamata", string.Join(", ", alreadys.ToArray())));
+                    return result;
+                }
+                // ----------------------------------------------------------
+
                 result = this.dal.AddChiamate(data_);
                 log.Info(string.Format("Operation computed for {0} items!", result));
                 return result;  
@@ -200,7 +264,7 @@ namespace BusinessLogicLayer
             }            
         }
 
-        public int DeleteChiamata(long chiamidid)
+        public int DeleteChiamata(long chiamidid, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();

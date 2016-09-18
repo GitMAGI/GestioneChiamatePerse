@@ -11,6 +11,7 @@ namespace TestLocale
         {
             Console.WriteLine("Avvio test ...");
 
+            /*
             List<string> err = null;
             List<string> warn = null;
             List<string> info = null;
@@ -30,7 +31,7 @@ namespace TestLocale
 
             WSChiamatePerse.Constraints.ChiamataContraints tbChecker = new WSChiamatePerse.Constraints.ChiamataContraints();
             bool res = tbChecker.CheckAndConstranitsValidation<ChiamataSOi>(dat, ref err, ref warn, ref info);
-/*
+           */
 
             Dictionary<string, string> data2Conv1 = new Dictionary<string, string>()
             {
@@ -38,7 +39,7 @@ namespace TestLocale
                 {"NomeChiamata", "Bombiero"},
                 {"NumeroChiamata", "44222390"},
                 {"MotivoChiamata", "Reclamo!"},
-                {"ExtIDChiamata", "13452"},
+                {"ExtIDChiamata", "101100002"},
                 {"DataOraInizioChiamata", "2015-1-21 14:07:50"},
                 {"DataOraFineChiamata", "2015-1-21 14:07:54"},
                 {"Priorita", "1"},
@@ -50,8 +51,20 @@ namespace TestLocale
                 {"NomeChiamata", "Topello"},
                 {"NumeroChiamata", "123322390"},
                 {"MotivoChiamata", "Intercettazione"},
-                {"ExtIDChiamata", "3445"},
-                {"DataOraInizioChiamata", "2011-10-1 11:07:47"},
+                {"ExtIDChiamata", "101100002"},
+                {"DataOraInizioChiamata", "2011-10-1 11:07:51"},
+                {"DataOraFineChiamata", "2011-10-1 11:07:54"},
+                {"Priorita", "1"},
+                {"ExtIDOperatore", "112"},
+            };
+            Dictionary<string, string> data2Conv3 = new Dictionary<string, string>()
+            {
+                {"CognomeChiamata", "Giorgelli"},
+                {"NomeChiamata", "Topello"},
+                {"NumeroChiamata", "123322390"},
+                {"MotivoChiamata", "Intercettazione"},
+                {"ExtIDChiamata", "101100002"},
+                {"DataOraInizioChiamata", "2011-10-1 11:07:51"},
                 {"DataOraFineChiamata", "2011-10-1 11:07:54"},
                 {"Priorita", "1"},
                 {"ExtIDOperatore", "112"},
@@ -60,21 +73,17 @@ namespace TestLocale
             List<Dictionary<string, string>> data2Conv = new List<Dictionary<string, string>>()
             {
                 data2Conv1,
-                data2Conv2
+                data2Conv2,
+                data2Conv3,
             };
-
-            List<Dictionary<string, object>> dataCNVT = new List<Dictionary<string, object>>();
-
-            List<string> errRep = new List<string>();
 
             string data = JsonConvert.SerializeObject(data2Conv);
             
-            WSChiamatePerse.GestioneChiamate client = new WSChiamatePerse.GestioneChiamate();
+            GestioneChiamate client = new GestioneChiamate();
 
-            //bool valid = ChiamataTab.Validation(data2Conv, out dataCNVT, out errRep);
+            //ResponseInsert response = client.InsertJson_obj(data);
+            string response = client.InsertJson_json(data);
 
-            WSChiamatePerse.ResponseInsert response = client.InsertJson(data);
-*/
             Console.WriteLine("Test Concluso. Premere un tasto per terminare!");
             Console.ReadKey();
         }

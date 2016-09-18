@@ -1,0 +1,597 @@
+2016-09-18 21:16:02,923 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:17:41,612 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 21:18:14,462 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:18:14,540 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 21:19:07,186 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:19:07,250 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 21:19:42,830 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:20:31,414 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 21:20:38,985 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:20:50,061 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 21:20:58,583 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:27:13,054 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:27:49,927 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 21:28:10,256 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:28:10,303 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 21:30:01,380 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 21:30:01,426 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 22:41:57,992 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 22:41:58,039 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 22:43:29,302 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 22:43:29,364 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 22:44:23,285 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 22:44:23,347 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 23:45:47,971 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 23:45:48,095 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-18 23:45:48,095 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IDAL.VO.ChiamataVO mapped to IBLL.DTO.ChiamataDTO
+2016-09-18 23:45:48,111 [9] INFO  DataAccessLayer.DAL.AddChiamate() - Starting ...
+2016-09-18 23:45:48,111 [9] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (@ExtIDChiamata0, @NumeroChiamata0, @NomeChiamata0, @CognomeChiamata0, @MotivoChiamata0, @DataOraInizioChiamata0, @DataOraFineChiamata0, @Priorita0, @Stato0, @DataOraOperazione0, @IPOperazione0, @ExtIDOperatore0)
+2016-09-18 23:45:48,111 [9] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Params: ExtIDChiamata0=101100002; NumeroChiamata0=44222390; NomeChiamata0=Bombiero; CognomeChiamata0=Boriellieri; MotivoChiamata0=Reclamo!; DataOraInizioChiamata0=21/01/2015 14:07:50; DataOraFineChiamata0=21/01/2015 14:07:54; Priorita0=1; Stato0=1; DataOraOperazione0=18/09/2016 23:45:48; IPOperazione0=-- no ip detected --; ExtIDOperatore0=2309
+2016-09-18 23:45:48,111 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Setting up ...
+2016-09-18 23:45:48,127 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Opening Connection on 'Data Source=192.168.3.200\SQL;Initial Catalog=GCP;User ID=sa;Password=semABC123' ...
+2016-09-18 23:46:02,866 [9] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected!
+2016-09-18 23:46:02,866 [9] ERROR DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected! Si è verificato un errore di rete o specifico dell'istanza mentre si cercava di stabilire una connessione con SQL Server. Il server non è stato trovato o non è accessibile. Verificare che il nome dell'istanza sia corretto e che SQL Server sia configurato in modo da consentire connessioni remote. (provider: SQL Network Interfaces, error: 26 - Errore nell'individuazione del server/dell'istanza specificata)
+2016-09-18 23:46:02,882 [9] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Completed! Elapsed time 00:00:14.768
+2016-09-18 23:46:02,882 [9] INFO  DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:46:02,882 [9] ERROR DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Si è verificato un errore di rete o specifico dell'istanza mentre si cercava di stabilire una connessione con SQL Server. Il server non è stato trovato o non è accessibile. Verificare che il nome dell'istanza sia corretto e che SQL Server sia configurato in modo da consentire connessioni remote. (provider: SQL Network Interfaces, error: 26 - Errore nell'individuazione del server/dell'istanza specificata)
+   in System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   in System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   in System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   in System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   in System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   in System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   in System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   in System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   in System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   in System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   in System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   in System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   in System.Data.SqlClient.SqlConnection.Open()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 133
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 268
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2016-09-18 23:46:02,898 [9] INFO  DataAccessLayer.DAL.AddChiamate() - Completed! Elapsed time 00:00:14.786
+2016-09-18 23:46:02,898 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:46:02,898 [9] ERROR BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Si è verificato un errore di rete o specifico dell'istanza mentre si cercava di stabilire una connessione con SQL Server. Il server non è stato trovato o non è accessibile. Verificare che il nome dell'istanza sia corretto e che SQL Server sia configurato in modo da consentire connessioni remote. (provider: SQL Network Interfaces, error: 26 - Errore nell'individuazione del server/dell'istanza specificata)
+   in System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   in System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   in System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   in System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   in System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   in System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   in System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   in System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   in System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   in System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   in System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   in System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   in System.Data.SqlClient.SqlConnection.Open()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 133
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 279
+   in BusinessLogicLayer.BLL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\BLO\ChiamataBLO.cs:riga 148
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2016-09-18 23:46:02,913 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:14.820
+2016-09-18 23:46:37,465 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 23:46:37,543 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-18 23:46:37,546 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IDAL.VO.ChiamataVO mapped to IBLL.DTO.ChiamataDTO
+2016-09-18 23:46:37,547 [10] INFO  DataAccessLayer.DAL.AddChiamate() - Starting ...
+2016-09-18 23:46:37,554 [10] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (@ExtIDChiamata0, @NumeroChiamata0, @NomeChiamata0, @CognomeChiamata0, @MotivoChiamata0, @DataOraInizioChiamata0, @DataOraFineChiamata0, @Priorita0, @Stato0, @DataOraOperazione0, @IPOperazione0, @ExtIDOperatore0)
+2016-09-18 23:46:37,555 [10] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Params: ExtIDChiamata0=101100002; NumeroChiamata0=44222390; NomeChiamata0=Bombiero; CognomeChiamata0=Boriellieri; MotivoChiamata0=Reclamo!; DataOraInizioChiamata0=21/01/2015 14:07:50; DataOraFineChiamata0=21/01/2015 14:07:54; Priorita0=1; Stato0=1; DataOraOperazione0=18/09/2016 23:46:37; IPOperazione0=-- no ip detected --; ExtIDOperatore0=2309
+2016-09-18 23:46:37,557 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Setting up ...
+2016-09-18 23:46:37,560 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-18 23:46:37,587 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (101100002, 44222390, Bombiero, Boriellieri, Reclamo!, 21/01/2015 14:07:50, 21/01/2015 14:07:54, 1, 1, 18/09/2016 23:46:37, -- no ip detected --, 2309)
+2016-09-18 23:46:37,588 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query execution starting ...
+2016-09-18 23:46:37,632 [10] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected!
+2016-09-18 23:46:37,633 [10] ERROR DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected! Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+2016-09-18 23:46:37,639 [10] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Completed! Elapsed time 00:00:00.089
+2016-09-18 23:46:37,640 [10] INFO  DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:46:37,640 [10] ERROR DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 136
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 268
+ClientConnectionId:880a2bf9-4792-48b5-b64a-e6f88473a7e2
+Error Number:2601,State:1,Class:14
+2016-09-18 23:46:37,657 [10] INFO  DataAccessLayer.DAL.AddChiamate() - Completed! Elapsed time 00:00:00.110
+2016-09-18 23:46:37,658 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:46:37,658 [10] ERROR BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 136
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 279
+   in BusinessLogicLayer.BLL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\BLO\ChiamataBLO.cs:riga 148
+ClientConnectionId:880a2bf9-4792-48b5-b64a-e6f88473a7e2
+Error Number:2601,State:1,Class:14
+2016-09-18 23:46:37,665 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:00.121
+2016-09-18 23:48:19,377 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 23:50:59,830 [12] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 23:51:03,702 [12] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-18 23:51:03,709 [12] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IDAL.VO.ChiamataVO mapped to IBLL.DTO.ChiamataDTO
+2016-09-18 23:51:03,711 [12] INFO  DataAccessLayer.DAL.AddChiamate() - Starting ...
+2016-09-18 23:51:03,729 [12] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (@ExtIDChiamata0, @NumeroChiamata0, @NomeChiamata0, @CognomeChiamata0, @MotivoChiamata0, @DataOraInizioChiamata0, @DataOraFineChiamata0, @Priorita0, @Stato0, @DataOraOperazione0, @IPOperazione0, @ExtIDOperatore0)
+2016-09-18 23:51:03,732 [12] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Params: ExtIDChiamata0=101100002; NumeroChiamata0=44222390; NomeChiamata0=Bombiero; CognomeChiamata0=Boriellieri; MotivoChiamata0=Reclamo!; DataOraInizioChiamata0=21/01/2015 14:07:50; DataOraFineChiamata0=21/01/2015 14:07:54; Priorita0=1; Stato0=1; DataOraOperazione0=18/09/2016 23:50:59; IPOperazione0=-- no ip detected --; ExtIDOperatore0=2309
+2016-09-18 23:51:03,733 [12] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Setting up ...
+2016-09-18 23:51:03,738 [12] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-18 23:51:03,766 [12] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (101100002, 44222390, Bombiero, Boriellieri, Reclamo!, 21/01/2015 14:07:50, 21/01/2015 14:07:54, 1, 1, 18/09/2016 23:50:59, -- no ip detected --, 2309)
+2016-09-18 23:51:03,766 [12] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query execution starting ...
+2016-09-18 23:51:03,780 [12] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected!
+2016-09-18 23:51:03,780 [12] ERROR DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected! Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+2016-09-18 23:51:03,786 [12] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Completed! Elapsed time 00:00:00.068
+2016-09-18 23:51:03,786 [12] INFO  DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:51:03,787 [12] ERROR DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 136
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 268
+ClientConnectionId:f789b1be-4c74-457c-92b1-36c6fad1d514
+Error Number:2601,State:1,Class:14
+2016-09-18 23:51:03,802 [12] INFO  DataAccessLayer.DAL.AddChiamate() - Completed! Elapsed time 00:00:00.090
+2016-09-18 23:51:03,802 [12] INFO  BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:51:03,802 [12] ERROR BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 136
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 279
+   in BusinessLogicLayer.BLL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\BLO\ChiamataBLO.cs:riga 148
+ClientConnectionId:f789b1be-4c74-457c-92b1-36c6fad1d514
+Error Number:2601,State:1,Class:14
+2016-09-18 23:51:03,811 [12] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:00.109
+2016-09-18 23:51:14,678 [12] ERROR WSChiamatePerse.GestioneChiamate.InsertJson() - INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+2016-09-18 23:51:17,081 [12] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 23:52:33,165 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 23:52:33,246 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-18 23:52:33,250 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IDAL.VO.ChiamataVO mapped to IBLL.DTO.ChiamataDTO
+2016-09-18 23:52:33,250 [10] INFO  DataAccessLayer.DAL.AddChiamate() - Starting ...
+2016-09-18 23:52:33,257 [10] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (@ExtIDChiamata0, @NumeroChiamata0, @NomeChiamata0, @CognomeChiamata0, @MotivoChiamata0, @DataOraInizioChiamata0, @DataOraFineChiamata0, @Priorita0, @Stato0, @DataOraOperazione0, @IPOperazione0, @ExtIDOperatore0)
+2016-09-18 23:52:33,258 [10] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Params: ExtIDChiamata0=101100002; NumeroChiamata0=44222390; NomeChiamata0=Bombiero; CognomeChiamata0=Boriellieri; MotivoChiamata0=Reclamo!; DataOraInizioChiamata0=21/01/2015 14:07:50; DataOraFineChiamata0=21/01/2015 14:07:54; Priorita0=1; Stato0=1; DataOraOperazione0=18/09/2016 23:52:33; IPOperazione0=-- no ip detected --; ExtIDOperatore0=2309
+2016-09-18 23:52:33,259 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Setting up ...
+2016-09-18 23:52:33,263 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-18 23:52:33,288 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (101100002, 44222390, Bombiero, Boriellieri, Reclamo!, 21/01/2015 14:07:50, 21/01/2015 14:07:54, 1, 1, 18/09/2016 23:52:33, -- no ip detected --, 2309)
+2016-09-18 23:52:33,289 [10] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query execution starting ...
+2016-09-18 23:52:33,302 [10] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected!
+2016-09-18 23:52:33,302 [10] ERROR DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected! Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+2016-09-18 23:52:33,307 [10] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Completed! Elapsed time 00:00:00.054
+2016-09-18 23:52:33,308 [10] INFO  DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:52:33,308 [10] ERROR DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 136
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 268
+ClientConnectionId:40350412-d287-4b9e-ac13-ac93258b622d
+Error Number:2601,State:1,Class:14
+2016-09-18 23:52:33,321 [10] INFO  DataAccessLayer.DAL.AddChiamate() - Completed! Elapsed time 00:00:00.070
+2016-09-18 23:52:33,321 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:52:33,322 [10] ERROR BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 136
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 279
+   in BusinessLogicLayer.BLL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\BLO\ChiamataBLO.cs:riga 148
+ClientConnectionId:40350412-d287-4b9e-ac13-ac93258b622d
+Error Number:2601,State:1,Class:14
+2016-09-18 23:52:33,328 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:00.081
+2016-09-18 23:52:33,328 [10] ERROR WSChiamatePerse.GestioneChiamate.InsertJson() - INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+2016-09-18 23:52:33,329 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure complete!
+2016-09-18 23:55:49,211 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 23:56:23,422 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-18 23:56:28,309 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IDAL.VO.ChiamataVO mapped to IBLL.DTO.ChiamataDTO
+2016-09-18 23:58:15,443 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-18 23:58:17,162 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-18 23:58:17,168 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-18 23:58:17,170 [9] INFO  DataAccessLayer.DAL.AddChiamate() - Starting ...
+2016-09-18 23:58:17,192 [9] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (@ExtIDChiamata0, @NumeroChiamata0, @NomeChiamata0, @CognomeChiamata0, @MotivoChiamata0, @DataOraInizioChiamata0, @DataOraFineChiamata0, @Priorita0, @Stato0, @DataOraOperazione0, @IPOperazione0, @ExtIDOperatore0)
+2016-09-18 23:58:17,194 [9] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Params: ExtIDChiamata0=101100002; NumeroChiamata0=44222390; NomeChiamata0=Bombiero; CognomeChiamata0=Boriellieri; MotivoChiamata0=Reclamo!; DataOraInizioChiamata0=21/01/2015 14:07:50; DataOraFineChiamata0=21/01/2015 14:07:54; Priorita0=1; Stato0=1; DataOraOperazione0=18/09/2016 23:58:16; IPOperazione0=-- no ip detected --; ExtIDOperatore0=2309
+2016-09-18 23:58:17,198 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Setting up ...
+2016-09-18 23:58:17,202 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-18 23:58:17,227 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query: INSERT INTO [Chiamata] (ExtIDChiamata, NumeroChiamata, NomeChiamata, CognomeChiamata, MotivoChiamata, DataOraInizioChiamata, DataOraFineChiamata, Priorita, Stato, DataOraOperazione, IPOperazione, ExtIDOperatore) VALUES (101100002, 44222390, Bombiero, Boriellieri, Reclamo!, 21/01/2015 14:07:50, 21/01/2015 14:07:54, 1, 1, 18/09/2016 23:58:16, -- no ip detected --, 2309)
+2016-09-18 23:58:17,228 [9] INFO  DataAccessLayer.DBSQL.ExecuteNonQueryWithParams() - Query execution starting ...
+2016-09-18 23:58:17,242 [9] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected!
+2016-09-18 23:58:17,243 [9] ERROR DataAccessLayer.DBSQL.MultiInsertOperation() - An Error occured! Exception detected! Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+2016-09-18 23:58:17,249 [9] INFO  DataAccessLayer.DBSQL.MultiInsertOperation() - Completed! Elapsed time 00:00:00.071
+2016-09-18 23:58:17,250 [9] INFO  DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:58:17,250 [9] ERROR DataAccessLayer.DAL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 136
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 268
+ClientConnectionId:65b5cdb1-3f11-43a4-9d26-8c76c9c9f56a
+Error Number:2601,State:1,Class:14
+2016-09-18 23:58:17,264 [9] INFO  DataAccessLayer.DAL.AddChiamate() - Completed! Elapsed time 00:00:00.093
+2016-09-18 23:58:17,265 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+2016-09-18 23:58:17,265 [9] ERROR BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Chiamata' with unique index 'IX_Chiamata'. The duplicate key value is (101100002).
+The statement has been terminated.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   in DataAccessLayer.DBSQL.ExecuteNonQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 136
+   in DataAccessLayer.DBSQL.MultiInsertOperation(String connectionString, String tabName, List`1 dataVOs) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 332
+   in DataAccessLayer.DAL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 279
+   in BusinessLogicLayer.BLL.AddChiamate(List`1 data) in C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\BLO\ChiamataBLO.cs:riga 148
+ClientConnectionId:65b5cdb1-3f11-43a4-9d26-8c76c9c9f56a
+Error Number:2601,State:1,Class:14
+2016-09-18 23:58:17,271 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:00.109
+2016-09-19 00:50:28,397 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 00:50:33,209 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 00:50:33,212 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:50:33,214 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 00:50:33,222 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE 
+2016-09-19 00:50:33,224 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: 
+2016-09-19 00:50:33,224 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 00:50:33,229 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 00:50:33,256 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE 
+2016-09-19 00:50:33,258 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 00:50:33,276 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - An Error occured! Exception detected!
+2016-09-19 00:50:33,277 [9] ERROR DataAccessLayer.DBSQL.SelectOperation() - An Error occured! Exception detected! Incorrect syntax near 'WHERE'.
+2016-09-19 00:50:33,281 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:00.063
+2016-09-19 00:50:33,282 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - An Error occured! Exception detected!
+2016-09-19 00:50:33,282 [9] ERROR DataAccessLayer.DAL.GetChiamateByExtPk() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'WHERE'.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   in System.Data.SqlClient.SqlDataReader.get_MetaData()
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   in System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   in System.Data.SqlClient.SqlCommand.ExecuteReader()
+   in DataAccessLayer.DBSQL.ExecuteQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 72
+   in DataAccessLayer.DBSQL.SelectOperation(String connectionString, String tabName, Dictionary`2 conditions) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 206
+   in DataAccessLayer.DAL.GetChiamateByExtPk(List`1 extidids) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 181
+ClientConnectionId:f7eba8f0-8c59-4d41-9db7-926e61070cc1
+Error Number:102,State:1,Class:15
+2016-09-19 00:50:33,299 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:00.083
+2016-09-19 00:50:33,299 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+2016-09-19 00:50:33,299 [9] ERROR BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'WHERE'.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   in System.Data.SqlClient.SqlDataReader.get_MetaData()
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   in System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   in System.Data.SqlClient.SqlCommand.ExecuteReader()
+   in DataAccessLayer.DBSQL.ExecuteQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 72
+   in DataAccessLayer.DBSQL.SelectOperation(String connectionString, String tabName, Dictionary`2 conditions) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 206
+   in DataAccessLayer.DAL.GetChiamateByExtPk(List`1 extidids) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 214
+   in BusinessLogicLayer.BLL.AddChiamate(List`1 data, List`1& errReport, List`1& warnReport, List`1& infoReport) in C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\BLO\ChiamataBLO.cs:riga 168
+ClientConnectionId:f7eba8f0-8c59-4d41-9db7-926e61070cc1
+Error Number:102,State:1,Class:15
+2016-09-19 00:50:33,306 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:00.096
+2016-09-19 00:50:33,306 [9] ERROR WSChiamatePerse.GestioneChiamate.InsertJson() - INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: Incorrect syntax near 'WHERE'.
+2016-09-19 00:50:33,306 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure Completed! Elapsed time 00:00:04.912
+2016-09-19 00:51:17,020 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 00:51:17,090 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 00:51:17,092 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:51:17,094 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 00:51:17,101 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE 
+2016-09-19 00:51:17,102 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: 
+2016-09-19 00:51:36,138 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 00:51:36,144 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 00:51:36,178 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE 
+2016-09-19 00:51:36,180 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 00:51:36,188 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - An Error occured! Exception detected!
+2016-09-19 00:51:36,189 [10] ERROR DataAccessLayer.DBSQL.SelectOperation() - An Error occured! Exception detected! Incorrect syntax near 'WHERE'.
+2016-09-19 00:51:36,194 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:19.096
+2016-09-19 00:51:36,195 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - An Error occured! Exception detected!
+2016-09-19 00:51:36,195 [10] ERROR DataAccessLayer.DAL.GetChiamateByExtPk() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'WHERE'.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   in System.Data.SqlClient.SqlDataReader.get_MetaData()
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   in System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   in System.Data.SqlClient.SqlCommand.ExecuteReader()
+   in DataAccessLayer.DBSQL.ExecuteQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 72
+   in DataAccessLayer.DBSQL.SelectOperation(String connectionString, String tabName, Dictionary`2 conditions) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 206
+   in DataAccessLayer.DAL.GetChiamateByExtPk(List`1 extidids) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 181
+ClientConnectionId:2d7cc81d-0dd3-4779-b35c-5a4d1468ce7e
+Error Number:102,State:1,Class:15
+2016-09-19 00:51:36,209 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:19.114
+2016-09-19 00:51:36,210 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+2016-09-19 00:51:36,210 [10] ERROR BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'WHERE'.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   in System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   in System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   in System.Data.SqlClient.SqlDataReader.get_MetaData()
+   in System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   in System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   in System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   in System.Data.SqlClient.SqlCommand.ExecuteReader()
+   in DataAccessLayer.DBSQL.ExecuteQueryWithParams(String connectionString, String sql, Dictionary`2 atts) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 72
+   in DataAccessLayer.DBSQL.SelectOperation(String connectionString, String tabName, Dictionary`2 conditions) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DBSQL.cs:riga 206
+   in DataAccessLayer.DAL.GetChiamateByExtPk(List`1 extidids) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 214
+   in BusinessLogicLayer.BLL.AddChiamate(List`1 data, List`1& errReport, List`1& warnReport, List`1& infoReport) in C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\BLO\ChiamataBLO.cs:riga 168
+ClientConnectionId:2d7cc81d-0dd3-4779-b35c-5a4d1468ce7e
+Error Number:102,State:1,Class:15
+2016-09-19 00:51:36,217 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:19.126
+2016-09-19 00:51:36,217 [10] ERROR WSChiamatePerse.GestioneChiamate.InsertJson() - INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: Incorrect syntax near 'WHERE'.
+2016-09-19 00:51:36,218 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure Completed! Elapsed time 00:00:19.199
+2016-09-19 00:52:28,126 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 00:52:28,197 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 00:52:28,200 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:52:32,090 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 00:52:39,472 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE 
+2016-09-19 00:52:39,473 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: 
+2016-09-19 00:53:51,997 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 00:53:52,069 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 00:53:52,072 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:53:55,375 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 00:54:00,272 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata >= @varName 
+2016-09-19 00:54:00,282 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: varName=101100002
+2016-09-19 00:54:00,459 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 00:54:00,463 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 00:54:00,500 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata >= 101100002 
+2016-09-19 00:54:00,501 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 00:54:00,525 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 13
+2016-09-19 00:54:00,526 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-19 00:54:00,526 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.067
+2016-09-19 00:54:01,328 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query Executed! Retrieved 13 records!
+2016-09-19 00:54:03,906 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:02.312
+2016-09-19 00:54:05,433 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Query Executed! Retrieved 13 records!
+2016-09-19 00:54:05,438 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - 13 Records mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:54:05,439 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:10.915
+2016-09-19 00:54:05,439 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Operation aborted! Duplicate Indexes for ExtIdChiamata: 
+2016-09-19 00:54:05,439 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:13.371
+2016-09-19 00:54:05,440 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure Completed! Elapsed time 00:00:13.446
+2016-09-19 00:55:03,690 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 00:55:08,432 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 00:55:10,244 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:55:24,891 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 00:55:30,721 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata >= @varName 
+2016-09-19 00:55:30,723 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: varName=101100002
+2016-09-19 00:55:31,339 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 00:55:31,344 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 00:55:31,369 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata >= 101100002 
+2016-09-19 00:55:31,371 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 00:55:31,375 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 13
+2016-09-19 00:55:31,377 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-19 00:55:31,377 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.037
+2016-09-19 00:55:32,846 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query Executed! Retrieved 13 records!
+2016-09-19 00:55:34,876 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:03.833
+2016-09-19 00:55:50,153 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Query Executed! Retrieved 13 records!
+2016-09-19 00:55:52,241 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - 13 Records mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:55:54,649 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:29.857
+2016-09-19 00:57:22,434 [11] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 00:57:29,966 [11] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 00:57:29,970 [11] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:57:34,899 [11] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 00:57:34,910 [11] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = @varName 
+2016-09-19 00:57:34,911 [11] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: varName=101100002
+2016-09-19 00:57:37,447 [11] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 00:57:37,454 [11] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 00:57:37,492 [11] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = 101100002 
+2016-09-19 00:57:37,493 [11] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 00:57:37,496 [11] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 1
+2016-09-19 00:57:37,497 [11] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-19 00:57:37,497 [11] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.049
+2016-09-19 00:57:43,535 [11] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query Executed! Retrieved 1 records!
+2016-09-19 00:57:43,535 [11] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:08.630
+2016-09-19 00:57:43,536 [11] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Query Executed! Retrieved 1 records!
+2016-09-19 00:57:43,538 [11] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - 1 Records mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:57:43,539 [11] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:08.640
+2016-09-19 00:58:07,910 [11] INFO  BusinessLogicLayer.BLL.AddChiamate() - Operation aborted! Duplicate Indexes for ExtIdChiamata: 
+2016-09-19 00:58:14,500 [11] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:44.532
+2016-09-19 00:58:14,501 [11] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure Completed! Elapsed time 00:00:52.068
+2016-09-19 00:59:33,692 [9] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 00:59:36,860 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 00:59:36,865 [9] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:59:36,868 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 00:59:36,878 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = @varName 
+2016-09-19 00:59:36,879 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: varName=101100002
+2016-09-19 00:59:36,880 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 00:59:36,884 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 00:59:36,912 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = 101100002 
+2016-09-19 00:59:36,912 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 00:59:36,914 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 1
+2016-09-19 00:59:36,915 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-19 00:59:36,915 [9] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.035
+2016-09-19 00:59:36,916 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query Executed! Retrieved 1 records!
+2016-09-19 00:59:36,916 [9] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:00.042
+2016-09-19 00:59:36,917 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Query Executed! Retrieved 1 records!
+2016-09-19 00:59:36,917 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - 1 Records mapped to IDAL.VO.ChiamataVO
+2016-09-19 00:59:36,919 [9] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:00.050
+2016-09-19 01:00:04,932 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 01:00:05,005 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 01:00:05,008 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 01:00:05,010 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 01:00:05,019 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = @varName 
+2016-09-19 01:00:05,020 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: varName=101100002
+2016-09-19 01:00:05,021 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 01:00:05,025 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 01:00:05,052 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = 101100002 
+2016-09-19 01:00:05,054 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 01:00:05,056 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 1
+2016-09-19 01:00:05,056 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-19 01:00:05,056 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.034
+2016-09-19 01:00:05,057 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query Executed! Retrieved 1 records!
+2016-09-19 01:00:05,057 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:00.042
+2016-09-19 01:00:05,058 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Query Executed! Retrieved 1 records!
+2016-09-19 01:00:05,059 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - 1 Records mapped to IDAL.VO.ChiamataVO
+2016-09-19 01:00:05,059 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:00.048
+2016-09-19 01:00:16,192 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Operation aborted! Duplicate Indexes for ExtIdChiamata: 101100002
+2016-09-19 01:00:16,193 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:11.187
+2016-09-19 01:00:16,194 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure Completed! Elapsed time 00:00:11.263
+2016-09-19 01:00:43,433 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 01:00:43,559 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 01:00:43,561 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 1 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 01:00:43,564 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 01:00:43,573 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = @varName 
+2016-09-19 01:00:43,575 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: varName=101100002
+2016-09-19 01:00:43,576 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 01:00:43,579 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 01:00:43,608 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = 101100002 
+2016-09-19 01:00:43,609 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 01:00:43,611 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 1
+2016-09-19 01:00:43,612 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-19 01:00:43,612 [10] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.036
+2016-09-19 01:00:43,613 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query Executed! Retrieved 1 records!
+2016-09-19 01:00:43,613 [10] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:00.043
+2016-09-19 01:00:43,613 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Query Executed! Retrieved 1 records!
+2016-09-19 01:00:43,615 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - 1 Records mapped to IDAL.VO.ChiamataVO
+2016-09-19 01:00:43,616 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:00.051
+2016-09-19 01:00:43,616 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Operation aborted! Duplicate Indexes for ExtIdChiamata: 101100002
+2016-09-19 01:00:43,617 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:00.058
+2016-09-19 01:00:43,617 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure Completed! Elapsed time 00:00:00.184
+2016-09-19 01:02:15,126 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Starting procedure...
+2016-09-19 01:02:15,192 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson() - Procedure Completed! Elapsed time 00:00:00.067
+2016-09-19 01:08:51,104 [8] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Starting procedure...
+2016-09-19 01:08:51,168 [8] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Procedure Completed! Elapsed time 00:00:00.064
+2016-09-19 01:10:28,216 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Starting procedure...
+2016-09-19 01:10:28,290 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Procedure Completed! Elapsed time 00:00:00.075
+2016-09-19 01:24:09,599 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Starting procedure...
+2016-09-19 01:24:52,480 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 01:24:55,573 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - 3 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 01:25:05,933 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 01:25:05,952 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - An Error occured! Exception detected!
+2016-09-19 01:25:05,954 [10] ERROR DataAccessLayer.DAL.GetChiamateByExtPk() - An Error occured! Exception detected!
+System.ArgumentException: È già stato aggiunto un elemento con la stessa chiave.
+   in System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   in System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   in System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   in DataAccessLayer.DAL.GetChiamateByExtPk(List`1 extidids) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 186
+2016-09-19 01:25:05,962 [10] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:00.028
+2016-09-19 01:25:37,842 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+2016-09-19 01:25:37,843 [10] ERROR BusinessLogicLayer.BLL.AddChiamate() - An Error occured! Exception detected!
+System.ArgumentException: È già stato aggiunto un elemento con la stessa chiave.
+   in System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   in System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   in System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   in DataAccessLayer.DAL.GetChiamateByExtPk(List`1 extidids) in C:\Workspace\C#\GestioneChiamatePerse\DataAccessLayer\DAO\ChiamataDAO.cs:riga 215
+   in BusinessLogicLayer.BLL.AddChiamate(List`1 data, List`1& errReport, List`1& warnReport, List`1& infoReport) in C:\Workspace\C#\GestioneChiamatePerse\BusinessLogicLayer\BLO\ChiamataBLO.cs:riga 168
+2016-09-19 01:25:37,863 [10] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:46.433
+2016-09-19 01:25:37,864 [10] ERROR WSChiamatePerse.GestioneChiamate.InsertJson_obj() - INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: È già stato aggiunto un elemento con la stessa chiave.
+2016-09-19 01:25:37,865 [10] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Procedure Completed! Elapsed time 00:01:28.670
+2016-09-19 01:26:09,339 [11] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Starting procedure...
+2016-09-19 01:26:09,411 [11] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 01:26:09,414 [11] INFO  BusinessLogicLayer.BLL.AddChiamate() - 3 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 01:26:17,282 [11] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 01:30:27,570 [8] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Starting procedure...
+2016-09-19 01:30:27,717 [8] INFO  BusinessLogicLayer.BLL.AddChiamate() - Starting ...
+2016-09-19 01:30:27,719 [8] INFO  BusinessLogicLayer.BLL.AddChiamate() - 3 items of IBLL.DTO.ChiamataDTO mapped to IDAL.VO.ChiamataVO
+2016-09-19 01:30:27,722 [8] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Starting ...
+2016-09-19 01:30:27,733 [8] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = @idid1  or  ExtIDChiamata = @idid2  or  ExtIDChiamata = @idid3 
+2016-09-19 01:30:27,734 [8] INFO  DataAccessLayer.DBSQL.SelectOperation() - Params: idid1=101100002; idid2=101100002; idid3=101100002
+2016-09-19 01:30:27,735 [8] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Setting up ...
+2016-09-19 01:30:27,758 [8] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Opening Connection on 'Data Source=MAGISYSTEM-DEV\MAGISQLSERVER12;Initial Catalog=GCP;User ID=sa;Password=inter243' ...
+2016-09-19 01:30:27,866 [8] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query: SELECT * FROM [Chiamata] WHERE ExtIDChiamata = 101100002  or  ExtIDChiamata = 101100002  or  ExtIDChiamata = 101100002 
+2016-09-19 01:30:27,867 [8] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query execution starting ...
+2016-09-19 01:30:27,884 [8] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Query executed! Result count: 1
+2016-09-19 01:30:27,887 [8] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Connection Closed!
+2016-09-19 01:30:27,888 [8] INFO  DataAccessLayer.DBSQL.ExecuteQueryWithParams() - Completed! Elapsed time 00:00:00.152
+2016-09-19 01:30:27,888 [8] INFO  DataAccessLayer.DBSQL.SelectOperation() - Query Executed! Retrieved 1 records!
+2016-09-19 01:30:27,889 [8] INFO  DataAccessLayer.DBSQL.SelectOperation() - Completed! Elapsed time 00:00:00.162
+2016-09-19 01:30:27,889 [8] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Query Executed! Retrieved 1 records!
+2016-09-19 01:30:27,891 [8] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - 1 Records mapped to IDAL.VO.ChiamataVO
+2016-09-19 01:30:27,893 [8] INFO  DataAccessLayer.DAL.GetChiamateByExtPk() - Completed! Elapsed time 00:00:00.170
+2016-09-19 01:30:27,893 [8] INFO  BusinessLogicLayer.BLL.AddChiamate() - Operation aborted! Duplicate Indexes for ExtIdChiamata: 101100002
+2016-09-19 01:30:27,894 [8] INFO  BusinessLogicLayer.BLL.AddChiamate() - Completed! Elapsed time 00:00:00.176
+2016-09-19 01:30:27,894 [8] INFO  WSChiamatePerse.GestioneChiamate.InsertJson_obj() - Procedure Completed! Elapsed time 00:00:00.325

@@ -83,6 +83,12 @@ namespace GeneralPurposeLib
                     continue; // Jump at the next iteration !!                    
                 }
 
+                if(entry.Value == null)
+                {
+                    dataRowConverted.Add(entry.Key, null);
+                    continue; // Jump at the next iteration !!  
+                }
+
                 // PARSING VALIDATION
                 object[] args = new object[2];
                 args[0] = entry.Value;
