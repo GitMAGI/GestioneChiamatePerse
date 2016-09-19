@@ -109,6 +109,7 @@ namespace WSChiamatePerse
                     {
                         // 5. Make the real service call
                         int rows = AddChiamate(sos, ref errReport, ref warnReport, ref infoReport);
+                        response.AffectedRows = rows;
                         if (errReport != null && errReport.Count > 0)
                             response.success = false;
                     }

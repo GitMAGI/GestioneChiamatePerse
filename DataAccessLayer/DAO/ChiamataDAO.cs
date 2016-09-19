@@ -47,7 +47,7 @@ namespace DataAccessLayer
                 {
                     chiams = Mappers.ChiamataMapper.DataRowToVO(data.Rows);
 
-                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, chiams.First().GetType().ToString()));
+                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, typeof(IDAL.VO.ChiamataVO).ToString()));
                 }
 
                 return chiams;
@@ -87,7 +87,7 @@ namespace DataAccessLayer
                 {
                     chiams = Mappers.ChiamataMapper.DataRowToVO(data.Rows);
 
-                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, chiams.First().GetType().ToString()));
+                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, typeof(IDAL.VO.ChiamataVO).ToString()));
                 }
 
                 return chiams;
@@ -238,11 +238,11 @@ namespace DataAccessLayer
 
                 log.Info(string.Format("Query Executed! Retrieved {0} records!", data.Rows.Count));
 
-                if (data != null)
-                {
+                if (data != null && data.Rows.Count > 0)
+                { 
                     chiams = Mappers.ChiamataMapper.DataRowToVO(data.Rows);
 
-                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, chiams.First().GetType().ToString()));
+                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, typeof(IDAL.VO.ChiamataVO).ToString()));
                 }
 
                 return chiams;
@@ -290,7 +290,7 @@ namespace DataAccessLayer
                 {
                     chiams = Mappers.ChiamataMapper.DataRowToVO(data.Rows);
 
-                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, chiams.First().GetType().ToString()));
+                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, typeof(IDAL.VO.ChiamataVO).ToString()));
                 }
                 return chiams;
             }

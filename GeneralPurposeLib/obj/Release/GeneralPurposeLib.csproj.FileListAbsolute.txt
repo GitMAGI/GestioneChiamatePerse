@@ -10,3 +10,4 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\Newtons
 C:\Workspace\repo\c#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\Newtonsoft.Json.xml
 C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\Newtonsoft.Json.dll
 C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\bin\Release\Newtonsoft.Json.xml
+C:\Workspace\C#\GestioneChiamatePerse\GeneralPurposeLib\obj\Release\GeneralPurposeLib.csprojResolveAssemblyReference.cache

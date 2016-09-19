@@ -19,6 +19,7 @@ namespace GestioneChiamatePerse
         protected void Page_Load(object sender, EventArgs e)
         {
             log.Info("Starting computing....");
+            log.Info(string.Format("Request from IP: {0}", GetUserIP()));
 
             string response = null;
 
@@ -29,27 +30,24 @@ namespace GestioneChiamatePerse
                 log.Info(string.Format("Request incoming: {0}", data));
 
                 using (WSGestioneChiamate.GestioneChiamateClient client = new WSGestioneChiamate.GestioneChiamateClient())
-                {
+                {                    
                     response = client.InsertJson_json(data);
                 }                
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 response = "Error! Internal error!";
-            }            
-            
-            Response.Clear();
-            Response.ContentType = "application/json; charset=utf-8";
-            //Response.ContentType = "text/plain";
-
-            Response.Write(response);
-
-            Response.End();
+            }
 
             log.Info("Completed!");
+
+            Response.Clear();
+            Response.ContentType = "application/json; charset=utf-8";
+            Response.Write(response);
+            Response.End();
         }
 
-        protected static string GetUser_IP()
+        protected static string GetUserIP()
         {
             string VisitorsIPAddr = string.Empty;
             

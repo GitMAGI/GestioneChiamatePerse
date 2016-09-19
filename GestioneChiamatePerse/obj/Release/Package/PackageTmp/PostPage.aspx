@@ -37,18 +37,23 @@
 
             $.support.cors = true;
 
+            console.log(jsonData);
+            console.log(JSON.stringify(jsonData));
+
             $.ajax({
                 type: "POST",
                 url: url,
                 data: JSON.stringify(jsonData),
                 contentType: "application/json; charset=utf-8",
                 success: function (data) {
-                    //console.log("Successo!");
+                    console.log("Successo!");
                     console.log(jsonData);
                     console.log(data);
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-                    //console.log("Errore!");
+                    console.log("Errore!");
+                    console.log(jqXHR);
+                    console.log(errorThrown);
                     console.log(textStatus);
                 }
 
