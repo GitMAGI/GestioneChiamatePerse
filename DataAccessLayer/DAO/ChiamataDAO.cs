@@ -65,6 +65,46 @@ namespace DataAccessLayer
                 log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
             }          
         }
+        public List<ChiamataVO> GetChiamateAll()
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting ...");
+
+            List<IDAL.VO.ChiamataVO> chiams = null;
+            try
+            {
+                string connectionString = this.GCPConnectionString;
+
+                string tabName = "[Chiamata]";
+                
+                DataTable data = DataAccessLayer.DBSQL.SelectOperation(connectionString, tabName);
+
+                log.Info(string.Format("Query Executed! Retrieved {0} records!", data.Rows.Count));
+
+                if (data != null)
+                {
+                    chiams = Mappers.ChiamataMapper.DataRowToVO(data.Rows);
+
+                    log.Info(string.Format("{0} Records mapped to {1}", chiams.Count, chiams.First().GetType().ToString()));
+                }
+
+                return chiams;
+            }
+            catch (Exception ex)
+            {
+                string msg = "An Error occured! Exception detected!";
+                log.Info(msg);
+                log.Error(msg, ex);
+                throw;
+            }
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }
+        }
         public ChiamataVO GetChiamataByPk(long idid)
         {
             Stopwatch tw = new Stopwatch();

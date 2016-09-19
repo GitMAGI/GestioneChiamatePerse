@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="980e4685-cc04-4690-8df4-7a1f8cd0d09e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://phonews.seminabit.local/GestioneChiamate.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GestioneChiamate.xsd" MetadataType="Schema" ID="4b79bc64-7516-43f1-b86a-29fb9addaa7a" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd2" />
+    <MetadataFile FileName="GestioneChiamate.wsdl" MetadataType="Wsdl" ID="44216a8b-748a-43b0-bb92-0087d58276a0" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?wsdl" />
+    <MetadataFile FileName="GestioneChiamate1.xsd" MetadataType="Schema" ID="5df6e751-c539-45a9-ae79-78e081a64a70" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd0" />
+    <MetadataFile FileName="GestioneChiamate2.xsd" MetadataType="Schema" ID="1c59173b-0be8-4d74-8f78-4807d62b3bfa" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd1" />
+    <MetadataFile FileName="GestioneChiamate.disco" MetadataType="Disco" ID="f3b33500-25d5-4c50-bfaf-bb9527dce1ab" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?disco" />
+    <MetadataFile FileName="GestioneChiamate3.xsd" MetadataType="Schema" ID="257f4a28-b9ae-486a-b230-9ba63d820a80" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -43,6 +43,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -77,6 +79,20 @@
     <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
     <Content Include="Scripts\jquery-3.1.0.min.js" />
     <Content Include="Scripts\npm.js" />
+    <None Include="Properties\PublishProfiles\phone_dev.seminabit.local.pubxml" />
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate.disco" />
+    <None Include="Service References\WSGestioneChiamate\configuration91.svcinfo" />
+    <None Include="Service References\WSGestioneChiamate\configuration.svcinfo" />
+    <Content Include="Service References\WSGestioneChiamate\GestioneChiamatePerse.WSGestioneChiamate.ResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WSGestioneChiamate\GestioneChiamatePerse.WSGestioneChiamate.ResponseInsert.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\WSGestioneChiamate\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="SummaryPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -110,6 +126,11 @@
     <Compile Include="ReceiverPage.aspx.designer.cs">
       <DependentUpon>ReceiverPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\WSGestioneChiamate\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="SummaryPage.aspx.cs">
       <DependentUpon>SummaryPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,6 +151,19 @@
     <Content Include="BoostrapMain.Master" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\phone.seminabit.com.pubxml" />
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate.wsdl" />
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -138,10 +172,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GCPData\GCPData.csproj">
-      <Project>{50fc2c80-0f30-4287-8b14-654b36e682a2}</Project>
-      <Name>GCPData</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WSGestioneChiamate\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

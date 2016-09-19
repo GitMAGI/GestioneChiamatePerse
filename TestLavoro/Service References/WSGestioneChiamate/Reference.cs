@@ -134,11 +134,17 @@ namespace TestCasa.WSGestioneChiamate {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WSGestioneChiamate.IGestioneChiamate")]
     public interface IGestioneChiamate {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGestioneChiamate/InsertJson", ReplyAction="http://tempuri.org/IGestioneChiamate/InsertJsonResponse")]
-        TestCasa.WSGestioneChiamate.ResponseInsert InsertJson(string jsonArray);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGestioneChiamate/InsertJson_obj", ReplyAction="http://tempuri.org/IGestioneChiamate/InsertJson_objResponse")]
+        TestCasa.WSGestioneChiamate.ResponseInsert InsertJson_obj(string jsonArray);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGestioneChiamate/InsertJson", ReplyAction="http://tempuri.org/IGestioneChiamate/InsertJsonResponse")]
-        System.Threading.Tasks.Task<TestCasa.WSGestioneChiamate.ResponseInsert> InsertJsonAsync(string jsonArray);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGestioneChiamate/InsertJson_obj", ReplyAction="http://tempuri.org/IGestioneChiamate/InsertJson_objResponse")]
+        System.Threading.Tasks.Task<TestCasa.WSGestioneChiamate.ResponseInsert> InsertJson_objAsync(string jsonArray);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGestioneChiamate/InsertJson_json", ReplyAction="http://tempuri.org/IGestioneChiamate/InsertJson_jsonResponse")]
+        string InsertJson_json(string jsonArray);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGestioneChiamate/InsertJson_json", ReplyAction="http://tempuri.org/IGestioneChiamate/InsertJson_jsonResponse")]
+        System.Threading.Tasks.Task<string> InsertJson_jsonAsync(string jsonArray);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -168,12 +174,20 @@ namespace TestCasa.WSGestioneChiamate {
                 base(binding, remoteAddress) {
         }
         
-        public TestCasa.WSGestioneChiamate.ResponseInsert InsertJson(string jsonArray) {
-            return base.Channel.InsertJson(jsonArray);
+        public TestCasa.WSGestioneChiamate.ResponseInsert InsertJson_obj(string jsonArray) {
+            return base.Channel.InsertJson_obj(jsonArray);
         }
         
-        public System.Threading.Tasks.Task<TestCasa.WSGestioneChiamate.ResponseInsert> InsertJsonAsync(string jsonArray) {
-            return base.Channel.InsertJsonAsync(jsonArray);
+        public System.Threading.Tasks.Task<TestCasa.WSGestioneChiamate.ResponseInsert> InsertJson_objAsync(string jsonArray) {
+            return base.Channel.InsertJson_objAsync(jsonArray);
+        }
+        
+        public string InsertJson_json(string jsonArray) {
+            return base.Channel.InsertJson_json(jsonArray);
+        }
+        
+        public System.Threading.Tasks.Task<string> InsertJson_jsonAsync(string jsonArray) {
+            return base.Channel.InsertJson_jsonAsync(jsonArray);
         }
     }
 }

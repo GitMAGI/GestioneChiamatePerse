@@ -5,6 +5,10 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+using System.ServiceModel.Web;
+using System.Web;
 using WSChiamatePerse.Constraints;
 
 namespace WSChiamatePerse
@@ -151,6 +155,50 @@ namespace WSChiamatePerse
             return result;
         }
 
+        public ResponseData GetAll_obj()
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting procedure...");
+
+            List<string> errReport = new List<string>();
+            List<string> warnReport = new List<string>();
+            List<string> infoReport = new List<string>();
+
+            ResponseData response = new ResponseData();
+            response.success = true;
+
+            try
+            {
+                List<ChiamataSOo> data = null;
+                int result = GetChiamate(ref data, ref errReport, ref warnReport, ref infoReport);
+                response.Data = data;
+            }
+            catch (Exception ex)
+            {
+                string msg = "INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: " + ex.Message;
+                if (errReport == null)
+                    errReport = new List<string>();
+                errReport.Add(msg);
+                log.Error(msg);
+                response.success = false;
+            }
+
+            response.AddErrors(errReport);
+            response.AddWarnings(warnReport);
+            response.AddInfos(infoReport);
+
+            errReport = null;
+            warnReport = null;
+            infoReport = null;
+
+            tw.Stop();
+            log.Info(string.Format("Procedure Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+
+            return response;
+        }
+
         private int AddChiamate(List<ChiamataSOi> data, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             int result = -1;
@@ -159,6 +207,25 @@ namespace WSChiamatePerse
             result = this.bll.AddChiamate(dtos, ref errReport, ref warnReport, ref infoReport);
 
             return result;
-        }    
+        }
+
+        private int GetChiamate(ref List<ChiamataSOo> data, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
+        {
+            int result = -1;
+
+            List<ChiamataDTO> dtos = this.bll.GetChiamateAll();
+            data = Mappers.ChiamataMapper.DTOListToSOList(dtos);
+            result = data.Count;
+
+            return result;
+        }
+
+        public void Exposer(ChiamataSOi soi, ChiamataSOo soo, ResponseData rd, ResponseInsert ri)
+        {
+            soo = null;
+            soi = null;
+            rd = null;
+            ri = null;
+        }
     }
 }

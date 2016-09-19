@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 
 namespace WSChiamatePerse
 {
@@ -16,6 +17,12 @@ namespace WSChiamatePerse
 
         [OperationContract]
         string InsertJson_json(string jsonArray);
+
+        [OperationContract]
+        ResponseData GetAll_obj();
+
+        [OperationContract]
+        void Exposer(ChiamataSOi soi, ChiamataSOo soo, ResponseData rd, ResponseInsert ri);
     }
 
     [DataContract]
@@ -198,4 +205,6 @@ namespace WSChiamatePerse
         [DataMember]
         public long? ExtIDOperatore { get; set; }
     }
+
+
 }

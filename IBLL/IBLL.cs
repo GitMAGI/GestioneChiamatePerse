@@ -7,6 +7,7 @@ namespace IBLL
     public interface IBLL
     {
         List<ChiamataDTO> GetChiamateByRangeDate(DateTime begin, DateTime end);
+        List<ChiamataDTO> GetChiamateAll();
         int UpdateChiamataByExtPk(ChiamataDTO data, long extidid, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport);
         int UpdateChiamataByPk(ChiamataDTO data, long idid, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport);
         int AddChiamata(ChiamataDTO data, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport);

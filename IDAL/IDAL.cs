@@ -10,6 +10,7 @@ namespace IDAL
     public interface IDAL
     {
         List<ChiamataVO> GetChiamateByRangeDate(DateTime begin, DateTime end);
+        List<ChiamataVO> GetChiamateAll();
         ChiamataVO GetChiamataByPk(long idid);
         ChiamataVO GetChiamataByExtPk(long extidid);
         List<ChiamataVO> GetChiamateByExtPk(List<long> extidids);

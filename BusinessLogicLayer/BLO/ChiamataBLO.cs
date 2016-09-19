@@ -39,7 +39,37 @@ namespace BusinessLogicLayer
                 log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
             }
         }
-        
+
+        public List<ChiamataDTO> GetChiamateAll()
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting ...");
+
+            List<ChiamataDTO> chiams = null;
+            try
+            {
+                List<ChiamataVO> chiams_ = this.dal.GetChiamateAll();
+                log.Info(string.Format("Operation computed for {0} items!", chiams_.Count));
+                chiams = ChiamataMapper.VOListToDTOList(chiams_);
+                log.Info(string.Format("{0} items of {1} mapped to {2}", chiams.Count, chiams_.First().GetType().ToString(), chiams.First().GetType().ToString()));
+                return chiams; 
+            }
+            catch (Exception ex)
+            {
+                string msg = "An Error occured! Exception detected!";
+                log.Info(msg);
+                log.Error(msg, ex);
+                throw;
+            }
+            finally
+            {
+                tw.Stop();
+                log.Info(string.Format("Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+            }
+        }
+
         public int UpdateChiamataByExtPk(ChiamataDTO data, long extidid, ref List<string> errReport, ref List<string> warnReport, ref List<string> infoReport)
         {
             Stopwatch tw = new Stopwatch();

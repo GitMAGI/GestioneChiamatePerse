@@ -84,6 +84,8 @@ namespace TestLocale
             //ResponseInsert response = client.InsertJson_obj(data);
             string response = client.InsertJson_json(data);
 
+            ResponseData dataR = client.GetAll_obj();
+
             Console.WriteLine("Test Concluso. Premere un tasto per terminare!");
             Console.ReadKey();
         }

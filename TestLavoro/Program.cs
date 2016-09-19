@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 
 namespace TestCasa
@@ -9,6 +10,9 @@ namespace TestCasa
     {
         static void Main(string[] args)
         {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
             System.Console.WriteLine("Avvio test ...");
 
             Dictionary<string, string> data2Conv1 = new Dictionary<string, string>()
@@ -46,7 +50,10 @@ namespace TestCasa
 
             WSGestioneChiamate.GestioneChiamateClient client = new WSGestioneChiamate.GestioneChiamateClient();
 
-            WSGestioneChiamate.ResponseInsert response = client.InsertJson(data);
+            WSGestioneChiamate.ResponseInsert response = client.InsertJson_obj(data);
+
+            tw.Stop();
+            System.Console.WriteLine(string.Format("Procedure Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
 
             System.Console.WriteLine("Test Concluso. Premere un tasto per terminare!");
             System.Console.ReadKey();

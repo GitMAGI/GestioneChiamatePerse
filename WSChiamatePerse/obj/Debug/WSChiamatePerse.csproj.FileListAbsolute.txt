@@ -16,7 +16,6 @@ C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\IBLL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\IRISDAL.pdb
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\log4net.xml
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\Newtonsoft.Json.xml
-C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Debug\WSChiamatePerse.csprojResolveAssemblyReference.cache
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\WSChiamatePerse.dll.config
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\WSChiamatePerse.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\bin\WSChiamatePerse.pdb
@@ -38,3 +37,4 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Debug\WSChiamateP
 C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Debug\WSChiamatePerse.pdb
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\DataAccessLayer.dll
 C:\Workspace\C#\GestioneChiamatePerse\WSChiamatePerse\bin\DataAccessLayer.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\WSChiamatePerse\obj\Debug\WSChiamatePerse.csprojResolveAssemblyReference.cache

@@ -172,7 +172,7 @@ namespace DataAccessLayer
             public string Conj;
         }
         
-        static public DataTable SelectOperation(string connectionString, string tabName, Dictionary<string, QueryCondition> conditions)
+        static public DataTable SelectOperation(string connectionString, string tabName, Dictionary<string, QueryCondition> conditions=null)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();
@@ -180,19 +180,31 @@ namespace DataAccessLayer
             DataTable data = null;
 
             try
-            {                
-                string query = "SELECT * FROM " + tabName + " WHERE " +
-                    string.Join(" ", conditions.Select(x => x.Value.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj).ToArray());
-                Dictionary<string, object> pars = new Dictionary<string, object>();
-                foreach (KeyValuePair<string, QueryCondition> entry in conditions)
+            {
+                if (conditions != null)
                 {
-                    pars[entry.Key] = entry.Value.Value;
+                    string query = "SELECT * FROM " + tabName + " WHERE " +
+                        string.Join(" ", conditions.Select(x => x.Value.Key + x.Value.Op + "@" + x.Key + " " + x.Value.Conj).ToArray());
+                    Dictionary<string, object> pars = new Dictionary<string, object>();
+                    foreach (KeyValuePair<string, QueryCondition> entry in conditions)
+                    {
+                        pars[entry.Key] = entry.Value.Value;
+                    }
+
+                    log.Info(string.Format("Query: {0}", query));
+                    log.Info(string.Format("Params: {0}", string.Join("; ", pars.Select(x => x.Key + "=" + x.Value).ToArray())));
+
+                    data = DataAccessLayer.DBSQL.ExecuteQueryWithParams(connectionString, query, pars);
                 }
+                else
+                {
+                    string query = "SELECT * FROM " + tabName;
 
-                log.Info(string.Format("Query: {0}", query));
-                log.Info(string.Format("Params: {0}", string.Join("; ", pars.Select(x => x.Key + "=" + x.Value).ToArray())));
+                    log.Info(string.Format("Query: {0}", query));                    
 
-                data = DataAccessLayer.DBSQL.ExecuteQueryWithParams(connectionString, query, pars);
+                    data = DataAccessLayer.DBSQL.ExecuteQuery(connectionString, query);
+                }
+                    
 
                 log.Info(string.Format("Query Executed! Retrieved {0} records!", data.Rows.Count));
 
