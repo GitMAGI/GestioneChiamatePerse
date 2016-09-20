@@ -47,14 +47,16 @@
                 contentType: "application/json; charset=utf-8",
                 success: function (data) {
                     console.log("Successo!");
-                    console.log(jsonData);
+                    //console.log(jsonData);
                     console.log(data);
+                    alert(JSON.stringify(data) + "\n\nVisualizzare la console del browser per dettagli più leggibili!");
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     console.log("Errore!");
                     console.log(jqXHR);
                     console.log(errorThrown);
                     console.log(textStatus);
+                    alert(errorThrown);
                 }
 
             });

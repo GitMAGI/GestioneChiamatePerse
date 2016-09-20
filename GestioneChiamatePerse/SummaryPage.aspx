@@ -15,7 +15,7 @@
         </div>
 
         <div class="page-body">
-            <div id="TableContainer" runat="server"></div>
+            <div class="table-responsive" id="TableContainer" runat="server"></div>
         </div>
 
     </div>

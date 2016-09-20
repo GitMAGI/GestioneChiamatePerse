@@ -1,0 +1,4 @@
+2016-09-21 00:00:12,836 [22] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Starting computing....
+2016-09-21 00:00:12,840 [22] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request from IP: ::1
+2016-09-21 00:00:12,840 [22] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request incoming: [{"ExtIDChiamata":null,"NumeroChiamata":null,"NomeChiamata":null,"CognomeChiamata":null,"MotivoChiamata":null,"DataOraInizioChiamata":null,"DataOraFineChiamata":null,"Priorita":"1","InfoChiamata":null,"IDExtSollecitoChiamata":null,"ExtIDOperatore":null}]
+2016-09-21 00:00:12,845 [22] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Completed!

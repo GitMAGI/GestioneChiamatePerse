@@ -15,6 +15,24 @@ namespace GestioneChiamatePerse
             using (WSGestioneChiamate.GestioneChiamateClient client = new WSGestioneChiamate.GestioneChiamateClient())
             {   
                 WSGestioneChiamate.ResponseData response = client.GetAll_obj();
+                List<string> visibleCols = new List<string>()
+                {
+                    "IDChiamata",
+                    "ExtIDChiamata",
+                    "NumeroChiamata",
+                    "NomeChiamata",
+                    "CognomeChiamata",
+                    "MotivoChiamata",
+                    "DataOraInizioChiamata",
+                    "DataOraFineChiamata",
+                    "Priorita",
+                    "Stato",
+                    "InfoChiamata",
+                    "IDExtSollecitoChiamata",
+                    "DataOraOperazione",
+                    "IPOperazione",
+                    "ExtIDOperatore",
+                };
                 if (response.success)
                 {
                     if (response.Data != null) 
@@ -29,7 +47,8 @@ namespace GestioneChiamatePerse
                         html += "<th>#</th>";
                         foreach (var prop in typeof(WSGestioneChiamate.ChiamataSOo).GetProperties())
                         {
-                            html += "<th>" + prop.Name + "</th>";
+                            if (visibleCols.Contains(prop.Name))
+                                html += "<th>" + prop.Name + "</th>";
                         }
                         html += "</tr>";
                         html += "</thead>";
@@ -45,7 +64,8 @@ namespace GestioneChiamatePerse
                                 html += "<td>" + t + "</td>";
                                 foreach (var prop in c.GetType().GetProperties())
                                 {
-                                    html += "<td>" + prop.GetValue(c, null) + "</td>";
+                                    if(visibleCols.Contains(prop.Name))
+                                        html += "<td>" + prop.GetValue(c, null) + "</td>";
                                 }
                                 html += "</tr>";
                                 t++;

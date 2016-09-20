@@ -1,0 +1,16 @@
+2016-09-20 23:41:20,562 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Starting computing....
+2016-09-20 23:41:20,595 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request from IP: ::1
+2016-09-20 23:41:20,595 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request incoming: 
+2016-09-20 23:41:21,027 [6] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Completed!
+2016-09-20 23:57:35,095 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Starting computing....
+2016-09-20 23:57:35,111 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request from IP: ::1
+2016-09-20 23:57:35,112 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request incoming: [{"ExtIDChiamata":null,"NumeroChiamata":null,"NomeChiamata":null,"CognomeChiamata":null,"MotivoChiamata":null,"DataOraInizioChiamata":null,"DataOraFineChiamata":null,"Priorita":"1","InfoChiamata":null,"IDExtSollecitoChiamata":null,"ExtIDOperatore":null}]
+2016-09-20 23:57:35,221 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Completed!
+2016-09-20 23:58:34,730 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Starting computing....
+2016-09-20 23:58:34,731 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request from IP: ::1
+2016-09-20 23:58:34,731 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request incoming: [{"ExtIDChiamata":null,"NumeroChiamata":null,"NomeChiamata":null,"CognomeChiamata":null,"MotivoChiamata":null,"DataOraInizioChiamata":null,"DataOraFineChiamata":null,"Priorita":"1","InfoChiamata":null,"IDExtSollecitoChiamata":null,"ExtIDOperatore":null}]
+2016-09-20 23:58:34,734 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Completed!
+2016-09-20 23:59:34,904 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Starting computing....
+2016-09-20 23:59:34,906 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request from IP: ::1
+2016-09-20 23:59:34,906 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Request incoming: [{"ExtIDChiamata":null,"NumeroChiamata":null,"NomeChiamata":null,"CognomeChiamata":null,"MotivoChiamata":null,"DataOraInizioChiamata":null,"DataOraFineChiamata":null,"Priorita":"1","InfoChiamata":null,"IDExtSollecitoChiamata":null,"ExtIDOperatore":null}]
+2016-09-20 23:59:34,909 [17] INFO  GestioneChiamatePerse.RecieverPage.Page_Load() - Completed!
