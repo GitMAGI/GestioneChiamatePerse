@@ -86,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\WSChiamatePerse.3.200.pubxml" />
+    <None Include="Properties\PublishProfiles\WSChiamatePerse.com.pubxml" />
     <None Include="Properties\PublishProfiles\WSChiamatePerse.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

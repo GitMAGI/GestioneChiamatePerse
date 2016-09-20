@@ -30,7 +30,7 @@ namespace WSChiamatePerse
             DAL dal = new DAL();
             this.dal = dal;
             BLL bll = new BLL(this.dal);
-            this.bll = bll;
+            this.bll = bll;            
         }
 
         public Response GenericCall(object input)
@@ -77,6 +77,61 @@ namespace WSChiamatePerse
             return response;
         }
 
+        public Response InsertObjList_obj(List<ChiamataSOi> sos)
+        {
+            Stopwatch tw = new Stopwatch();
+            tw.Start();
+
+            log.Info("Starting procedure...");
+
+            List<string> errReport = new List<string>();
+            List<string> warnReport = new List<string>();
+            List<string> infoReport = new List<string>();
+
+            ResponseInsert response = new ResponseInsert();
+            response.success = true;
+
+            try
+            {
+
+                // 1. Validate the Object
+                bool validChecks = ChiamataTabStruct.CheckAndConstranitsValidation<ChiamataSOi>(sos, ref errReport, ref warnReport, ref infoReport);
+                if (validChecks)
+                {
+                    // 2. Make the real service call
+                    int rows = AddChiamate(sos, ref errReport, ref warnReport, ref infoReport);
+                    response.AffectedRows = rows;
+                    if (errReport != null && errReport.Count > 0)
+                        response.success = false;
+                }
+                else
+                {
+                    response.success = false;
+                }  
+
+            }
+            catch (Exception ex)
+            {
+                string msg = "INTERNAL ERROR -> An Exception occurred during the request that was under computation! The stack is: " + ex.Message;
+                errReport.Add(msg);
+                log.Error(msg);
+                response.success = false;
+            }
+
+            response.AddErrors(errReport);
+            response.AddWarnings(warnReport);
+            response.AddInfos(infoReport);
+
+            errReport = null;
+            warnReport = null;
+            infoReport = null;
+
+            tw.Stop();
+            log.Info(string.Format("Procedure Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));
+
+            return response;
+        }
+        
         public ResponseInsert InsertJson_obj(string jsonArray)
         {
             Stopwatch tw = new Stopwatch();
