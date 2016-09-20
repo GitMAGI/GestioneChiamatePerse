@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GestioneChiamate" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WSChiamatePerse" />
+      <xsd:import schemaLocation="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGestioneChiamate_InsertJson_obj_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJson_obj" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertJson_obj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJson_objResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertJson_json_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJson_json" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertJson_json_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJson_jsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertObjList_obj_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertObjList_obj" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertObjList_obj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertObjList_objResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_GetAll_obj_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll_obj" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_GetAll_obj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll_objResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_Exposer_InputMessage">
+    <wsdl:part name="parameters" element="tns:Exposer" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_Exposer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExposerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGestioneChiamate">
+    <wsdl:operation name="InsertJson_obj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_obj" message="tns:IGestioneChiamate_InsertJson_obj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_objResponse" message="tns:IGestioneChiamate_InsertJson_obj_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertJson_json">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_json" message="tns:IGestioneChiamate_InsertJson_json_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_jsonResponse" message="tns:IGestioneChiamate_InsertJson_json_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertObjList_obj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertObjList_obj" message="tns:IGestioneChiamate_InsertObjList_obj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertObjList_objResponse" message="tns:IGestioneChiamate_InsertObjList_obj_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAll_obj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/GetAll_obj" message="tns:IGestioneChiamate_GetAll_obj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/GetAll_objResponse" message="tns:IGestioneChiamate_GetAll_obj_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Exposer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/Exposer" message="tns:IGestioneChiamate_Exposer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/ExposerResponse" message="tns:IGestioneChiamate_Exposer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGestioneChiamate" type="tns:IGestioneChiamate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertJson_obj">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InsertJson_obj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertJson_json">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InsertJson_json" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertObjList_obj">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InsertObjList_obj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll_obj">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/GetAll_obj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exposer">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/Exposer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GestioneChiamate">
+    <wsdl:port name="BasicHttpBinding_IGestioneChiamate" binding="tns:BasicHttpBinding_IGestioneChiamate">
+      <soap:address location="http://phonews.seminabit.local/GestioneChiamate.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

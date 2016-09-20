@@ -19,7 +19,7 @@ namespace WSChiamatePerse
         string InsertJson_json(string jsonArray);
 
         [OperationContract]
-        Response InsertObjList_obj(List<ChiamataSOi> sos);
+        ResponseInsert InsertObjList_obj(List<ChiamataSOi> sos);
 
         [OperationContract]
         ResponseData GetAll_obj();

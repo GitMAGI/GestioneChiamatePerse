@@ -59,18 +59,21 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Service References\WSGestioneChiamate\GestioneChiamate1.wsdl" />
-    <None Include="Service References\WSGestioneChiamate\GestioneChiamate4.xsd">
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate.wsdl" />
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WSGestioneChiamate\GestioneChiamate41.xsd">
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WSGestioneChiamate\GestioneChiamate42.xsd">
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WSGestioneChiamate\GestioneChiamate43.xsd">
+    <None Include="Service References\WSGestioneChiamate\GestioneChiamate3.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSGestioneChiamate\TestCasa.WSGestioneChiamate.ResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\WSGestioneChiamate\TestCasa.WSGestioneChiamate.ResponseInsert.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

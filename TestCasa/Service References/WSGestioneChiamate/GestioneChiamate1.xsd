@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WSChiamatePerse" />
+  <xs:element name="InsertJson_obj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jsonArray" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertJson_objResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="InsertJson_objResult" nillable="true" type="q1:ResponseInsert" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertJson_json">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jsonArray" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertJson_jsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertJson_jsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertObjList_obj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="sos" nillable="true" type="q2:ArrayOfChiamataSOi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertObjList_objResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="InsertObjList_objResult" nillable="true" type="q3:ResponseInsert" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAll_obj">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAll_objResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="GetAll_objResult" nillable="true" type="q4:ResponseData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Exposer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="soi" nillable="true" type="q5:ChiamataSOi" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="soo" nillable="true" type="q6:ChiamataSOo" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="rd" nillable="true" type="q7:ResponseData" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="ri" nillable="true" type="q8:ResponseInsert" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExposerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

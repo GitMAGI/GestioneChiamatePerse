@@ -10,103 +10,103 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/GestioneChiamatePerse.dll">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>09/20/2016 22:39:10</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>08/23/2016 14:47:45</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="BoostrapMain.Master">
-      <publishTime>08/23/2016 19:38:32</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/bootstrap-theme.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/bootstrap-theme.css.map">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/bootstrap-theme.min.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/bootstrap-theme.min.css.map">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/bootstrap.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/bootstrap.css.map">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/bootstrap.min.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/bootstrap.min.css.map">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/css/ie10-viewport-bug-workaround.css">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.eot">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.svg">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.woff">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Content/fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>08/23/2016 19:41:02</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>08/23/2016 14:47:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="PostPage.aspx">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>09/20/2016 00:26:55</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
       <publishTime>09/19/2016 22:21:04</publishTime>
     </File>
     <File Include="ReceiverPage.aspx">
-      <publishTime>08/23/2016 18:16:27</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Scripts/docs.min.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Scripts/holder.min.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Scripts/ie10-viewport-bug-workaround.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Scripts/jquery-3.1.0.min.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Scripts/npm.js">
-      <publishTime>08/23/2016 09:39:46</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Service References/WSGestioneChiamate/GestioneChiamatePerse.WSGestioneChiamate.ResponseData.datasource">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>09/20/2016 00:19:58</publishTime>
     </File>
     <File Include="Service References/WSGestioneChiamate/GestioneChiamatePerse.WSGestioneChiamate.ResponseInsert.datasource">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>09/20/2016 00:19:58</publishTime>
     </File>
     <File Include="SummaryPage.aspx">
-      <publishTime>08/23/2016 19:40:44</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/20/2016 10:40:51</publishTime>
+      <publishTime>09/20/2016 22:39:20</publishTime>
     </File>
   </ItemGroup>
 </Project>

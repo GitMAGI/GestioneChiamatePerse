@@ -46,9 +46,29 @@ namespace TestCasa
 
             string data = JsonConvert.SerializeObject(data2Conv);
 
+            WSGestioneChiamate.ChiamataSOi input = new WSGestioneChiamate.ChiamataSOi();
+            input.NomeChiamata = "Michael";
+            input.CognomeChiamata = "Gerson";
+            input.NumeroChiamata = "123343432";
+            input.MotivoChiamata = "Lusso";
+            input.ExtIDChiamata = 1000011;
+            input.DataOraInizioChiamata = System.Convert.ToDateTime("2011-10-1 11:07:47");
+            input.DataOraFineChiamata = System.Convert.ToDateTime("2011-10-1 11:07:54"); ;
+            input.Priorita = 1;
+            input.ExtIDOperatore = 311;
+            //input.IDExtSollecitoChiamata = "";
+            //input.InfoChiamata = "";
+
+
+            WSGestioneChiamate.ChiamataSOi[] inputs = new WSGestioneChiamate.ChiamataSOi[1] { input };
+            List<WSGestioneChiamate.ChiamataSOi> inputs_ = new List<WSGestioneChiamate.ChiamataSOi>() { input };
+
+
             WSGestioneChiamate.GestioneChiamateClient client = new WSGestioneChiamate.GestioneChiamateClient();
 
-            WSGestioneChiamate.ResponseInsert response = client.InsertJson_obj(data);
+            //WSGestioneChiamate.ResponseInsert response = client.InsertJson_obj(data);
+
+            WSGestioneChiamate.ResponseInsert response = client.InsertObjList_obj(inputs);
 
             tw.Stop();
             System.Console.WriteLine(string.Format("Procedure Completed! Elapsed time {0}", GeneralPurposeLib.LibString.TimeSpanToTimeHmsms(tw.Elapsed)));

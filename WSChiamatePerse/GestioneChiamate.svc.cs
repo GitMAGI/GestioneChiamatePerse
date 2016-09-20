@@ -77,7 +77,7 @@ namespace WSChiamatePerse
             return response;
         }
 
-        public Response InsertObjList_obj(List<ChiamataSOi> sos)
+        public ResponseInsert InsertObjList_obj(List<ChiamataSOi> sos)
         {
             Stopwatch tw = new Stopwatch();
             tw.Start();

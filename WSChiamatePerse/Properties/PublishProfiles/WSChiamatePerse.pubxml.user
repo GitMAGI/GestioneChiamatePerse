@@ -10,37 +10,37 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/BusinessLogicLayer.dll">
-      <publishTime>09/20/2016 10:40:41</publishTime>
+      <publishTime>09/20/2016 22:39:10</publishTime>
     </File>
     <File Include="bin/DataAccessLayer.dll">
-      <publishTime>09/20/2016 10:40:41</publishTime>
+      <publishTime>09/20/2016 22:39:09</publishTime>
     </File>
     <File Include="bin/GeneralPurposeLib.dll">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>09/20/2016 22:39:09</publishTime>
     </File>
     <File Include="bin/IBLL.dll">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>09/20/2016 22:39:09</publishTime>
     </File>
     <File Include="bin/IRISDAL.dll">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>09/20/2016 22:39:09</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>08/23/2016 14:47:45</publishTime>
+      <publishTime>07/09/2016 00:37:23</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>09/09/2016 13:44:50</publishTime>
+      <publishTime>09/09/2016 23:43:48</publishTime>
     </File>
     <File Include="bin/WSChiamatePerse.dll">
-      <publishTime>09/20/2016 10:40:42</publishTime>
+      <publishTime>09/20/2016 22:39:10</publishTime>
     </File>
     <File Include="GestioneChiamate.svc">
-      <publishTime>09/12/2016 17:18:30</publishTime>
+      <publishTime>09/12/2016 20:01:15</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>09/09/2016 18:23:01</publishTime>
+      <publishTime>09/09/2016 23:43:48</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/20/2016 10:40:42</publishTime>
+      <publishTime>09/20/2016 22:39:30</publishTime>
     </File>
   </ItemGroup>
 </Project>

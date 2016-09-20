@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.1.152:41000/GestioneChiamate.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://phonews.seminabit.local/GestioneChiamate.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestioneChiamate4.xsd" MetadataType="Schema" ID="d60b98de-1102-4525-aa35-b64d6152f24c" SourceId="1" SourceUrl="http://192.168.1.152:41000/GestioneChiamate.svc?xsd=xsd1" />
-    <MetadataFile FileName="GestioneChiamate41.xsd" MetadataType="Schema" ID="8ef387d0-108c-42aa-a6b8-a8de311ca01a" SourceId="1" SourceUrl="http://192.168.1.152:41000/GestioneChiamate.svc?xsd=xsd3" />
-    <MetadataFile FileName="GestioneChiamate1.wsdl" MetadataType="Wsdl" ID="ce95174f-e10e-48d0-a55a-7b7418937be6" SourceId="1" SourceUrl="http://192.168.1.152:41000/GestioneChiamate.svc?wsdl" />
-    <MetadataFile FileName="GestioneChiamate42.xsd" MetadataType="Schema" ID="f0a74e6e-98c2-4fc0-b375-b0ddb2956474" SourceId="1" SourceUrl="http://192.168.1.152:41000/GestioneChiamate.svc?xsd=xsd0" />
-    <MetadataFile FileName="GestioneChiamate43.xsd" MetadataType="Schema" ID="932329cf-5d42-4d68-8639-da0b661ccc40" SourceId="1" SourceUrl="http://192.168.1.152:41000/GestioneChiamate.svc?xsd=xsd2" />
+    <MetadataFile FileName="GestioneChiamate.xsd" MetadataType="Schema" ID="d98956ed-eb15-44cc-97b0-87bfbc18a95e" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd2" />
+    <MetadataFile FileName="GestioneChiamate.wsdl" MetadataType="Wsdl" ID="1d5e14e7-cca4-4e4a-8087-b99f0731ea72" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?wsdl" />
+    <MetadataFile FileName="GestioneChiamate1.xsd" MetadataType="Schema" ID="70e5f7ed-7459-43b8-b314-177173e1092a" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd0" />
+    <MetadataFile FileName="GestioneChiamate2.xsd" MetadataType="Schema" ID="2d306209-565e-4597-81d9-ec142ca1121d" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd1" />
+    <MetadataFile FileName="GestioneChiamate3.xsd" MetadataType="Schema" ID="3196a0a2-b911-4e65-90c9-ddfc9c5090b2" SourceId="1" SourceUrl="http://phonews.seminabit.local/GestioneChiamate.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
