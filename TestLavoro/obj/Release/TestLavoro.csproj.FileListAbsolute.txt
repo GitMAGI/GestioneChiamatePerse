@@ -1,9 +1,10 @@
-C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\TestCasa.exe.config
-C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\TestCasa.exe
-C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\TestCasa.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\GeneralPurposeLib.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\Newtonsoft.Json.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\GeneralPurposeLib.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\Newtonsoft.Json.xml
-C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\obj\Release\TestCasa.exe
-C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\obj\Release\TestCasa.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\TestLavoro.exe.config
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\TestLavoro.exe
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\bin\Release\TestLavoro.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\obj\Release\TestLavoro.csprojResolveAssemblyReference.cache
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\obj\Release\TestLavoro.exe
+C:\Workspace\repo\c#\GestioneChiamatePerse\TestLavoro\obj\Release\TestLavoro.pdb

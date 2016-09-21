@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BoostrapMain.master.cs" Inherits="GestioneChiamatePerse.BoostrapMain" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS -->
+    <link href="Content/css/bootstrap.min.css" rel="Stylesheet" type="text/css" />
+    <!-- Bootstrap theme -->
+    <link href="Content/css/bootstrap-theme.min.css" rel="Stylesheet" type="text/css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="Content/css/ie10-viewport-bug-workaround.css" rel="Stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-phone-alt"></span> Phone Calls</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <% 
+                            string url = "SummaryPage.aspx";
+                            string linkName = "Summary";
+                            string icon = "<span class=\"glyphicon glyphicon-list\"></span> ";
+                            linkName = icon + linkName;
+
+                            string toRender = "<li><a href=\""+url+"\">"+linkName+"</a></li>";
+                            if(this.Page.ToString() == "ASP.summarypage_aspx")
+                                toRender = "<li class=\"active\"><a href=\""+url+"\">"+linkName+"<span class=\"sr-only\">(current)</span></a></li>";
+                            Response.Write(toRender); 
+
+                            url = "PostPage.aspx";
+                            linkName = "Post Example";
+                            icon = "<span class=\"glyphicon glyphicon-indent-left\"></span> ";
+                            linkName = icon + linkName;
+
+                            toRender = "<li><a href=\""+url+"\">"+linkName+"</a></li>";
+                            if(this.Page.ToString() == "ASP.postpage_aspx")
+                                toRender = "<li class=\"active\"><a href=\""+url+"\">"+linkName+"<span class=\"sr-only\">(current)</span></a></li>";
+                            Response.Write(toRender); 
+                        %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <script type="text/javascript" src="Scripts/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="Scripts/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

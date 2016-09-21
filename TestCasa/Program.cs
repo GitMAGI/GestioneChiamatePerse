@@ -61,7 +61,6 @@ namespace TestCasa
 
 
             WSGestioneChiamate.ChiamataSOi[] inputs = new WSGestioneChiamate.ChiamataSOi[1] { input };
-            List<WSGestioneChiamate.ChiamataSOi> inputs_ = new List<WSGestioneChiamate.ChiamataSOi>() { input };
 
 
             WSGestioneChiamate.GestioneChiamateClient client = new WSGestioneChiamate.GestioneChiamateClient();

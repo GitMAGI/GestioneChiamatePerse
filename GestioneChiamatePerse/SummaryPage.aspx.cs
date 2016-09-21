@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -45,10 +46,17 @@ namespace GestioneChiamatePerse
                         html += "<thead>";
                         html += "<tr>";
                         html += "<th>#</th>";
+
+                        /*
                         foreach (var prop in typeof(WSGestioneChiamate.ChiamataSOo).GetProperties())
                         {
                             if (visibleCols.Contains(prop.Name))
                                 html += "<th>" + prop.Name + "</th>";
+                        }
+                         * */
+                        foreach (string nm in visibleCols)
+                        {
+                            html += "<th>" + nm + "</th>";
                         }
                         html += "</tr>";
                         html += "</thead>";
@@ -62,11 +70,30 @@ namespace GestioneChiamatePerse
                             {
                                 html += "<tr>";
                                 html += "<td>" + t + "</td>";
+                                /*
                                 foreach (var prop in c.GetType().GetProperties())
                                 {
                                     if(visibleCols.Contains(prop.Name))
                                         html += "<td>" + prop.GetValue(c, null) + "</td>";
                                 }
+                                */
+                                foreach (string nm in visibleCols)
+                                {
+                                    string vl = "";
+                                    PropertyInfo prop = c.GetType().GetProperty(nm);
+                                    if (prop != null)
+                                    {
+                                        var vl1 = prop.GetValue(c, null);
+                                        vl += vl1;
+                                    }
+                                    else
+                                    {
+                                        vl = "undefined";
+                                    }
+                                    html += "<td>" + vl + "</td>";
+                                    
+                                }
+
                                 html += "</tr>";
                                 t++;
                             }

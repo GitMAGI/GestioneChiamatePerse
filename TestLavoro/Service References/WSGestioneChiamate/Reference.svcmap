@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="974fec22-8743-461c-b691-e9d0dbdee344" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="66151282-21a8-4eda-94ad-b649f1171824" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.3.47:41000/GestioneChiamate.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://phone.seminabit.com/WSGestioneChiamate/GestioneChiamate.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestioneChiamate4.xsd" MetadataType="Schema" ID="d95c5aa1-57ad-4043-9ef1-27c954c175c3" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?xsd=xsd3" />
-    <MetadataFile FileName="GestioneChiamate41.xsd" MetadataType="Schema" ID="778a721a-5671-4c5e-85f9-cb39aef24c34" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?xsd=xsd2" />
-    <MetadataFile FileName="GestioneChiamate42.xsd" MetadataType="Schema" ID="1bea9089-8613-4314-a1f4-d507427c0f89" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?xsd=xsd0" />
-    <MetadataFile FileName="GestioneChiamate1.wsdl" MetadataType="Wsdl" ID="45ad7bcb-aa1c-4e4a-a20d-a80e0665582c" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?wsdl" />
-    <MetadataFile FileName="GestioneChiamate43.xsd" MetadataType="Schema" ID="4672c113-e149-4f2b-9e46-4d5e42f9ba1f" SourceId="1" SourceUrl="http://192.168.3.47:41000/GestioneChiamate.svc?xsd=xsd1" />
+    <MetadataFile FileName="GestioneChiamate.xsd" MetadataType="Schema" ID="a8e00e31-ca97-48be-b3b3-44b79496a063" SourceId="1" SourceUrl="http://phone.seminabit.com/WSGestioneChiamate/GestioneChiamate.svc?xsd=xsd2" />
+    <MetadataFile FileName="GestioneChiamate1.xsd" MetadataType="Schema" ID="bb015f9f-5791-4df7-b2c0-d472675f4ca3" SourceId="1" SourceUrl="http://phone.seminabit.com/WSGestioneChiamate/GestioneChiamate.svc?xsd=xsd3" />
+    <MetadataFile FileName="GestioneChiamate.disco" MetadataType="Disco" ID="bd47763b-5dd1-4318-901d-f1e336981bf4" SourceId="1" SourceUrl="http://phone.seminabit.com/WSGestioneChiamate/GestioneChiamate.svc?disco" />
+    <MetadataFile FileName="GestioneChiamate2.xsd" MetadataType="Schema" ID="1cef2891-66eb-497c-a9dd-1fdede19be6c" SourceId="1" SourceUrl="http://phone.seminabit.com/WSGestioneChiamate/GestioneChiamate.svc?xsd=xsd1" />
+    <MetadataFile FileName="GestioneChiamate3.xsd" MetadataType="Schema" ID="40da2c0a-0e25-4617-85ba-6b0b53a00423" SourceId="1" SourceUrl="http://phone.seminabit.com/WSGestioneChiamate/GestioneChiamate.svc?xsd=xsd0" />
+    <MetadataFile FileName="GestioneChiamate.wsdl" MetadataType="Wsdl" ID="52ec2ed3-adb7-427d-a342-ca39054f0bf3" SourceId="1" SourceUrl="http://phone.seminabit.com/WSGestioneChiamate/GestioneChiamate.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
