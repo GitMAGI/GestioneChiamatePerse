@@ -26,6 +26,7 @@ namespace BusinessLogicLayer.Mappers
             vo.NumeroChiamata = dto.NumeroChiamata;
             vo.Priorita = dto.Priorita;
             vo.Stato = dto.Stato;
+            vo.Azienda = dto.Azienda;
 
             return vo;
         }
@@ -59,6 +60,7 @@ namespace BusinessLogicLayer.Mappers
             dto.NumeroChiamata = vo.NumeroChiamata;
             dto.Priorita = vo.Priorita;
             dto.Stato = vo.Stato;
+            dto.Azienda = vo.Azienda;
             
             return dto;
         }

@@ -20,6 +20,7 @@
             var InfoChiamata = $("#InfoChiamata").val() != "" ? $("#InfoChiamata").val() : null;
             var IDExtSollecitoChiamata = $("#IDExtSollecitoChiamata").val() != "" ? $("#IDExtSollecitoChiamata").val() : null;
             var ExtIDOperatore = $("#ExtIDOperatore").val() != "" ? $("#ExtIDOperatore").val() : null;
+            var Azienda = $("#Azienda").val() != "" ? $("#Azienda").val() : null;
 
             jsonData = [{
                 ExtIDChiamata: ExtIDChiamata,
@@ -32,7 +33,8 @@
                 Priorita: Priorita,
                 InfoChiamata: InfoChiamata,
                 IDExtSollecitoChiamata: IDExtSollecitoChiamata,
-                ExtIDOperatore: ExtIDOperatore
+                ExtIDOperatore: ExtIDOperatore,
+                Azienda: Azienda
             }];
 
             $.support.cors = true;
@@ -103,7 +105,12 @@
 					<div class="form-group">
 						<label for="Motivochiamata">Motivo della Chiamata</label>
 						<input type="text" class="form-control" id="MotivoChiamata" name="MotivoChiamata" placeholder="Motivo Chiamata">
-					</div>                  
+					</div>     
+                    <div class="form-group">
+						<label for="Azienda">Azienda</label>
+						<input type="text" class="form-control" id="Azienda" name="Azienda" aria-describedby="AziendaHelp" placeholder="Azienda">
+						<small id="AziendaHelp" class="form-text text-muted">Azienda</small>
+					</div>               
 				</div>
 
 				<div class="col-xl-6 col-lg-6 col-md-6">
@@ -131,7 +138,7 @@
 						<label for="IDExtSollecitoChiamata">ID Sollecito</label>
 						<input type="text" class="form-control" id="IDExtSollecitoChiamata" name="IDExtSollecitoChiamata" aria-describedby="IDExtSollecitoChiamataHelp" placeholder="ID del Sollecito della Chiamata">
 						<small id="IDExtSollecitoChiamataHelp" class="form-text text-muted">L'ID della chiamata che si vuole sollecitare</small>
-					</div>  
+					</div>                      
 					<div class="form-group">
 						<label for="ExtIDOperatore">ID Operatore</label>
 						<input type="text" class="form-control" id="ExtIDOperatore" name="ExtIDOperatore" aria-describedby="ExtIDOperatoreHelp" placeholder="ID Operatore">

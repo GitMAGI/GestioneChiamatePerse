@@ -29,6 +29,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="InsertObjList_obj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="sos" nillable="true" type="q2:ArrayOfChiamataSOi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertObjList_objResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="InsertObjList_objResult" nillable="true" type="q3:ResponseInsert" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAll_obj">
     <xs:complexType>
       <xs:sequence />
@@ -37,17 +51,17 @@
   <xs:element name="GetAll_objResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="GetAll_objResult" nillable="true" type="q2:ResponseData" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="GetAll_objResult" nillable="true" type="q4:ResponseData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Exposer">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="soi" nillable="true" type="q3:ChiamataSOi" />
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="soo" nillable="true" type="q4:ChiamataSOo" />
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="rd" nillable="true" type="q5:ResponseData" />
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="ri" nillable="true" type="q6:ResponseInsert" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="soi" nillable="true" type="q5:ChiamataSOi" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="soo" nillable="true" type="q6:ChiamataSOo" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="rd" nillable="true" type="q7:ResponseData" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WSChiamatePerse" minOccurs="0" name="ri" nillable="true" type="q8:ResponseInsert" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

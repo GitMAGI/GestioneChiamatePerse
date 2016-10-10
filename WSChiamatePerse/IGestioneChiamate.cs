@@ -172,6 +172,9 @@ namespace WSChiamatePerse
 
         [DataMember]
         public long? ExtIDOperatore { get; set; }
+
+        [DataMember]
+        public string Azienda { get; set; }
     }
     
     [DataContract]
@@ -207,6 +210,8 @@ namespace WSChiamatePerse
         public string IPOperazione { get; set; }
         [DataMember]
         public long? ExtIDOperatore { get; set; }
+        [DataMember]
+        public string Azienda { get; set; }
     }
 
 

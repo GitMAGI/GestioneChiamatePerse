@@ -20,6 +20,12 @@
   <wsdl:message name="IGestioneChiamate_InsertJson_json_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertJson_jsonResponse" />
   </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertObjList_obj_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertObjList_obj" />
+  </wsdl:message>
+  <wsdl:message name="IGestioneChiamate_InsertObjList_obj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertObjList_objResponse" />
+  </wsdl:message>
   <wsdl:message name="IGestioneChiamate_GetAll_obj_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAll_obj" />
   </wsdl:message>
@@ -40,6 +46,10 @@
     <wsdl:operation name="InsertJson_json">
       <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_json" message="tns:IGestioneChiamate_InsertJson_json_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertJson_jsonResponse" message="tns:IGestioneChiamate_InsertJson_json_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertObjList_obj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertObjList_obj" message="tns:IGestioneChiamate_InsertObjList_obj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestioneChiamate/InsertObjList_objResponse" message="tns:IGestioneChiamate_InsertObjList_obj_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAll_obj">
       <wsdl:input wsaw:Action="http://tempuri.org/IGestioneChiamate/GetAll_obj" message="tns:IGestioneChiamate_GetAll_obj_InputMessage" />
@@ -63,6 +73,15 @@
     </wsdl:operation>
     <wsdl:operation name="InsertJson_json">
       <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InsertJson_json" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertObjList_obj">
+      <soap:operation soapAction="http://tempuri.org/IGestioneChiamate/InsertObjList_obj" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

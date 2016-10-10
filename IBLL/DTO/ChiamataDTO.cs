@@ -23,5 +23,6 @@ namespace IBLL.DTO
         public DateTime? DataOraOperazione { get; set; }
         public string IPOperazione { get; set; } //MAX Length 50
         public long? ExtIDOperatore { get; set; }
+        public string Azienda { get; set; } //MAX Length 255
     }
 }

@@ -53,6 +53,9 @@ namespace WSChiamatePerse.Constraints
                     new ColumnStructure{ 
                         colName = "ExtIDOperatore", colType = typeof(long), colMaxLength = null, colNotNull = false, colChecks = null
                     },
+                    new ColumnStructure{
+                        colName = "Azienda", colType = typeof(string), colMaxLength = 255, colNotNull = true, colChecks = null
+                    },
                 }
             ); 
         } 

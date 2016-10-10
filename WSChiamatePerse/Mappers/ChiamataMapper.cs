@@ -48,6 +48,7 @@ namespace WSChiamatePerse.Mappers
             dto.IDChiamata = so.IDChiamata;
             dto.IDExtSollecitoChiamata = so.IDExtSollecitoChiamata;
             dto.InfoChiamata = so.InfoChiamata;
+            dto.Azienda = so.Azienda;
 
             string ip_ = "-- no ip detected --";
             if (HttpContext.Current != null)
@@ -99,6 +100,7 @@ namespace WSChiamatePerse.Mappers
             so.Stato = dto.Stato;
             so.IPOperazione = dto.IPOperazione;
             so.DataOraOperazione = dto.DataOraOperazione;
+            so.Azienda = dto.Azienda;
 
             return so;
         }

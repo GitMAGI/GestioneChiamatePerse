@@ -23,5 +23,6 @@ namespace IDAL.VO
         public DateTime? DataOraOperazione { get; set; }
         public string IPOperazione { get; set; }
         public long? ExtIDOperatore { get; set; }
+        public string Azienda { get; set; }
     }
 }

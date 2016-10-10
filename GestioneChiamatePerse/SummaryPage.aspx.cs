@@ -33,6 +33,7 @@ namespace GestioneChiamatePerse
                     "DataOraOperazione",
                     "IPOperazione",
                     "ExtIDOperatore",
+                    "Azienda"
                 };
                 if (response.success)
                 {

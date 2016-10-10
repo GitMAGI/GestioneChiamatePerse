@@ -39,6 +39,7 @@ namespace DataAccessLayer.Mappers
             chia.NumeroChiamata = row["NumeroChiamata"] != DBNull.Value ? (string)row["NumeroChiamata"] : null;
             chia.Priorita = row["priorita"] != DBNull.Value ? (int)row["priorita"] : (int?)null;
             chia.Stato = row["Stato"] != DBNull.Value ? (int)row["Stato"] : (int?)null;
+            chia.Azienda = row["Azienda"] != DBNull.Value ? (string)row["Azienda"] : null;
 
             return chia;
         }

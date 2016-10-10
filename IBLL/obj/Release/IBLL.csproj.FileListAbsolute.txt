@@ -6,3 +6,4 @@ C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\bin\Release\IBLL.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\bin\Release\IBLL.pdb
 C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\obj\Release\IBLL.dll
 C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\obj\Release\IBLL.pdb
+C:\Workspace\repo\c#\GestioneChiamatePerse\IBLL\obj\Release\IBLL.csprojResolveAssemblyReference.cache

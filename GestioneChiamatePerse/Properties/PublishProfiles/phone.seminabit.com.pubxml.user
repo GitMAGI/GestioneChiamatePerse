@@ -13,7 +13,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/GestioneChiamatePerse.dll">
-      <publishTime>09/21/2016 13:02:20</publishTime>
+      <publishTime>10/10/2016 15:34:16</publishTime>
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>08/23/2016 14:47:45</publishTime>
@@ -70,7 +70,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>08/23/2016 14:47:46</publishTime>
     </File>
     <File Include="PostPage.aspx">
-      <publishTime>09/21/2016 13:02:13</publishTime>
+      <publishTime>10/10/2016 15:34:02</publishTime>
     </File>
     <File Include="ReceiverPage.aspx">
       <publishTime>08/23/2016 18:16:27</publishTime>
@@ -100,16 +100,16 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>08/23/2016 09:39:46</publishTime>
     </File>
     <File Include="Service References/WSGestioneChiamate/GestioneChiamatePerse.WSGestioneChiamate.ResponseData.datasource">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>10/10/2016 15:28:08</publishTime>
     </File>
     <File Include="Service References/WSGestioneChiamate/GestioneChiamatePerse.WSGestioneChiamate.ResponseInsert.datasource">
-      <publishTime>09/20/2016 09:34:40</publishTime>
+      <publishTime>10/10/2016 15:28:08</publishTime>
     </File>
     <File Include="SummaryPage.aspx">
       <publishTime>09/21/2016 09:37:09</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/21/2016 09:42:51</publishTime>
+      <publishTime>10/10/2016 15:34:16</publishTime>
     </File>
   </ItemGroup>
 </Project>
